@@ -53,6 +53,9 @@
          3. copy media file on public/uploads
          4. composer install
          5. need to create feature branch 
+                check branch name befor create the feature branch
+                        git branch
+                        
                 Complsory :  git pull origin master
 
                              git checkout -b develop
