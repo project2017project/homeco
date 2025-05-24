@@ -77,4 +77,5 @@
                 git merge feature/design --no-commit --no-ff
         
         7. After test on develop branch then again merge in master branch
+        8. Need to create ssk key push the code
 
