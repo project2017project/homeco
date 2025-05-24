@@ -29,4 +29,25 @@
         - OpenSSL PHP Extension
         - PDO PHP Extension
         - Tokenizer PHP Extension
-        - XML PHP Extension
+        - XML PHP 
+        
+### Dummy Images
+        - Path : public > uploads
+
+
+### crete virtual host on local
+        - Path : C:\Windows\System32\drivers\etc\hosts
+
+                127.0.0.1	homeco.webngigs
+
+        - Path : C:\xampp\apache\conf\extra\http-vhosts.conf
+        
+                <VirtualHost *:80>
+                        DocumentRoot "C:/xampp/htdocs/homeco"
+                        ServerName homeco.webngigs
+                        <Directory "C:/xampp/htdocs/homeco">
+                                Options Indexes FollowSymLinks
+                                AllowOverride All
+                                Require all granted
+                        </Directory>
+                </VirtualHost>
