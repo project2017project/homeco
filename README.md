@@ -31,23 +31,47 @@
         - Tokenizer PHP Extension
         - XML PHP 
         
-### Dummy Images
-        - Path : public > uploads
+### Git command for project setup 
+         1. git clone git@github.com:project2017project/homeco.git
+         2. crete virtual host on local
+                - Path : C:\Windows\System32\drivers\etc\hosts
 
+                        127.0.0.1	homeco.webngigs
 
-### crete virtual host on local
-        - Path : C:\Windows\System32\drivers\etc\hosts
+                - Path : C:\xampp\apache\conf\extra\http-vhosts.conf
 
-                127.0.0.1	homeco.webngigs
+                        <VirtualHost *:80>
+                                DocumentRoot "C:/xampp/htdocs/homeco"
+                                ServerName homeco.webngigs
+                                <Directory "C:/xampp/htdocs/homeco">
+                                        Options Indexes FollowSymLinks
+                                        AllowOverride All
+                                        Require all granted
+                                </Directory>
+                        </VirtualHost>
 
-        - Path : C:\xampp\apache\conf\extra\http-vhosts.conf
+         3. copy media file on public/uploads
+         4. composer install
+         5. need to create feature branch 
+                Complsory :  git pull origin master
+
+                             git checkout -b develop
+
+                Designer : 
+
+                        git checkout -b feature/design
+                        git checkout -b feature/design-work
+                        Optional : git pull origin feature/develop
+
+                Developer : 
+
+                        git checkout -b feature/develop
+                        git checkout -b feature/develop-work
+                        optional: git pull origin feature/develop
+
+        6. After finish the task on local merge your feature branch to develop
+                git checkout develop
+                git merge feature/design --no-commit --no-ff
         
-                <VirtualHost *:80>
-                        DocumentRoot "C:/xampp/htdocs/homeco"
-                        ServerName homeco.webngigs
-                        <Directory "C:/xampp/htdocs/homeco">
-                                Options Indexes FollowSymLinks
-                                AllowOverride All
-                                Require all granted
-                        </Directory>
-                </VirtualHost>
+        7. After test on develop branch then again merge in master branch
+
