@@ -15,7 +15,7 @@
           <li class="{{ Route::is('admin.dashboard')  ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.dashboard') }}"><i class="fas fa-home"></i> <span>{{__('admin.Dashboard')}}</span></a></li>
 
 
-          <li class="nav-item dropdown {{ Route::is('admin.pricing-plan.*') || Route::is('admin.assign-pricing-plan') || Route::is('admin.purchase-history') || Route::is('admin.show-purchase-history') || Route::is('admin.pending-payment') ? 'active' : '' }}">
+          <!-- <li class="nav-item dropdown {{ Route::is('admin.pricing-plan.*') || Route::is('admin.assign-pricing-plan') || Route::is('admin.purchase-history') || Route::is('admin.show-purchase-history') || Route::is('admin.pending-payment') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i><span>{{__('admin.Pricing Plan')}}</span></a>
 
             <ul class="dropdown-menu">
@@ -29,7 +29,7 @@
                 <li class="{{ Route::is('admin.pending-payment')  ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.pending-payment') }}">{{__('admin.Pending Payment')}}</a></li>
 
             </ul>
-          </li>
+          </li> -->
 
           <li class="nav-item dropdown {{ Route::is('admin.category.*') || Route::is('admin.property.booking') || Route::is('admin.nearest-location.*') || Route::is('admin.aminity.*') || Route::is('admin.property.*') || Route::is('admin.agent-property') || Route::is('admin.agent-pending-property') || Route::is('admin.assign-slider-property') || Route::is('admin.agent-reject-property') || Route::is('admin.review-list') || Route::is('admin.show-review') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas far fa-building"></i><span>{{__('admin.Real Estate')}}</span></a>
@@ -103,13 +103,13 @@
             </ul>
           </li>
 
-        @if (Module::isEnabled('SupportTicket'))
+        <!-- @if (Module::isEnabled('SupportTicket'))
             @include('supportticket::admin.sidebar')
-        @endif
+        @endif -->
 
-          @if (Module::isEnabled('Kyc'))
+          <!-- @if (Module::isEnabled('Kyc'))
             @include('kyc::Admin.sideber')
-          @endif
+          @endif -->
 
           <li class="nav-item dropdown {{  Route::is('admin.customer-list') || Route::is('admin.customer-show') || Route::is('admin.pending-customer-list') || Route::is('admin.send-email-to-all-customer') || Route::is('admin.create-customer') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>{{__('admin.Users')}}</span></a>
@@ -141,7 +141,7 @@
             </ul>
           </li>
 
-          <li class="{{ Route::is('admin.mobile-app-setting') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.mobile-app-setting') }}"><i class="fas fa-mobile"></i> <span>{{__('admin.Mobile App Setting')}}</span></a></li>
+          <!-- <li class="{{ Route::is('admin.mobile-app-setting') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.mobile-app-setting') }}"><i class="fas fa-mobile"></i> <span>{{__('admin.Mobile App Setting')}}</span></a></li> -->
 
 
           <li class="nav-item dropdown {{ Route::is('admin.mobile-slider.*') || Route::is('admin.slider.*') || Route::is('admin.counter.*') || Route::is('admin.testimonial.*') || Route::is('admin.mobile-app') || Route::is('admin.partner.*') || Route::is('admin.why-choose-us.*') || Route::is('admin.home2-about-us') ? 'active' : '' }}">
@@ -180,7 +180,7 @@
           </li>
 
 
-          <li class="{{ Route::is('admin.payment-method') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.payment-method') }}"><i class="fas fa-dollar-sign"></i> <span>{{__('admin.Payment Method')}}</span></a></li>
+          <!-- <li class="{{ Route::is('admin.payment-method') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.payment-method') }}"><i class="fas fa-dollar-sign"></i> <span>{{__('admin.Payment Method')}}</span></a></li> -->
 
           <li class="nav-item dropdown {{ Route::is('admin.about-us.*') || Route::is('admin.custom-page.*') || Route::is('admin.terms-and-condition.*') || Route::is('admin.privacy-policy.*') || Route::is('admin.faq.*') || Route::is('admin.error-page.*') || Route::is('admin.contact-us.*') || Route::is('admin.login-page') || Route::is('admin.homepage') || Route::is('admin.create-property') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-columns"></i><span>{{__('admin.Pages')}}</span></a>
@@ -250,9 +250,9 @@
           @php
               $logedInAdmin = Auth::guard('admin')->user();
           @endphp
-          @if ($logedInAdmin->admin_type == 1)
+          <!-- @if ($logedInAdmin->admin_type == 1)
           <li  class="{{ Route::is('admin.clear-database') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.clear-database') }}"><i class="fas fa-trash"></i> <span>{{__('admin.Clear Database')}}</span></a></li>
-          @endif
+          @endif -->
 
           <li  class="{{ Route::is('admin.clear-cache') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.clear-cache') }}"><i class="fas fa-undo"></i> <span>{{__('admin.Cache Clear')}}</span></a></li>
 
