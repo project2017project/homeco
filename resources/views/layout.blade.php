@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/theme-default.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/agency.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/kyc.css') }}">
 
     <link rel="stylesheet" href="{{ asset('toastr/toastr.min.css') }}">
@@ -238,7 +239,7 @@
     <header id="active-sticky" class="homec-header">
         <!-- Topbar -->
         <div class="homec-header__top">
-            <div class="container">
+            <div class="container homec-container-medium">
                 <div class="row">
                     <div class="col-12">
                         <div class="homec-topbar-flex">
@@ -281,7 +282,7 @@
         <!-- End Topbar -->
 
         <div class="homec-header__middle">
-            <div class="container">
+            <div class="container homec-container-medium">
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="homec-header__inside">
@@ -340,7 +341,9 @@
 
                                                 <li><a href="{{ route('agencies') }}">{{ __('user.Our Agency') }}</a></li>
 
-                                                <li class="menu-item-has-children"><a
+                                                <li><a href="{{ route('about-us') }}">{{ __('user.About Us') }}</a> </li>
+
+                                                <!--<li class="menu-item-has-children"><a
                                                     href="#">{{ __('user.Pages') }}</a>
                                                 <ul class="sub-menu">
 
@@ -376,7 +379,7 @@
                                                         </li>
                                                     @endforeach
                                                 </ul>
-                                            </li>
+                                            </li>-->
 
                                                 <li><a
                                                         href="{{ route('contact-us') }}">{{ __('user.Contact') }}</a>
@@ -411,6 +414,7 @@
                                             <path
                                                 d="M27.8681 22.6752C27.6558 22.1446 27.3729 21.6494 27.0545 21.1895C25.4273 18.784 22.9158 17.1922 20.0858 16.8031C19.7321 16.7677 19.343 16.8384 19.06 17.0507C17.5743 18.1473 15.8056 18.7133 13.9661 18.7133C12.1266 18.7133 10.3579 18.1473 8.87219 17.0507C8.58917 16.8384 8.20005 16.7323 7.84634 16.8031C5.0164 17.1922 2.46948 18.784 0.877655 21.1895C0.55929 21.6494 0.276269 22.18 0.0640708 22.6752C-0.0420283 22.8875 -0.00668454 23.1351 0.0994145 23.3474C0.382436 23.8426 0.736144 24.3379 1.05451 24.7623C1.54973 25.4345 2.08036 26.0358 2.68174 26.6018C3.17696 27.097 3.74294 27.5569 4.30898 28.0167C7.10351 30.1039 10.4641 31.2004 13.9307 31.2004C17.3974 31.2004 20.758 30.1038 23.5525 28.0167C24.1185 27.5923 24.6845 27.097 25.1798 26.6018C25.7457 26.0358 26.3117 25.4344 26.807 24.7623C27.1607 24.3025 27.4791 23.8426 27.7621 23.3474C27.9389 23.1351 27.9742 22.8874 27.8681 22.6752Z" />
                                         </svg>
+                                        <span>Login</span>
                                     </a>
                                 @endauth
 
@@ -442,9 +446,8 @@
                     alt="#"></div>
         </div>
         <div class="container">
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-12">
-                    <!-- Subscribe Form -->
                     <div class="homec-form mg-top-100">
                         <div class="homec-form__content">
                             <span class="homec-form__label">{{ __('user.For Rent house offer') }}</span>
@@ -457,9 +460,8 @@
                                     id="subscribe_btn_text">{{ __('user.Subscribe Now') }}</span></button>
                         </form>
                     </div>
-                    <!-- End Subscribe Form -->
                 </div>
-            </div>
+            </div>-->
             <div class="row">
                 <div class="col-12">
                     <div class="footer-top-inner pd-top-30 pd-btm-100">

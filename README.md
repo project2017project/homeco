@@ -79,3 +79,7 @@
         7. After test on develop branch then again merge in master branch
         8. Need to create ssk key push the code
 
+        ### New Custom Css file add
+
+        File Path - public/frontend/css/custom.css
+
