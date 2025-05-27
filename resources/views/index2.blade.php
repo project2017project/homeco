@@ -25,9 +25,9 @@
 					<div class="row align-items-center">
 						<div class="col-md-10 offset-md-1 col-12">
 							<div class="homec-hero__inner">
-								<svg class="homec-arrow-left" width="106" height="193" viewBox="0 0 106 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<!--<svg class="homec-arrow-left" width="106" height="193" viewBox="0 0 106 193" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M41.5023 1.15691C14.2375 16.2178 -4.14265 43.6931 1.00245 74.3315C2.53343 83.4634 6.44872 93.3821 13.1666 100.543C11.7779 112.322 13.677 124.712 18.1444 135.489C24.5277 150.884 36.148 165.77 52.4032 172.661C62.4926 176.936 73.8871 178.399 84.5622 176.158C81.5002 179.845 78.8816 183.843 76.9324 188.127C75.3846 191.505 79.9859 194.096 82.2113 190.98C88.4356 182.269 94.8272 174.624 103.821 168.305C107.786 165.523 104.599 160.27 100.073 162.042C93.815 164.474 88.3687 161.589 84.2359 157.234C81.4333 154.285 76.4555 158.045 78.4633 161.415C81.1906 165.977 85.7752 168.631 90.8032 169.577C90.7279 169.648 90.6526 169.72 90.5857 169.783C51.575 182.905 18.7635 141.927 19.4495 105.828C21.1729 106.941 23.0218 107.903 25.0045 108.658C37.6456 113.498 51.8009 109.079 61.7899 101.004C71.8793 92.8337 79.0657 78.9173 71.9295 66.8765C65.3538 55.7815 50.5292 55.7497 39.8375 60.9793C27.1881 67.1785 19.3993 77.5344 15.576 89.3844C12.6563 84.5443 10.7572 79.0206 9.75329 73.9182C4.36558 46.6734 21.1311 20.446 43.7193 4.8685C45.9949 3.29485 44.0539 -0.249828 41.5023 1.15691ZM26.6945 80.5227C32.6678 71.208 44.2714 61.488 56.5946 62.402C63.9818 62.9504 68.6249 68.9032 68.9763 75.6588C69.3109 82.1441 65.5713 88.1287 60.8863 92.5635C53.3151 99.7085 41.0924 104.962 30.3755 101.711C26.5355 100.543 23.2895 98.4448 20.5705 95.7823C21.6916 90.362 23.6911 85.2039 26.6945 80.5227Z" fill="#F2C94C"/>
-								</svg>
+								</svg>-->
 							<!-- Hero Content -->
 							<div class="homec-hero__content">
 								<h1 class="homec-hero__title">{{ $home2_intro->title }}</h1>
@@ -50,9 +50,9 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -60,9 +60,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -70,9 +70,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<select class="select2" id="rent_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -107,9 +107,9 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -117,9 +117,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -127,9 +127,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<select class="select2" id="sale_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -162,9 +162,9 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -172,9 +172,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -182,9 +182,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<select class="select2" id="any_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -258,7 +258,7 @@
         @endphp
 
 		<!-- About Area -->
-		<section class="homec-about pd-top-100 pd-btm-130">
+		<section class="homec-about pd-top-60 pd-btm-100">
 			<div class="homec-shape">
 				<img class="homec-shape-single homec-shape-1" src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="icon">
 				<img class="homec-shape-single homec-shape-2" src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="icon">
@@ -315,11 +315,11 @@
 
     @if ($featured_property->visibility)
 		<!-- Properties Listing -->
-		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-90 pd-btm-120 homec-featured-property-bg">
+		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-60 pd-btm-80 homec-featured-property-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<div class="homec-flex homec-flex__section mg-btm-60">
+						<div class="homec-flex homec-flex__section mg-btm-40">
 							<!-- Section TItle -->
 							<div class="homec-section__head m-0 mg-top-30">
 								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $featured_property->title }}</span>
@@ -413,7 +413,7 @@
         @if ($setting->agent_can_add_property == 'enable')
             @if ($agent->visibility)
                 <!-- Agents -->
-                <section class="homec-bg-third-color homec-bg-cover pd-top-90 pd-btm-120" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
+                <section class="homec-bg-third-color homec-bg-cover pd-top-60 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
                     <div class="homec-overlay"></div>
                     <div class="section-inside-bg homec-agent-inside"></div>
                     <div class="container">
@@ -734,7 +734,7 @@
                 $counter_content = $counter->content;
             @endphp
             <!-- FunFacts -->
-            <section class="homec-funfacts pd-btm-100">
+            <section class="homec-funfacts pd-btm-10">
                 <img src="{{ asset($counter_content->bg_image) }}" alt="bg_image">
                 <div class="container">
                     <div class="row">
@@ -783,20 +783,43 @@
                             </div>
                         </div>
                     </div>
+
+
+                   @if ($partner->visibility)
+                    <div class="row mg-top-100">
+                        <div class="col-12">
+                            <h4 class="homec-medium-title text-center mg-btm-30">{{ $partner->title }}</h4>
+                            <!-- Clients Logo Slider -->
+                            <div class="swiper mySwiper homec-slider-client loading">
+                                <div class="swiper-wrapper">
+                                    @foreach ($partner->partners as $partner_item)
+                                        <div class="swiper-slide">
+                                            <div class="homec-cl-logo">
+                                                <a href="{{ $partner_item->link }}"><img src="{{ asset($partner_item->logo) }}" alt="Client Logo"></a>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <!-- End Clients Logo Slider -->
+                        </div>
+                    </div>
+                    @endif
+
+
                 </div>
             </section>
             <!-- End FunFacts Area -->
         @endif
 
-        @if ($setting->agent_can_add_property)
+        <!--@if ($setting->agent_can_add_property)
             @if ($setting->agent_can_add_property == 'enable')
                 @if ($pricing_plan->visibility)
-                    <!-- Pricing -->
+                    
                     <section class="pd-btm-120">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <!-- Section TItle -->
                                     <div class="homec-section__head text-center mg-btm-30">
                                         <span class="homec-section__badge homec-section__badge--small homec-primary-color m-0" data-aos="fade-in" data-aos-delay="300">{{ $pricing_plan->title }}</span>
                                         <h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $pricing_plan->description }}</h2>
@@ -807,7 +830,7 @@
                             <div class="row">
                                 @foreach ($pricing_plan->pricing_plans as $index => $pricing_plan_item)
                                     <div class="col-lg-4 col-md-4 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-                                        <!-- Pricing Single -->
+                                        
                                         <div class="homec-psingle {{ ++$index % 2 == 0 ? 'homec-psingle__active' : '' }} ">
                                             <div class="homec-psingle__head">
                                                 <h4 class="homec-psingle__title">{{ $pricing_plan_item->plan_name }}</h4>
@@ -893,7 +916,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Pricing Single -->
+                                       
                                     </div>
                                 @endforeach
 
@@ -901,19 +924,17 @@
 
                         </div>
                     </section>
-                    <!-- End Priicng -->
                 @endif
             @endif
-        @endif
+        @endif-->
 
 
-        @if ($testimonial->visibility)
-            <!-- Testimonials & Clients -->
+        <!--@if ($testimonial->visibility)
             <section class="homec-bg-third-color pd-top-120 pd-btm-120 homec-bg-cover homec-bg-testimonial">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Section TItle -->
+                            
                             <div class="homec-section__head text-center mg-btm-60">
                                 <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $testimonial->title }}</span>
                                 <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $testimonial->description }}</h2>
@@ -922,14 +943,14 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <!-- Testimonial Slider -->
+                           
                             <div class="swiper mySwiper homec-slider-testimonial loading">
                                 <div class="swiper-wrapper">
                                     @foreach ($testimonial->testimonials as $testimonial_item)
                                         <div class="swiper-slide">
-                                            <!-- Testimonial Single -->
+                                            
                                             <div class="homec-testimonial homec-border">
-                                                <!-- Author Rating -->
+                                                
                                                 <ul class="homec-rating list-none mg-btm-15">
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                     <li><i class="fa-solid fa-star"></i></li>
@@ -937,10 +958,10 @@
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                 </ul>
-                                                <!-- Testimonial Text -->
+                                                
                                                 <p class="homec-testimonial__text">“{{ $testimonial_item->comment }}”</p>
                                                 <div class="homec-testimonial__bottom mg-top-10">
-                                                    <!-- Testimonial Author -->
+                                                    
                                                     <div class="homec-testimonial__author">
                                                         <img src="{{ asset($testimonial_item->image) }}" alt="image">
                                                         <div class="homec-testimonial__author--info">
@@ -948,7 +969,7 @@
                                                             <p class="homec-testimonial__author--position">{{ $testimonial_item->designation }}</p>
                                                         </div>
                                                     </div>
-                                                    <!-- Testimonial Quoute Icon -->
+                                                    
                                                     <div class="homec-testimonial__quote">
                                                         <svg width="153" height="108" viewBox="0 0 153 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g opacity="0.1">
@@ -959,12 +980,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Testimonial Single -->
+                                            
                                         </div>
                                     @endforeach
                                 </div>
                             </div>
-                            <!-- End Testimonial Slider -->
+                            
                         </div>
                     </div>
 
@@ -972,7 +993,7 @@
                     <div class="row mg-top-50">
                         <div class="col-12">
                             <h4 class="homec-medium-title text-center mg-btm-30">{{ $partner->title }}</h4>
-                            <!-- Clients Logo Slider -->
+                           
                             <div class="swiper mySwiper homec-slider-client loading">
                                 <div class="swiper-wrapper">
                                     @foreach ($partner->partners as $partner_item)
@@ -984,17 +1005,16 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <!-- End Clients Logo Slider -->
+                            
                         </div>
                     </div>
                     @endif
                 </div>
             </section>
-            <!-- End Testimonials & Clients -->
-        @endif
+            
+        @endif-->
 
-        @if ($mobile_app->visibility)
-		<!-- Download App -->
+        <!--@if ($mobile_app->visibility)
 		<section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
 			<div class="homec-shape">
 				<div class="homec-shape-single homec-shape-11"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="#"></div>
@@ -1010,7 +1030,7 @@
 									<h2 class="homec-section__title">{{ $mobile_app->full_title }}</h2>
                                     <p class="sec-head__text">{{ $mobile_app->description }}</p>
 								</div>
-								<!-- App Download Button -->
+								
 								<div class="download__app-button" data-aos="fade-up" data-aos-delay="500">
 									<a href="{{ $mobile_app->app_store }}" class="homec-btn homec-btn-primary-overlay homec-btn__download">
                                         <div class="homec-btn__inside">
@@ -1025,9 +1045,8 @@
                                         </div>
                                     </a>
 								</div>
-								<!-- End App Download Button -->
+								
 							</div>
-							<!-- Download Image -->
 							<div class="download-app__img" data-aos="fade-up" data-aos-delay="700">
 								<img src="{{ asset($mobile_app->image) }}" alt="mobile_app">
 							</div>
@@ -1036,8 +1055,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Download App -->
-        @endif
+        @endif-->
 
         @if ($blog->visibility)
 		<!-- Blog Area -->

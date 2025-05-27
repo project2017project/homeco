@@ -1,0 +1,162 @@
+.homec-filter-group .homec-btn{
+    color: #ffffff;
+}
+.homec-header__menu .nav-menu li a:hover, .homec-header__menu .nav-menu li.active a, #offcanvas-menu li a:hover, #offcanvas-menu li.active a {
+    color: #d8232a;
+}
+.homec-header .navigation li .sub-menu li a:hover{
+    color: #d8232a!important;
+}
+.homec-header .navigation li .sub-menu{
+    border-top: 3px solid #d8232a;
+}
+.homec-header .homec-btn{
+        height: auto;
+    line-height: normal;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.homec-header a.homec-header__icon{
+     height: auto;
+    line-height: normal;
+    padding: 3px 20px;
+    width: auto;
+}
+.homec-header a.homec-header__icon svg {
+        max-width: 16px;
+}
+.homec-header a.homec-header__icon span{
+    padding-left: 10px;
+}
+.homec-header .homec-header__menu .nav-menu li a{
+    font-size: 16px;
+    font-weight: 400;
+}
+.homec-header__inside{
+    padding: 15px 20px;
+}
+.homec-hero__tabs {
+    margin-bottom: 20px;
+}
+#homec-tabs.homec-tabs--noborder a{
+    border-bottom: 1px solid #ffffff;
+}
+#homec-tabs a{
+    border-radius: 5px;
+}
+#homec-tabs a:hover, #homec-tabs a.active, input[type="checkbox"]:checked, .price-filter .ui-slider-range, .pd-features__single:hover, .homec-comments-form, .homec-features__single:hover, .homec-iconic-list li i, .homec-section-bottom-shape, .swiper-pagination span::before{
+     border-bottom: 1px solid #d8232a; 
+}
+.homec-btn svg path{
+    fill: #ffffff;
+}
+.homec-filter-group .form-group .select2-container--default .select2-selection--single span.select2-selection__arrow{
+        position: initial;
+}
+
+.homec-filter-group .form-group, .homec-filter-group .homec-btn{
+    height: auto;
+}
+.homec-filter-group .form-group{
+       background: transparent;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+}
+
+.homec-filter-group .homec-btn{
+    line-height: normal;
+    padding: 7px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: auto;
+    min-width: auto;
+    font-weight: 400;
+}
+.homec-filter-group .homec-btn svg{
+    width: 15px;
+    height: 15px;
+}
+.homec-filter-group .form-group .select2-container--default .select2-selection--single span{
+        font-size: 14px !important;
+    font-weight: 400;
+}
+
+.homec-filters{
+    border-radius: 50px;
+}
+.homec-hero__tabs--detail{
+    width: 100%;
+}
+.homec-filter-group{
+    justify-content: space-between;
+}
+.homec-features__icon img {
+    max-width: 60px;
+}
+.homec-features__icon{
+    min-width: 120px;
+    min-height: 120px;
+    line-height: 120px;
+}
+.homec-features__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.homec-features__v2 {
+    top: -140px;
+}
+.homec-section__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+.homec-section__badge--small {
+    font-size: 16px;
+    font-weight: 400;
+}
+.homec-btn{
+    height: 50px;
+    line-height: 50px;
+}
+.homec-property__title a {
+    font-size: 16px;
+    font-weight: 400;
+}
+.homec-property__price {
+    font-size: 17px;
+    font-weight: 600;
+}
+.homec-property__price span{
+    font-size: 15px;
+}
+.homec-bg-third-color .homec-second-color{
+    color: #ffffff;
+}
+.homec-agent__title{
+    font-size: 16px;
+    font-weight: 500;
+}
+.homec-listing__inner:hover .homec-listing__title{
+    color: #ffffff!important;
+}
+.homec-listing__title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.homec-listing__title span{
+    font-size: 16px;
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width: 10000px) {
+    #active-sticky.is-sticky .homec-header__icon {
+        width: auto;
+        height: 40px;
+    }
+    #active-sticky.is-sticky .homec-btn{
+        height: 40px;
+        line-height: 40px;
+    }
+}
