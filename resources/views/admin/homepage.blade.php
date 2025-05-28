@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <div class="control-label">{{__('admin.Visibility')}}</div>
                                 <label class="mt-2">
-                                  <input {{ $homepage->show_top_property == 'enable' ? 'checked' : '' }} type="checkbox" name="top_property_status" class="custom-switch-input">
+                                  <input {{ $homepage->show_top_property == 'enable' ? 'checked' : '' }} type="checkbox" name="show_top_property" class="custom-switch-input">
                                   <span class="custom-switch-indicator"></span>
                                   <span class="custom-switch-description">{{__('admin.Please enable or disable this section')}}</span>
                                 </label>
