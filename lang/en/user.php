@@ -157,6 +157,7 @@
   'Select Location' => 'Select Location',
   'Search' => 'Search',
   'See Featured  Properties' => 'See Featured  Properties',
+  'See Top  Properties' => 'See Top  Properties',
   'Property Submission' => 'Property Submission',
   'Image Gallery' => 'Image Gallery',
   'Trail Now' => 'Trail Now',

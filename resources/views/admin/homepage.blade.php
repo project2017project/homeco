@@ -41,6 +41,34 @@
                                 </label>
                             </div>
 
+                            <h5>{{__('admin.Top Property')}}</h5>
+                            <hr>
+                            <div class="form-group">
+                                <label for="">{{__('admin.Title')}}</label>
+                                <input type="text" name="top_property_title" class="form-control" value="{{ $homepage->top_property_title }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">{{__('admin.Description')}}</label>
+                                <input type="text" name="top_property_description" class="form-control" value="{{ $homepage->top_property_description }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">{{__('admin.Item')}}</label>
+                                <input type="text" name="top_property_item" class="form-control" value="{{ $homepage->top_property_item }}">
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="control-label">{{__('admin.Visibility')}}</div>
+                                <label class="mt-2">
+                                  <input {{ $homepage->show_top_property == 'enable' ? 'checked' : '' }} type="checkbox" name="top_property_status" class="custom-switch-input">
+                                  <span class="custom-switch-indicator"></span>
+                                  <span class="custom-switch-description">{{__('admin.Please enable or disable this section')}}</span>
+                                </label>
+                            </div>
+
+
                             <h5>{{__('admin.Featured Property')}}</h5>
                             <hr>
                             <div class="form-group">

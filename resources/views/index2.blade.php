@@ -29,9 +29,6 @@
 					<div class="row align-items-center">
 						<div class="col-md-10 offset-md-1 col-12">
 							<div class="homec-hero__inner">
-								<!--<svg class="homec-arrow-left" width="106" height="193" viewBox="0 0 106 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M41.5023 1.15691C14.2375 16.2178 -4.14265 43.6931 1.00245 74.3315C2.53343 83.4634 6.44872 93.3821 13.1666 100.543C11.7779 112.322 13.677 124.712 18.1444 135.489C24.5277 150.884 36.148 165.77 52.4032 172.661C62.4926 176.936 73.8871 178.399 84.5622 176.158C81.5002 179.845 78.8816 183.843 76.9324 188.127C75.3846 191.505 79.9859 194.096 82.2113 190.98C88.4356 182.269 94.8272 174.624 103.821 168.305C107.786 165.523 104.599 160.27 100.073 162.042C93.815 164.474 88.3687 161.589 84.2359 157.234C81.4333 154.285 76.4555 158.045 78.4633 161.415C81.1906 165.977 85.7752 168.631 90.8032 169.577C90.7279 169.648 90.6526 169.72 90.5857 169.783C51.575 182.905 18.7635 141.927 19.4495 105.828C21.1729 106.941 23.0218 107.903 25.0045 108.658C37.6456 113.498 51.8009 109.079 61.7899 101.004C71.8793 92.8337 79.0657 78.9173 71.9295 66.8765C65.3538 55.7815 50.5292 55.7497 39.8375 60.9793C27.1881 67.1785 19.3993 77.5344 15.576 89.3844C12.6563 84.5443 10.7572 79.0206 9.75329 73.9182C4.36558 46.6734 21.1311 20.446 43.7193 4.8685C45.9949 3.29485 44.0539 -0.249828 41.5023 1.15691ZM26.6945 80.5227C32.6678 71.208 44.2714 61.488 56.5946 62.402C63.9818 62.9504 68.6249 68.9032 68.9763 75.6588C69.3109 82.1441 65.5713 88.1287 60.8863 92.5635C53.3151 99.7085 41.0924 104.962 30.3755 101.711C26.5355 100.543 23.2895 98.4448 20.5705 95.7823C21.6916 90.362 23.6911 85.2039 26.6945 80.5227Z" fill="#F2C94C"/>
-								</svg>-->
 							<!-- Hero Content -->
 							<div class="homec-hero__content">
 								<h1 class="homec-hero__title">{{ $home2_intro->title }}</h1>
@@ -627,7 +624,7 @@
     @endif
 
 
-    @if ($featured_property->visibility)
+    @if ($top_property->visibility)
 		<!-- Properties Listing -->
 		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-60 pd-btm-80 homec-featured-property-bg">
 			<div class="container">
@@ -636,41 +633,41 @@
 						<div class="homec-flex homec-flex__section mg-btm-40">
 							<!-- Section TItle -->
 							<div class="homec-section__head m-0 mg-top-30">
-								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $featured_property->title }}</span>
-								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $featured_property->description }}</h2>
+								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $top_property->title }}</span>
+								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $top_property->description }}</h2>
 							</div>
 							<!-- Button -->
 							<div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
-								<a href="{{ route('properties',['featured_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Featured  Properties')}}</span></a>
+								<a href="{{ route('properties',['top_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Top  Properties')}}</span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
                     @php
-                        $featured_properties = $featured_property->properties;
+                        $top_properties = $top_property->properties;
                     @endphp
 
 					<div class="col-12">
 						<div class="swiper mySwiper homec-slider-property loading">
 							<div class="swiper-wrapper">
 
-                                @foreach ($featured_properties as $featured_property)
+                                @foreach ($top_properties as $top_property)
                                     <div class="swiper-slide">
                                         <!-- Single property-->
                                         <div class="homec-property">
                                             <!-- Property Head-->
                                             <div class="homec-property__head">
-                                                <img src="{{ asset($featured_property->thumbnail_image) }}" alt="thumbnail_image">
+                                                <img src="{{ asset($top_property->thumbnail_image) }}" alt="thumbnail_image">
                                                 <!-- Top Sticky -->
                                                 <div class="homec-property__hsticky">
                                                     <div class="homec-heart-df">
-                                                    <a href="javascript:;" class="homec-heart add-to-wishlist" data-property-id="{{ $featured_property->id }}">
+                                                    <a href="javascript:;" class="homec-heart add-to-wishlist" data-property-id="{{ $top_property->id }}">
                                                         <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
                                                         </svg>
                                                         </a>
-                                                        <a href="javascript:;" class="homec-heart add-to-compare" data-property-id="{{ $featured_property->id }}">
+                                                        <a href="javascript:;" class="homec-heart add-to-compare" data-property-id="{{ $top_property->id }}">
                                                             <span>
                                                                 <i class="fa-solid fa-shuffle"></i>
                                                             </span>
@@ -678,7 +675,7 @@
                                                     </div>
                                                     <span class="homec-property__salebadge">
 
-                                                        @if ($featured_property->purpose == 'rent')
+                                                        @if ($top_property->purpose == 'rent')
                                                             {{__('user.For Rent')}}
                                                         @else
                                                             {{__('user.For Sale')}}
@@ -691,21 +688,21 @@
                                             <!-- Property Body-->
                                             <div class="homec-property__body">
                                                 <div class="homec-property__topbar">
-                                                    <div class="homec-property__price">{{ $currency_icon }}{{ html_decode(num_format($featured_property->price)) }}
-                                                        @if ($featured_property->purpose == 'rent')
-                                                        <span>/{{ $featured_property->rent_period }}</span>
+                                                    <div class="homec-property__price">{{ $currency_icon }}{{ html_decode(num_format($top_property->price)) }}
+                                                        @if ($top_property->purpose == 'rent')
+                                                        <span>/{{ $top_property->rent_period }}</span>
                                                         @endif
                                                     </div>
                                                 </div>
-                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($featured_property->slug)) }}">{{ html_decode($featured_property->title) }}</a></h3>
+                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($top_property->slug)) }}">{{ html_decode($top_property->title) }}</a></h3>
                                                 <div class="homec-property__text">
-                                                    <img src="{{ asset('frontend/img/location-icon.svg') }}" alt="address"><p>{{ html_decode($featured_property->address) }}</p>
+                                                    <img src="{{ asset('frontend/img/location-icon.svg') }}" alt="address"><p>{{ html_decode($top_property->address) }}</p>
                                                 </div>
                                                 <!-- Property List-->
                                                 <ul class="homec-property__list homec-border-top list-none">
-                                                    <li><img src="{{ asset('frontend/img/room-icon2.svg') }}" alt="total_bedroom">{{ $featured_property->total_bedroom }} {{__('user.Bed')}}</li>
-                                                    <li><img src="{{ asset('frontend/img/bath-icon2.svg') }}" alt="total_bathroom">{{ $featured_property->total_bathroom }} {{__('user.Bath')}}</li>
-                                                    <li><img src="{{ asset('frontend/img/size-icon2.svg') }}" alt="total_area">{{ html_decode($featured_property->total_area) }} {{__('user.m2')}}</li>
+                                                    <li><img src="{{ asset('frontend/img/room-icon2.svg') }}" alt="total_bedroom">{{ $top_property->total_bedroom }} {{__('user.Bed')}}</li>
+                                                    <li><img src="{{ asset('frontend/img/bath-icon2.svg') }}" alt="total_bathroom">{{ $top_property->total_bathroom }} {{__('user.Bath')}}</li>
+                                                    <li><img src="{{ asset('frontend/img/size-icon2.svg') }}" alt="total_area">{{ html_decode($top_property->total_area) }} {{__('user.m2')}}</li>
                                                 </ul>
                                             </div>
                                         </div>
