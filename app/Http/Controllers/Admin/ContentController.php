@@ -337,6 +337,11 @@ class ContentController extends Controller
         $homepage->property_item = $request->property_item;
         $homepage->show_property = $request->property_status ? 'enable' : 'disable';
 
+        $homepage->top_property_title = $request->top_property_title;
+        $homepage->top_property_description = $request->top_property_description;
+        $homepage->top_property_item = $request->top_property_item;
+        $homepage->show_top_property = $request->show_top_property ? 'enable' : 'disable';
+
         $homepage->urgent_property_title = $request->urgent_property_title;
         $homepage->urgent_property_description = $request->urgent_property_description;
         $homepage->urgent_property_item = $request->urgent_property_item;
