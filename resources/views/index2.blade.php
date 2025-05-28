@@ -19,15 +19,16 @@
         @endphp
 
 		<!-- homec Hero -->
-		<section id="hero" class="homec-hero homec-bg-cover p-relative" style="background-image:url({{ asset($home2_intro->bg_image) }});">
-			<div class="homec-overlay"></div>
+		<!-- style="background-image:url({{ asset($home2_intro->bg_image) }});" -->
+		<section id="hero" class="homec-hero homec-bg-cover p-relative">
+			<video autoplay muted width="100%">
+				<source src="../public/video/real_estate.mp4" type="video/mp4" />
+			</video>
+			<!-- <div class="homec-overlay"></div> -->
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-md-10 offset-md-1 col-12">
 							<div class="homec-hero__inner">
-								<svg class="homec-arrow-left" width="106" height="193" viewBox="0 0 106 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M41.5023 1.15691C14.2375 16.2178 -4.14265 43.6931 1.00245 74.3315C2.53343 83.4634 6.44872 93.3821 13.1666 100.543C11.7779 112.322 13.677 124.712 18.1444 135.489C24.5277 150.884 36.148 165.77 52.4032 172.661C62.4926 176.936 73.8871 178.399 84.5622 176.158C81.5002 179.845 78.8816 183.843 76.9324 188.127C75.3846 191.505 79.9859 194.096 82.2113 190.98C88.4356 182.269 94.8272 174.624 103.821 168.305C107.786 165.523 104.599 160.27 100.073 162.042C93.815 164.474 88.3687 161.589 84.2359 157.234C81.4333 154.285 76.4555 158.045 78.4633 161.415C81.1906 165.977 85.7752 168.631 90.8032 169.577C90.7279 169.648 90.6526 169.72 90.5857 169.783C51.575 182.905 18.7635 141.927 19.4495 105.828C21.1729 106.941 23.0218 107.903 25.0045 108.658C37.6456 113.498 51.8009 109.079 61.7899 101.004C71.8793 92.8337 79.0657 78.9173 71.9295 66.8765C65.3538 55.7815 50.5292 55.7497 39.8375 60.9793C27.1881 67.1785 19.3993 77.5344 15.576 89.3844C12.6563 84.5443 10.7572 79.0206 9.75329 73.9182C4.36558 46.6734 21.1311 20.446 43.7193 4.8685C45.9949 3.29485 44.0539 -0.249828 41.5023 1.15691ZM26.6945 80.5227C32.6678 71.208 44.2714 61.488 56.5946 62.402C63.9818 62.9504 68.6249 68.9032 68.9763 75.6588C69.3109 82.1441 65.5713 88.1287 60.8863 92.5635C53.3151 99.7085 41.0924 104.962 30.3755 101.711C26.5355 100.543 23.2895 98.4448 20.5705 95.7823C21.6916 90.362 23.6911 85.2039 26.6945 80.5227Z" fill="#F2C94C"/>
-								</svg>
 							<!-- Hero Content -->
 							<div class="homec-hero__content">
 								<h1 class="homec-hero__title">{{ $home2_intro->title }}</h1>
@@ -50,9 +51,10 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
+															<i class="fa-solid fa-house"></i>
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -60,9 +62,12 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
+
+
+														<i class="fa-solid fa-location-dot"></i>
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -70,9 +75,10 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
+															<i class="fa-solid fa-circle-dollar-to-slot"></i>
 															<select class="select2" id="rent_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -107,9 +113,9 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -117,9 +123,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -127,9 +133,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<select class="select2" id="sale_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -162,9 +168,9 @@
 													<div class="homec-filter-group">
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Type')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<select name="type" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
 																<option value="{{ $property_type->slug }}">{{ $property_type->name }}</option>
                                                                 @endforeach
@@ -172,9 +178,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span class="homec-filter-group__label">{{__('user.Locaiton')}}</span>
+															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<select name="location" class="select2">
-																<option value="" data-display="">{{__('user.Select')}}</option>
+																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
 																<option value="{{ $single_location->slug }}">{{ $single_location->name }}</option>
                                                                 @endforeach
@@ -182,9 +188,9 @@
 														</div>
 														<!-- Form Group -->
 														<div class="form-group">
-															<span  class="homec-filter-group__label">{{__('user.Price Range')}}</span>
+															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<select class="select2" id="any_price_range">
-                                                                <option value="">{{__('user.Select')}}</option>
+                                                                <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
                                                                 <option data-min-price="{{ $filter_price->min }}" data-max-price="{{ $filter_price->max }}" value="{{ $filter_price->min.':'.$filter_price->max }}">{{ $currency_icon }}{{ $filter_price->min }} - {{ $currency_icon }}{{ $filter_price->max }}</option>
                                                                 @endforeach
@@ -222,123 +228,28 @@
     @endif
 
 
-    @if ($category->visibility)
-
-        @php
-            $property_types = $category->property_types;
-        @endphp
-		<!-- Features Area -->
-		<section class="homec-features homec-features__v2">
-			<div class="container">
-				<div class="row">
-                    @foreach ($property_types as $property_type)
-					<div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-						<!-- Single Feature -->
-						<a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
-							<div class="homec-features__icon">
-								<img src="{{ asset($property_type->icon) }}" alt="icon">
-							</div>
-							<div class="homec-features__content">
-								<h3 class="homec-features__title">{{ $property_type->name }}</h3>
-								<p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
-							</div>
-						</a>
-						<!-- End Single Feature -->
-					</div>
-                    @endforeach
-				</div>
-			</div>
-		</section>
-		<!-- End Features Area -->
-    @endif
-
-    @if ($about_us->visibility)
-        @php
-            $home2_content = $about_us->home2_content;
-        @endphp
-
-		<!-- About Area -->
-		<section class="homec-about pd-top-100 pd-btm-130">
-			<div class="homec-shape">
-				<img class="homec-shape-single homec-shape-1" src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="icon">
-				<img class="homec-shape-single homec-shape-2" src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="icon">
-				<img class="homec-shape-single homec-shape-3" src="{{ asset('frontend/img/anim-shape-3.svg') }}" alt="icon">
-			</div>
-			<div class="container homec-container-medium">
-				<div class="row  homec-container-medium__row align-items-center">
-					<div class="col-lg-7 col-12 homec-about__column--one mg-top-30" data-aos="fade-right" data-aos-delay="400">
-						<!-- Homec Image Group -->
-						<div class="homec-image-group">
-							<div class="homec-image-group__single">
-								<img src="{{ asset($home2_content->image1) }}" alt="image1">
-								<img src="{{ asset($home2_content->image2) }}" alt="image2">
-							</div>
-							<div class="homec-image-group__content">
-								<h4 class="homec-image-group__title">{{ $home2_content->percentage }}</h4>
-								<p class="homec-image-group__text">{{ $home2_content->percentage_text }}</p>
-							</div>
-						</div>
-						<!-- End Homec Image Group -->
-					</div>
-					<div class="col-lg-5 col-12 homec-about__column--two mg-top-30">
-						<div class="homec-about-content">
-							<!-- Section Title -->
-							<div class="homec-section__head">
-								<div class="homec-section__shape">
-									<span class="homec-section__badge homec-section__badge--shape" data-aos="fade-down" data-aos-delay="300">{{ $home2_content->short_title }}</span>
-								</div>
-								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $home2_content->long_title }}</h2>
-							</div>
-							<div class="homec-about-content__inner mg-top-20" data-aos="fade-in" data-aos-delay="500">
-								<p class="homec-about-content__text">{{ $home2_content->description1 }}</p>
-								<div class="homec-focus-content homec-border mg-top-20">
-									<p>{{ $home2_content->description2 }}</p>
-								</div>
-								<!-- Homec List -->
-								<ul class="homec-iconic-list list-none mg-top-30">
-									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item1 }}</li>
-									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item2 }}</li>
-								</ul>
-								<!-- Homec Button -->
-								<div class="mg-top-40">
-									<a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End About Area -->
-    @endif
-
-
+    
     @if ($featured_property->visibility)
 		<!-- Properties Listing -->
-		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-90 pd-btm-120 homec-featured-property-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="homec-flex homec-flex__section mg-btm-60">
-							<!-- Section TItle -->
-							<div class="homec-section__head m-0 mg-top-30">
-								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $featured_property->title }}</span>
-								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $featured_property->description }}</h2>
-							</div>
-							<!-- Button -->
-							<div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
-								<a href="{{ route('properties',['featured_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Featured  Properties')}}</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
+		<section class="homec-properties  homec-bg-third-color pd-top-90 pd-btm-90">
+			<div class="container homec-container-medium">
+				
 				<div class="row">
                     @php
                         $featured_properties = $featured_property->properties;
                     @endphp
+                    <div class="col-lg-3 col-md-4">
+                    	<div class="property-explore-wrap">
+                    		<h4>{{ $featured_property->title }}</h4>
+                    		<p>{{ $featured_property->description }}</p>
+                    		<div class="property-more-btn">
+                    			<a href="{{ route('properties',['featured_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Featured  Properties')}}</span></a>
+                    		</div>
+                    	</div>
+                    </div>
 
-					<div class="col-12">
-						<div class="swiper mySwiper homec-slider-property loading">
+					<div class="col-lg-9 col-md-8">
+						<div class="swiper mySwiper homec-slider-property loading home-property-circle-wrapper">
 							<div class="swiper-wrapper">
 
                                 @foreach ($featured_properties as $featured_property)
@@ -347,35 +258,10 @@
                                         <div class="homec-property">
                                             <!-- Property Head-->
                                             <div class="homec-property__head">
-                                                <img src="{{ asset($featured_property->thumbnail_image) }}" alt="thumbnail_image">
-                                                <!-- Top Sticky -->
-                                                <div class="homec-property__hsticky">
-                                                    <div class="homec-heart-df">
-                                                    <a href="javascript:;" class="homec-heart add-to-wishlist" data-property-id="{{ $featured_property->id }}">
-                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-                                                        </svg>
-                                                        </a>
-                                                        <a href="javascript:;" class="homec-heart add-to-compare" data-property-id="{{ $featured_property->id }}">
-                                                            <span>
-                                                                <i class="fa-solid fa-shuffle"></i>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <span class="homec-property__salebadge">
+                                            	<div class="property-titles-wrap">
+                                                
+                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($featured_property->slug)) }}">{{ html_decode($featured_property->title) }}</a></h3>
 
-                                                        @if ($featured_property->purpose == 'rent')
-                                                            {{__('user.For Rent')}}
-                                                        @else
-                                                            {{__('user.For Sale')}}
-                                                        @endif
-                                                    </span>
-
-                                                </div>
-                                                <!-- End Top Sticky -->
-                                            </div>
-                                            <!-- Property Body-->
-                                            <div class="homec-property__body">
                                                 <div class="homec-property__topbar">
                                                     <div class="homec-property__price">{{ $currency_icon }}{{ html_decode(num_format($featured_property->price)) }}
                                                         @if ($featured_property->purpose == 'rent')
@@ -383,10 +269,21 @@
                                                         @endif
                                                     </div>
                                                 </div>
-                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($featured_property->slug)) }}">{{ html_decode($featured_property->title) }}</a></h3>
+                                                </div>
                                                 <div class="homec-property__text">
                                                     <img src="{{ asset('frontend/img/location-icon.svg') }}" alt="address"><p>{{ html_decode($featured_property->address) }}</p>
                                                 </div>
+                                                
+
+                                            </div>
+                                            <!-- Property Body-->
+                                            <div class="homec-property__body">
+
+                                            	<div class="property-img-wrap">
+                                                <img src="{{ asset($featured_property->thumbnail_image) }}" alt="thumbnail_image">
+                                            </div>
+                                                
+                                                
                                                 <!-- Property List-->
                                                 <ul class="homec-property__list homec-border-top list-none">
                                                     <li><img src="{{ asset('frontend/img/room-icon2.svg') }}" alt="total_bedroom">{{ $featured_property->total_bedroom }} {{__('user.Bed')}}</li>
@@ -409,105 +306,10 @@
 		<!-- End Properties Listing -->
     @endif
 
-    @if ($setting->agent_can_add_property)
-        @if ($setting->agent_can_add_property == 'enable')
-            @if ($agent->visibility)
-                <!-- Agents -->
-                <section class="homec-bg-third-color homec-bg-cover pd-top-90 pd-btm-120" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
-                    <div class="homec-overlay"></div>
-                    <div class="section-inside-bg homec-agent-inside"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="homec-flex homec-flex__section mg-btm-60">
-                                    <div class="homec-section__head section-white homec-section__head__half m-0 mg-top-30">
-                                        <span class="homec-section__badge homec-second-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $agent->title }}</span>
-                                        <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $agent->description }}</h2>
-                                    </div>
-                                    <div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
-                                        <a href="{{ route('agents') }}" class="homec-btn"><span>{{__('user.See All Agents')}}</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="swiper mySwiper homec-slider-agent loading">
-                                    <div class="swiper-wrapper">
-                                        @foreach ($agent->agents as $agent_index => $single_agent )
-                                            <div class="swiper-slide">
-                                                <!-- Single agent-->
-                                                <div class="homec-agent">
-                                                    <!-- Agent Head-->
-                                                    <div class="homec-agent__head">
-                                                        @if ($single_agent->image)
-                                                        <img src="{{ asset($single_agent->image) }}" alt="agent">
-                                                        @else
-                                                        <img src="{{ asset($default_user_avatar) }}" alt="agent">
-                                                        @endif
-                                                        <ul class="homec-agent__social list-none">
-                                                            @if ($single_agent->linkedin)
-                                                                <li><a href="{{ html_decode($single_agent->linkedin) }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                                            @endif
 
-                                                            @if ($single_agent->twitter)
-                                                            <li><a href="{{ html_decode($single_agent->twitter) }}"><i class="fab fa-twitter"></i></a></li>
-                                                            @endif
-
-                                                            @if ($single_agent->instagram)
-                                                            <li><a href="{{ html_decode($single_agent->instagram) }}"><i class="fab fa-instagram"></i></a></li>
-                                                            @endif
-
-                                                            @if ($single_agent->facebook)
-                                                            <li><a href="{{ html_decode($single_agent->facebook) }}"><i class="fab fa-facebook-f"></i></a></li>
-                                                            @endif
-                                                        </ul>
-                                                    </div>
-                                                    <!-- Agent Body -->
-                                                    <div class="homec-agent__body">
-                                                        <h4 class="homec-agent__title position_relitive">
-
-                                                            <a href="{{ route('agent', ['agent_type' => 'agent', 'user_name' => html_decode($single_agent->user_name)]) }}">{{ html_decode($single_agent->name) }}
-
-                                                                @php
-                                                                $kyc = Modules\Kyc\Entities\KycInformation::where('user_id',$single_agent->id)->where('status',1)->first();
-                                                                @endphp
-                                                                @if($kyc)
-
-                                                                <span class="varified-badge">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.007 2.10377C8.60544 1.65006 7.08181 2.28116 6.41156 3.59306L5.60578 5.17023C5.51004 5.35763 5.35763 5.51004 5.17023 5.60578L3.59306 6.41156C2.28116 7.08181 1.65006 8.60544 2.10377 10.007L2.64923 11.692C2.71404 11.8922 2.71404 12.1078 2.64923 12.308L2.10377 13.993C1.65006 15.3946 2.28116 16.9182 3.59306 17.5885L5.17023 18.3942C5.35763 18.49 5.51004 18.6424 5.60578 18.8298L6.41156 20.407C7.08181 21.7189 8.60544 22.35 10.007 21.8963L11.692 21.3508C11.8922 21.286 12.1078 21.286 12.308 21.3508L13.993 21.8963C15.3946 22.35 16.9182 21.7189 17.5885 20.407L18.3942 18.8298C18.49 18.6424 18.6424 18.49 18.8298 18.3942L20.407 17.5885C21.7189 16.9182 22.35 15.3946 21.8963 13.993L21.3508 12.308C21.286 12.1078 21.286 11.8922 21.3508 11.692L21.8963 10.007C22.35 8.60544 21.7189 7.08181 20.407 6.41156L18.8298 5.60578C18.6424 5.51004 18.49 5.35763 18.3942 5.17023L17.5885 3.59306C16.9182 2.28116 15.3946 1.65006 13.993 2.10377L12.308 2.64923C12.1078 2.71403 11.8922 2.71404 11.692 2.64923L10.007 2.10377ZM6.75977 11.7573L8.17399 10.343L11.0024 13.1715L16.6593 7.51465L18.0735 8.92886L11.0024 15.9999L6.75977 11.7573Z">
-
-                                                                    </path>
-                                                                    </svg>
-                                                                </span>
-                                                                @endif
-
-                                                        </a>
-
-                                                        <span>{{ html_decode($single_agent->designation) }}</span>
-                                                </h4>
-                                                    </div>
-                                                    <!-- End Agent Body -->
-                                                </div>
-                                                <!-- End Single agent-->
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <!-- Slider Pagination -->
-                                <div class="swiper-pagination swiper-pagination__start swiper-pagination--white  swiper-pagination__agent"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End Agents -->
-            @endif
-        @endif
-    @endif
-
-   @if ($location->visibility)
+       @if ($location->visibility)
             <!-- Property Listing -->
-            <section class="pd-top-120 pd-btm-120">
+            <section class="pd-top-5 pd-btm-80">
                 <div class="container homec-listing__container">
                     <div class="row">
                         <div class="col-12">
@@ -532,7 +334,7 @@
                                         <!-- Form Group -->
                                         <div class="form-group">
                                             <select name="location" class="select2">
-                                                <option value="">{{__('user.Select Location')}}</option>
+                                          <option value="">{{__('user.Select Location')}}</option>
                                                 @foreach ($location->location_for_filter as $location_for_filter)
                                                 <option value="{{ $location_for_filter->slug }}">{{ $location_for_filter->name }}</option>
                                                 @endforeach
@@ -729,12 +531,299 @@
             <!-- End Property Listing -->
         @endif
 
+
+
+    @if ($category->visibility)
+
+        @php
+            $property_types = $category->property_types;
+        @endphp
+		<!-- Features Area -->
+		<section class="homec-features homec-features__v2">
+			<div class="container">
+				<div class="row">
+                    @foreach ($property_types as $property_type)
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
+						<!-- Single Feature -->
+						<a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="{{ asset($property_type->icon) }}" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">{{ $property_type->name }}</h3>
+								<p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
+							</div>
+						</a>
+						<!-- End Single Feature -->
+					</div>
+                    @endforeach
+				</div>
+			</div>
+		</section>
+		<!-- End Features Area -->
+    @endif
+
+    @if ($about_us->visibility)
+        @php
+            $home2_content = $about_us->home2_content;
+        @endphp
+
+		<!-- About Area -->
+		<section class="homec-about pd-top-60 pd-btm-100">
+			<div class="homec-shape">
+				<img class="homec-shape-single homec-shape-1" src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="icon">
+				<img class="homec-shape-single homec-shape-2" src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="icon">
+				<img class="homec-shape-single homec-shape-3" src="{{ asset('frontend/img/anim-shape-3.svg') }}" alt="icon">
+			</div>
+			<div class="container homec-container-medium">
+				<div class="row  homec-container-medium__row align-items-center">
+					<div class="col-lg-7 col-12 homec-about__column--one mg-top-30" data-aos="fade-right" data-aos-delay="400">
+						<!-- Homec Image Group -->
+						<div class="homec-image-group">
+							<div class="homec-image-group__single">
+								<img src="{{ asset($home2_content->image1) }}" alt="image1">
+								<img src="{{ asset($home2_content->image2) }}" alt="image2">
+							</div>
+							<div class="homec-image-group__content">
+								<h4 class="homec-image-group__title">{{ $home2_content->percentage }}</h4>
+								<p class="homec-image-group__text">{{ $home2_content->percentage_text }}</p>
+							</div>
+						</div>
+						<!-- End Homec Image Group -->
+					</div>
+					<div class="col-lg-5 col-12 homec-about__column--two mg-top-30">
+						<div class="homec-about-content">
+							<!-- Section Title -->
+							<div class="homec-section__head">
+								<div class="homec-section__shape">
+									<span class="homec-section__badge homec-section__badge--shape" data-aos="fade-down" data-aos-delay="300">{{ $home2_content->short_title }}</span>
+								</div>
+								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $home2_content->long_title }}</h2>
+							</div>
+							<div class="homec-about-content__inner mg-top-20" data-aos="fade-in" data-aos-delay="500">
+								<p class="homec-about-content__text">{{ $home2_content->description1 }}</p>
+								<div class="homec-focus-content homec-border mg-top-20">
+									<p>{{ $home2_content->description2 }}</p>
+								</div>
+								<!-- Homec List -->
+								<ul class="homec-iconic-list list-none mg-top-30">
+									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item1 }}</li>
+									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item2 }}</li>
+								</ul>
+								<!-- Homec Button -->
+								<div class="mg-top-40">
+									<a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End About Area -->
+    @endif
+
+
+    @if ($top_property->visibility)
+		<!-- Properties Listing -->
+		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-60 pd-btm-80 homec-featured-property-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="homec-flex homec-flex__section mg-btm-40">
+							<!-- Section TItle -->
+							<div class="homec-section__head m-0 mg-top-30">
+								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $top_property->title }}</span>
+								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $top_property->description }}</h2>
+							</div>
+							<!-- Button -->
+							<div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
+								<a href="{{ route('properties',['top_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Top  Properties')}}</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+                    @php
+                        $top_properties = $top_property->properties;
+                    @endphp
+
+					<div class="col-12">
+						<div class="swiper mySwiper homec-slider-property loading">
+							<div class="swiper-wrapper">
+
+                                @foreach ($top_properties as $top_property)
+                                    <div class="swiper-slide">
+                                        <!-- Single property-->
+                                        <div class="homec-property">
+                                            <!-- Property Head-->
+                                            <div class="homec-property__head">
+                                                <img src="{{ asset($top_property->thumbnail_image) }}" alt="thumbnail_image">
+                                                <!-- Top Sticky -->
+                                                <div class="homec-property__hsticky">
+                                                    <div class="homec-heart-df">
+                                                    <a href="javascript:;" class="homec-heart add-to-wishlist" data-property-id="{{ $top_property->id }}">
+                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
+                                                        </svg>
+                                                        </a>
+                                                        <a href="javascript:;" class="homec-heart add-to-compare" data-property-id="{{ $top_property->id }}">
+                                                            <span>
+                                                                <i class="fa-solid fa-shuffle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <span class="homec-property__salebadge">
+
+                                                        @if ($top_property->purpose == 'rent')
+                                                            {{__('user.For Rent')}}
+                                                        @else
+                                                            {{__('user.For Sale')}}
+                                                        @endif
+                                                    </span>
+
+                                                </div>
+                                                <!-- End Top Sticky -->
+                                            </div>
+                                            <!-- Property Body-->
+                                            <div class="homec-property__body">
+                                                <div class="homec-property__topbar">
+                                                    <div class="homec-property__price">{{ $currency_icon }}{{ html_decode(num_format($top_property->price)) }}
+                                                        @if ($top_property->purpose == 'rent')
+                                                        <span>/{{ $top_property->rent_period }}</span>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($top_property->slug)) }}">{{ html_decode($top_property->title) }}</a></h3>
+                                                <div class="homec-property__text">
+                                                    <img src="{{ asset('frontend/img/location-icon.svg') }}" alt="address"><p>{{ html_decode($top_property->address) }}</p>
+                                                </div>
+                                                <!-- Property List-->
+                                                <ul class="homec-property__list homec-border-top list-none">
+                                                    <li><img src="{{ asset('frontend/img/room-icon2.svg') }}" alt="total_bedroom">{{ $top_property->total_bedroom }} {{__('user.Bed')}}</li>
+                                                    <li><img src="{{ asset('frontend/img/bath-icon2.svg') }}" alt="total_bathroom">{{ $top_property->total_bathroom }} {{__('user.Bath')}}</li>
+                                                    <li><img src="{{ asset('frontend/img/size-icon2.svg') }}" alt="total_area">{{ html_decode($top_property->total_area) }} {{__('user.m2')}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- End Single property-->
+                                    </div>
+                                @endforeach
+							</div>
+						</div>
+						<!-- Slider Pagination -->
+						<div class="swiper-pagination swiper-pagination__property"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Properties Listing -->
+    @endif
+
+    @if ($setting->agent_can_add_property)
+        @if ($setting->agent_can_add_property == 'enable')
+            @if ($agent->visibility)
+                <!-- Agents -->
+                <section class="homec-bg-third-color homec-bg-cover pd-top-60 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
+                    <div class="homec-overlay"></div>
+                    <div class="section-inside-bg homec-agent-inside"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="homec-flex homec-flex__section mg-btm-60">
+                                    <div class="homec-section__head section-white homec-section__head__half m-0 mg-top-30">
+                                        <span class="homec-section__badge homec-second-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $agent->title }}</span>
+                                        <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $agent->description }}</h2>
+                                    </div>
+                                    <div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
+                                        <a href="{{ route('agents') }}" class="homec-btn"><span>{{__('user.See All Agents')}}</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="swiper mySwiper homec-slider-agent loading">
+                                    <div class="swiper-wrapper">
+                                        @foreach ($agent->agents as $agent_index => $single_agent )
+                                            <div class="swiper-slide">
+                                                <!-- Single agent-->
+                                                <div class="homec-agent">
+                                                    <!-- Agent Head-->
+                                                    <div class="homec-agent__head">
+                                                        @if ($single_agent->image)
+                                                        <img src="{{ asset($single_agent->image) }}" alt="agent">
+                                                        @else
+                                                        <img src="{{ asset($default_user_avatar) }}" alt="agent">
+                                                        @endif
+                                                        <ul class="homec-agent__social list-none">
+                                                            @if ($single_agent->linkedin)
+                                                                <li><a href="{{ html_decode($single_agent->linkedin) }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                                            @endif
+
+                                                            @if ($single_agent->twitter)
+                                                            <li><a href="{{ html_decode($single_agent->twitter) }}"><i class="fab fa-twitter"></i></a></li>
+                                                            @endif
+
+                                                            @if ($single_agent->instagram)
+                                                            <li><a href="{{ html_decode($single_agent->instagram) }}"><i class="fab fa-instagram"></i></a></li>
+                                                            @endif
+
+                                                            @if ($single_agent->facebook)
+                                                            <li><a href="{{ html_decode($single_agent->facebook) }}"><i class="fab fa-facebook-f"></i></a></li>
+                                                            @endif
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Agent Body -->
+                                                    <div class="homec-agent__body">
+                                                        <h4 class="homec-agent__title position_relitive">
+
+                                                            <a href="{{ route('agent', ['agent_type' => 'agent', 'user_name' => html_decode($single_agent->user_name)]) }}">{{ html_decode($single_agent->name) }}
+
+                                                                @php
+                                                                $kyc = Modules\Kyc\Entities\KycInformation::where('user_id',$single_agent->id)->where('status',1)->first();
+                                                                @endphp
+                                                                @if($kyc)
+
+                                                                <span class="varified-badge">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.007 2.10377C8.60544 1.65006 7.08181 2.28116 6.41156 3.59306L5.60578 5.17023C5.51004 5.35763 5.35763 5.51004 5.17023 5.60578L3.59306 6.41156C2.28116 7.08181 1.65006 8.60544 2.10377 10.007L2.64923 11.692C2.71404 11.8922 2.71404 12.1078 2.64923 12.308L2.10377 13.993C1.65006 15.3946 2.28116 16.9182 3.59306 17.5885L5.17023 18.3942C5.35763 18.49 5.51004 18.6424 5.60578 18.8298L6.41156 20.407C7.08181 21.7189 8.60544 22.35 10.007 21.8963L11.692 21.3508C11.8922 21.286 12.1078 21.286 12.308 21.3508L13.993 21.8963C15.3946 22.35 16.9182 21.7189 17.5885 20.407L18.3942 18.8298C18.49 18.6424 18.6424 18.49 18.8298 18.3942L20.407 17.5885C21.7189 16.9182 22.35 15.3946 21.8963 13.993L21.3508 12.308C21.286 12.1078 21.286 11.8922 21.3508 11.692L21.8963 10.007C22.35 8.60544 21.7189 7.08181 20.407 6.41156L18.8298 5.60578C18.6424 5.51004 18.49 5.35763 18.3942 5.17023L17.5885 3.59306C16.9182 2.28116 15.3946 1.65006 13.993 2.10377L12.308 2.64923C12.1078 2.71403 11.8922 2.71404 11.692 2.64923L10.007 2.10377ZM6.75977 11.7573L8.17399 10.343L11.0024 13.1715L16.6593 7.51465L18.0735 8.92886L11.0024 15.9999L6.75977 11.7573Z">
+
+                                                                    </path>
+                                                                    </svg>
+                                                                </span>
+                                                                @endif
+
+                                                        </a>
+
+                                                        <span>{{ html_decode($single_agent->designation) }}</span>
+                                                </h4>
+                                                    </div>
+                                                    <!-- End Agent Body -->
+                                                </div>
+                                                <!-- End Single agent-->
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <!-- Slider Pagination -->
+                                <div class="swiper-pagination swiper-pagination__start swiper-pagination--white  swiper-pagination__agent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Agents -->
+            @endif
+        @endif
+    @endif
+
+
+
         @if ($counter->visibility)
             @php
                 $counter_content = $counter->content;
             @endphp
             <!-- FunFacts -->
-            <section class="homec-funfacts pd-btm-100">
+            <section class="homec-funfacts pd-btm-10">
                 <img src="{{ asset($counter_content->bg_image) }}" alt="bg_image">
                 <div class="container">
                     <div class="row">
@@ -783,20 +872,43 @@
                             </div>
                         </div>
                     </div>
+
+
+                   @if ($partner->visibility)
+                    <div class="row mg-top-100">
+                        <div class="col-12">
+                            <h4 class="homec-medium-title text-center mg-btm-30">{{ $partner->title }}</h4>
+                            <!-- Clients Logo Slider -->
+                            <div class="swiper mySwiper homec-slider-client loading">
+                                <div class="swiper-wrapper">
+                                    @foreach ($partner->partners as $partner_item)
+                                        <div class="swiper-slide">
+                                            <div class="homec-cl-logo">
+                                                <a href="{{ $partner_item->link }}"><img src="{{ asset($partner_item->logo) }}" alt="Client Logo"></a>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <!-- End Clients Logo Slider -->
+                        </div>
+                    </div>
+                    @endif
+
+
                 </div>
             </section>
             <!-- End FunFacts Area -->
         @endif
 
-        @if ($setting->agent_can_add_property)
+        <!--@if ($setting->agent_can_add_property)
             @if ($setting->agent_can_add_property == 'enable')
                 @if ($pricing_plan->visibility)
-                    <!-- Pricing -->
+                    
                     <section class="pd-btm-120">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <!-- Section TItle -->
                                     <div class="homec-section__head text-center mg-btm-30">
                                         <span class="homec-section__badge homec-section__badge--small homec-primary-color m-0" data-aos="fade-in" data-aos-delay="300">{{ $pricing_plan->title }}</span>
                                         <h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $pricing_plan->description }}</h2>
@@ -807,7 +919,7 @@
                             <div class="row">
                                 @foreach ($pricing_plan->pricing_plans as $index => $pricing_plan_item)
                                     <div class="col-lg-4 col-md-4 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-                                        <!-- Pricing Single -->
+                                        
                                         <div class="homec-psingle {{ ++$index % 2 == 0 ? 'homec-psingle__active' : '' }} ">
                                             <div class="homec-psingle__head">
                                                 <h4 class="homec-psingle__title">{{ $pricing_plan_item->plan_name }}</h4>
@@ -893,7 +1005,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Pricing Single -->
+                                       
                                     </div>
                                 @endforeach
 
@@ -901,19 +1013,17 @@
 
                         </div>
                     </section>
-                    <!-- End Priicng -->
                 @endif
             @endif
-        @endif
+        @endif-->
 
 
-        @if ($testimonial->visibility)
-            <!-- Testimonials & Clients -->
+        <!--@if ($testimonial->visibility)
             <section class="homec-bg-third-color pd-top-120 pd-btm-120 homec-bg-cover homec-bg-testimonial">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Section TItle -->
+                            
                             <div class="homec-section__head text-center mg-btm-60">
                                 <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $testimonial->title }}</span>
                                 <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $testimonial->description }}</h2>
@@ -922,14 +1032,14 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <!-- Testimonial Slider -->
+                           
                             <div class="swiper mySwiper homec-slider-testimonial loading">
                                 <div class="swiper-wrapper">
                                     @foreach ($testimonial->testimonials as $testimonial_item)
                                         <div class="swiper-slide">
-                                            <!-- Testimonial Single -->
+                                            
                                             <div class="homec-testimonial homec-border">
-                                                <!-- Author Rating -->
+                                                
                                                 <ul class="homec-rating list-none mg-btm-15">
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                     <li><i class="fa-solid fa-star"></i></li>
@@ -937,10 +1047,10 @@
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                     <li><i class="fa-solid fa-star"></i></li>
                                                 </ul>
-                                                <!-- Testimonial Text -->
+                                                
                                                 <p class="homec-testimonial__text">“{{ $testimonial_item->comment }}”</p>
                                                 <div class="homec-testimonial__bottom mg-top-10">
-                                                    <!-- Testimonial Author -->
+                                                    
                                                     <div class="homec-testimonial__author">
                                                         <img src="{{ asset($testimonial_item->image) }}" alt="image">
                                                         <div class="homec-testimonial__author--info">
@@ -948,7 +1058,7 @@
                                                             <p class="homec-testimonial__author--position">{{ $testimonial_item->designation }}</p>
                                                         </div>
                                                     </div>
-                                                    <!-- Testimonial Quoute Icon -->
+                                                    
                                                     <div class="homec-testimonial__quote">
                                                         <svg width="153" height="108" viewBox="0 0 153 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g opacity="0.1">
@@ -959,12 +1069,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Testimonial Single -->
+                                            
                                         </div>
                                     @endforeach
                                 </div>
                             </div>
-                            <!-- End Testimonial Slider -->
+                            
                         </div>
                     </div>
 
@@ -972,7 +1082,7 @@
                     <div class="row mg-top-50">
                         <div class="col-12">
                             <h4 class="homec-medium-title text-center mg-btm-30">{{ $partner->title }}</h4>
-                            <!-- Clients Logo Slider -->
+                           
                             <div class="swiper mySwiper homec-slider-client loading">
                                 <div class="swiper-wrapper">
                                     @foreach ($partner->partners as $partner_item)
@@ -984,17 +1094,16 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <!-- End Clients Logo Slider -->
+                            
                         </div>
                     </div>
                     @endif
                 </div>
             </section>
-            <!-- End Testimonials & Clients -->
-        @endif
+            
+        @endif-->
 
-        @if ($mobile_app->visibility)
-		<!-- Download App -->
+        <!--@if ($mobile_app->visibility)
 		<section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
 			<div class="homec-shape">
 				<div class="homec-shape-single homec-shape-11"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="#"></div>
@@ -1010,7 +1119,7 @@
 									<h2 class="homec-section__title">{{ $mobile_app->full_title }}</h2>
                                     <p class="sec-head__text">{{ $mobile_app->description }}</p>
 								</div>
-								<!-- App Download Button -->
+								
 								<div class="download__app-button" data-aos="fade-up" data-aos-delay="500">
 									<a href="{{ $mobile_app->app_store }}" class="homec-btn homec-btn-primary-overlay homec-btn__download">
                                         <div class="homec-btn__inside">
@@ -1025,9 +1134,8 @@
                                         </div>
                                     </a>
 								</div>
-								<!-- End App Download Button -->
+								
 							</div>
-							<!-- Download Image -->
 							<div class="download-app__img" data-aos="fade-up" data-aos-delay="700">
 								<img src="{{ asset($mobile_app->image) }}" alt="mobile_app">
 							</div>
@@ -1036,8 +1144,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Download App -->
-        @endif
+        @endif-->
 
         @if ($blog->visibility)
 		<!-- Blog Area -->

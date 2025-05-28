@@ -220,7 +220,7 @@ class HomeController extends Controller
         );
         // about us section
 
-        // property section
+        // Featured property section
         $property_visibility = false;
         if($homepage->show_property == 'enable') $property_visibility = true;
         $property_title = $homepage->property_title;
@@ -246,7 +246,35 @@ class HomeController extends Controller
             'description' => $property_description,
             'properties' => $featured_properties,
         );
-        // property section
+        //Featured property section
+
+        // Top property section
+        $property_visibility = false;
+        if($homepage->show_top_property == 'enable') $property_visibility = true;
+        $property_title = $homepage->top_property_title;
+        $property_description = $homepage->top_property_description;
+        $property_item = $homepage->top_property_item;
+
+        $top_properties = Property::with('agent')
+                                        ->select('id', 'agent_id', 'title', 'slug', 'purpose', 'rent_period', 'price', 'thumbnail_image', 'address', 'total_bedroom', 'total_bathroom', 'total_area', 'status', 'is_featured')
+                                        ->where('status', 'enable')
+                                        ->where('is_top', 'enable')
+                                        ->where(function ($query) {
+                                        $query->where('expired_date', null)
+                                            ->orWhere('expired_date', '>=', date('Y-m-d'));
+                                        })
+                                        ->orderBy('id', 'desc')
+                                        ->where('approve_by_admin', 'approved')
+                                        ->take($property_item)
+                                        ->get();
+
+        $top_property = (object) array(
+            'visibility' => $property_visibility,
+            'title' => $property_title,
+            'description' => $property_description,
+            'properties' => $top_properties,
+        );
+        // Top property section
 
         // why choose us
         $why_choose_visibility = false;
@@ -501,6 +529,7 @@ class HomeController extends Controller
                 'category' => $category,
                 'about_us' => $about_us,
                 'featured_property' => $featured_property,
+                'top_property' => $top_property,
                 'urgent_property' => $urgent_property,
                 'why_choose_us' => $why_choose_us,
                 'agent' => $agent,
