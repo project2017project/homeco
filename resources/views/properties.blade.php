@@ -43,8 +43,8 @@
     <!-- End breadcrumbs -->
 
     <!-- Property -->
-    <section class="homec-propertys pd-top-80 pd-btm-80">
-        <div class="container">
+    <section class="homec-propertys pd-top-60 pd-btm-60">
+        <div class="container homec-container-medium">
             <div class="row">
                 <div class="col-12">
                     <!-- Proeprty Bar -->
@@ -56,24 +56,17 @@
                                 <button id="searchPropertyBtn" type="button"
                                     class="homec-btn"><span>{{ __('user.Search Now') }}</span></button>
                             </div>
+                            
+                        </div>
+                        <div class="homec-property-bar__single last">
                             <!-- Show Results -->
                             <div class="hoemc-showing-results">
                                 <p class="hoemc-showing-results__text">
                                     {{ __('user.You can see list or grid view from right side') }}</p>
                             </div>
                             <!-- End Show Results -->
-                        </div>
-                        <div class="homec-property-bar__single last">
                             <div id="homec-tabs" class="list-group homec-gl-tabs" role="tablist">
-                                <a class="list-group-item active grid_view" data-bs-toggle="list" href="#homec-grid"
-                                    role="tab">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.31756 0.517578H3.14916C1.88457 0.517578 0.855469 1.54668 0.855469 2.81127V6.97916C0.855469 8.24375 1.88457 9.27285 3.14916 9.27285H7.31705C8.58164 9.27285 9.61075 8.24375 9.61075 6.97916V2.81127C9.61126 1.54668 8.58215 0.517578 7.31756 0.517578ZM8.08213 6.97967C8.08213 7.4012 7.73909 7.74424 7.31756 7.74424H3.14916C2.72763 7.74424 2.3846 7.4012 2.3846 6.97967V2.81178C2.3846 2.39025 2.72763 2.04722 3.14916 2.04722H7.31705C7.73858 2.04722 8.08162 2.39025 8.08162 2.81178L8.08213 6.97967ZM17.63 0.517578H13.4616C12.197 0.517578 11.1679 1.54668 11.1679 2.81127V6.97916C11.1679 8.24375 12.197 9.27285 13.4616 9.27285H17.63C18.8946 9.27285 19.9237 8.24375 19.9237 6.97916V2.81127C19.9237 1.54668 18.8951 0.517578 17.63 0.517578ZM18.3946 6.97967C18.3946 7.4012 18.0515 7.74424 17.63 7.74424H13.4616C13.0401 7.74424 12.697 7.4012 12.697 6.97967V2.81178C12.697 2.39025 13.0401 2.04722 13.4616 2.04722H17.63C18.0515 2.04722 18.3946 2.39025 18.3946 2.81178V6.97967ZM7.31756 10.3392H3.14916C1.88457 10.3392 0.855469 11.3683 0.855469 12.6329V16.8008C0.855469 18.0653 1.88457 19.0944 3.14916 19.0944H7.31705C8.58164 19.0944 9.61075 18.0653 9.61075 16.8008V12.6329C9.61126 11.3678 8.58215 10.3392 7.31756 10.3392ZM8.08213 16.8008C8.08213 17.2223 7.73909 17.5653 7.31756 17.5653H3.14916C2.72763 17.5653 2.3846 17.2223 2.3846 16.8008V12.6329C2.3846 12.2113 2.72763 11.8683 3.14916 11.8683H7.31705C7.73858 11.8683 8.08162 12.2113 8.08162 12.6329L8.08213 16.8008ZM17.63 10.3392H13.4616C12.197 10.3392 11.1679 11.3683 11.1679 12.6329V16.8008C11.1679 18.0653 12.197 19.0944 13.4616 19.0944H16.5759C16.998 19.0944 17.3405 18.7519 17.3405 18.3299C17.3405 17.9078 16.998 17.5653 16.5759 17.5653H13.4616C13.0401 17.5653 12.697 17.2223 12.697 16.8008V12.6329C12.697 12.2113 13.0401 11.8683 13.4616 11.8683H17.63C18.0515 11.8683 18.3946 12.2113 18.3946 12.6329V16.1264C18.3946 16.5484 18.7371 16.891 19.1591 16.891C19.5812 16.891 19.9237 16.5484 19.9237 16.1264V12.6329C19.9237 11.3678 18.8951 10.3392 17.63 10.3392Z" />
-                                    </svg>
-                                </a>
-                                <a class="list-group-item list_view" data-bs-toggle="list" href="#homec-list"
+                                <a class="list-group-item active list_view" data-bs-toggle="list" href="#homec-list"
                                     role="tab">
                                     <svg width="27" height="19" viewBox="0 0 27 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -91,6 +84,15 @@
                                             d="M17.5788 15.3828H6.84306C5.93088 15.3828 5.19141 16.1223 5.19141 17.0345C5.19141 17.9466 5.93088 18.6861 6.84306 18.6861H17.5788C18.491 18.6861 19.2304 17.9466 19.2304 17.0345C19.2304 16.1223 18.491 15.3828 17.5788 15.3828Z" />
                                     </svg>
                                 </a>
+                                <a class="list-group-item grid_view" data-bs-toggle="list" href="#homec-grid"
+                                    role="tab">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.31756 0.517578H3.14916C1.88457 0.517578 0.855469 1.54668 0.855469 2.81127V6.97916C0.855469 8.24375 1.88457 9.27285 3.14916 9.27285H7.31705C8.58164 9.27285 9.61075 8.24375 9.61075 6.97916V2.81127C9.61126 1.54668 8.58215 0.517578 7.31756 0.517578ZM8.08213 6.97967C8.08213 7.4012 7.73909 7.74424 7.31756 7.74424H3.14916C2.72763 7.74424 2.3846 7.4012 2.3846 6.97967V2.81178C2.3846 2.39025 2.72763 2.04722 3.14916 2.04722H7.31705C7.73858 2.04722 8.08162 2.39025 8.08162 2.81178L8.08213 6.97967ZM17.63 0.517578H13.4616C12.197 0.517578 11.1679 1.54668 11.1679 2.81127V6.97916C11.1679 8.24375 12.197 9.27285 13.4616 9.27285H17.63C18.8946 9.27285 19.9237 8.24375 19.9237 6.97916V2.81127C19.9237 1.54668 18.8951 0.517578 17.63 0.517578ZM18.3946 6.97967C18.3946 7.4012 18.0515 7.74424 17.63 7.74424H13.4616C13.0401 7.74424 12.697 7.4012 12.697 6.97967V2.81178C12.697 2.39025 13.0401 2.04722 13.4616 2.04722H17.63C18.0515 2.04722 18.3946 2.39025 18.3946 2.81178V6.97967ZM7.31756 10.3392H3.14916C1.88457 10.3392 0.855469 11.3683 0.855469 12.6329V16.8008C0.855469 18.0653 1.88457 19.0944 3.14916 19.0944H7.31705C8.58164 19.0944 9.61075 18.0653 9.61075 16.8008V12.6329C9.61126 11.3678 8.58215 10.3392 7.31756 10.3392ZM8.08213 16.8008C8.08213 17.2223 7.73909 17.5653 7.31756 17.5653H3.14916C2.72763 17.5653 2.3846 17.2223 2.3846 16.8008V12.6329C2.3846 12.2113 2.72763 11.8683 3.14916 11.8683H7.31705C7.73858 11.8683 8.08162 12.2113 8.08162 12.6329L8.08213 16.8008ZM17.63 10.3392H13.4616C12.197 10.3392 11.1679 11.3683 11.1679 12.6329V16.8008C11.1679 18.0653 12.197 19.0944 13.4616 19.0944H16.5759C16.998 19.0944 17.3405 18.7519 17.3405 18.3299C17.3405 17.9078 16.998 17.5653 16.5759 17.5653H13.4616C13.0401 17.5653 12.697 17.2223 12.697 16.8008V12.6329C12.697 12.2113 13.0401 11.8683 13.4616 11.8683H17.63C18.0515 11.8683 18.3946 12.2113 18.3946 12.6329V16.1264C18.3946 16.5484 18.7371 16.891 19.1591 16.891C19.5812 16.891 19.9237 16.5484 19.9237 16.1264V12.6329C19.9237 11.3678 18.8951 10.3392 17.63 10.3392Z" />
+                                    </svg>
+                                </a>
+                                
                                 @if ($setting->live_map == 'yes')
                                     <a class="list-group-item map_view" data-bs-toggle="list" href="#map-grid"
                                         role="tab">
@@ -320,16 +322,14 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="mg-top-30">
+                        <!--<div class="mg-top-30">
                             <div class="homec-agent-card homec-bg-cover homec-agent-vector-bg">
                                 <h4 class="homec-agent-card__title mg-btm-20 text-white">{{ __('user.Our Agents') }}</h4>
                                 <div class="swiper mySwiper homec-slider-agent__card loading">
                                     <div class="swiper-wrapper">
                                         @foreach ($slider_agents as $slider_agent)
                                             <div class="swiper-slide">
-                                                <!-- Single agent-->
                                                 <div class="homec-agent">
-                                                    <!-- Agent Head-->
                                                     <div class="homec-agent__head">
                                                         @if ($slider_agent->image)
                                                             <img src="{{ $slider_agent->image }}" alt="agent">
@@ -359,7 +359,6 @@
                                                             @endif
                                                         </ul>
                                                     </div>
-                                                    <!-- Agent Body -->
                                                     <div class="homec-agent__body">
                                                         <h4 class="homec-agent__title position_relitive">
 
@@ -392,23 +391,28 @@
                                                         </h4>
 
                                                     </div>
-                                                    <!-- End Agent Body -->
                                                 </div>
-                                                <!-- End Single agent-->
                                             </div>
                                         @endforeach
                                     </div>
                                 </div>
-                                <!-- Slider Pagination -->
                                 <div
                                     class="swiper-pagination swiper-pagination--white swiper-pagination__slider--agent mg-top-40">
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="col-lg-8 col-12">
                         <div class="spinner_hidden_box d-none">
-                            <div class="tab-pane fade show active" id="homec-grid" role="tabpanel">
+
+                            <div class="tab-pane fade show active" id="homec-list" role="tabpanel">
+                                <div class="row">
+                                    <img class="spinner-element" src="{{ asset('uploads/website-images/Spinner.gif') }}"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="homec-grid" role="tabpanel">
                                 <div class="row">
                                     <div class="col-12">
                                         <img class="spinner-element"
@@ -417,12 +421,7 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="homec-list" role="tabpanel">
-                                <div class="row">
-                                    <img class="spinner-element" src="{{ asset('uploads/website-images/Spinner.gif') }}"
-                                        alt="">
-                                </div>
-                            </div>
+                            
 
                             <div class="tab-pane fade" id="map-grid" role="tabpanel">
                                 <div class="row">

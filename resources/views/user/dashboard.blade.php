@@ -32,8 +32,8 @@
     <!-- End breadcrumbs -->
 
             <!-- Homec Dashboard -->
-		<section class="homec-dashboard pd-top-100 pd-btm-100 homec-bg-third-color">
-			<div class="container">
+		<section class="homec-dashboard pd-top-50 pd-btm-50 homec-bg-third-color">
+			<div class="container homec-container-medium">
 				<div class="row">
 					<div class="col-12">
 						<div class="homec-dashboard__middle">
@@ -133,7 +133,7 @@
 		<!-- End Dashboard -->
 
     <!-- Download App -->
-    <section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
+    <!--<section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
         <div class="homec-shape">
             <div class="homec-shape-single homec-shape-11"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="bg"></div>
             <div class="homec-shape-single homec-shape-12"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="bg"></div>
@@ -148,7 +148,7 @@
                                 <h2 class="homec-section__title">{{ $mobile_app->full_title }}</h2>
                                 <p class="sec-head__text">{{ $mobile_app->description }}</p>
                             </div>
-                            <!-- App Download Button -->
+                            
                             <div class="download__app-button" data-aos="fade-up" data-aos-delay="500">
                                 <a href="{{ $mobile_app->app_store }}" class="homec-btn homec-btn-primary-overlay homec-btn__download">
                                     <div class="homec-btn__inside">
@@ -163,9 +163,9 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- End App Download Button -->
+                            
                         </div>
-                        <!-- Download Image -->
+                        
                         <div class="download-app__img" data-aos="fade-up" data-aos-delay="700">
                             <img src="{{ asset($mobile_app->image) }}" alt="mobile_app">
                         </div>
@@ -173,6 +173,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End Download App -->
 @endsection

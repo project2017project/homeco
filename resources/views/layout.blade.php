@@ -238,12 +238,12 @@
     <!-- Header -->
     <header id="active-sticky" class="homec-header">
         <!-- Topbar -->
-        <div class="homec-header__top">
+        <!--<div class="homec-header__top">
             <div class="container homec-container-medium">
                 <div class="row">
                     <div class="col-12">
                         <div class="homec-topbar-flex">
-                            <!-- Contact -->
+                            
                             <ul class="homec-header__list">
                                 <li>
                                     <a href="mailto:{{ $footer->email }}">
@@ -264,8 +264,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <!-- End Contact -->
-                            <!-- Social -->
+                            
                             <ul class="homec-social homec-social__topbar">
                                 @foreach ($social_links as $social_link)
                                     <li><a href="{{ $social_link->link }}"><i
@@ -273,12 +272,12 @@
                                 @endforeach
 
                             </ul>
-                            <!-- End Social -->
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- End Topbar -->
 
         <div class="homec-header__middle">
@@ -445,7 +444,7 @@
             <div class="homec-shape-single homec-shape-10"><img src="{{ asset($footer->background_image) }}"
                     alt="#"></div>
         </div>
-        <div class="container">
+        <div class="container homec-container-medium">
             <!--<div class="row">
                 <div class="col-12">
                     <div class="homec-form mg-top-100">
@@ -890,24 +889,25 @@
 
                 /* Slider Property */
                 var swiper = new Swiper(".homec-slider-property", {
-                    autoplay: {
-                        delay: 4000,
-                    },
+                    // autoplay: {
+                    //     delay: 5000,
+                    // },
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     },
-                    mousewheel: true,
+                    mousewheel: false,
+                    autoplay: false,
                     keyboard: true,
                     loop: true,
                     grabCursor: true,
                     spaceBetween: 30,
                     centeredSlides: false,
-                    pagination: {
-                        el: '.swiper-pagination__property',
-                        type: 'bullets',
-                        clickable: true,
-                    },
+                    // pagination: {
+                    //     el: '.swiper-pagination__property',
+                    //     type: 'bullets',
+                    //     clickable: true,
+                    // },
                     slidesPerView: "4",
                     breakpoints: {
                         320: {
