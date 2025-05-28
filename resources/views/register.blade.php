@@ -38,6 +38,7 @@
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{{ asset('frontend/css/theme-default.css') }}">
 		<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
 
         <link rel="stylesheet" href="{{ asset('toastr/toastr.min.css') }}">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -150,18 +151,18 @@
 								<!-- Middle Image -->
 								<div class="ecom-wc__middle">
 									<a href="{{ route('home') }}"><img src="{{ asset($login_page->image) }}" alt="image"></a>
-									<div class="ecom-wc__countdown--title">{{ $login_page->login_top_item_qty }}<span>{{ $login_page->login_top_item }}</span></div>
-									<div class="ecom-wc__countdown--title ecom-wc__countdown--title--v2">{{ $login_page->login_footer_item_qty }}<span>{{ $login_page->login_footer_item }}</span></div>
+									<!--<div class="ecom-wc__countdown--title">{{ $login_page->login_top_item_qty }}<span>{{ $login_page->login_top_item }}</span></div>
+									<div class="ecom-wc__countdown--title ecom-wc__countdown--title--v2">{{ $login_page->login_footer_item_qty }}<span>{{ $login_page->login_footer_item }}</span></div>-->
 								</div>
-								<div class="ecom-wc__footer">
+								<!--<div class="ecom-wc__footer">
 									<ul class="ecom-wc__footer--list list-none">
                                         <li><a href="{{ route('terms-and-conditions') }}">{{__('user.Terms and Conditions')}}</a></li>
                                         <li><a href="{{ route('privacy-policy') }}">{{__('user.Privacy Policy')}}</a></li>
                                         <li><a href="{{ route('contact-us') }}">{{__('user.Contact Us')}}</a></li>
 									</ul>
 
-								</div>
-								<p class="ecom-wc__footer--text">{{ $footer->copyright }} </p>
+								</div>-->
+								<!-- <p class="ecom-wc__footer--text">{{ $footer->copyright }} </p> -->
 							</div>
                         </div>
                     </div>

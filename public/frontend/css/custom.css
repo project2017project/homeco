@@ -1,0 +1,493 @@
+.homec-filter-group .homec-btn{
+    color: #ffffff;
+}
+.homec-header__menu .nav-menu li a:hover, .homec-header__menu .nav-menu li.active a, #offcanvas-menu li a:hover, #offcanvas-menu li.active a {
+    color: #d8232a;
+}
+.homec-header .navigation li .sub-menu li a:hover{
+    color: #d8232a!important;
+}
+.homec-header .navigation li .sub-menu{
+    border-top: 3px solid #d8232a;
+}
+.homec-header .homec-btn{
+        height: auto;
+    line-height: normal;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.homec-header a.homec-header__icon{
+     height: auto;
+    line-height: normal;
+    padding: 3px 20px;
+    width: auto;
+}
+.homec-header a.homec-header__icon svg {
+        max-width: 16px;
+}
+.homec-header a.homec-header__icon span{
+    padding-left: 10px;
+}
+.homec-header .homec-header__menu .nav-menu li a{
+    font-size: 16px;
+    font-weight: 400;
+}
+.homec-header__inside{
+    padding: 15px 20px;
+}
+.homec-hero__tabs {
+    margin-bottom: 20px;
+}
+#homec-tabs.homec-tabs--noborder a{
+    border-bottom: 1px solid #ffffff;
+}
+#homec-tabs a{
+    border-radius: 5px;
+}
+#homec-tabs a:hover, #homec-tabs a.active, input[type="checkbox"]:checked, .price-filter .ui-slider-range, .pd-features__single:hover, .homec-comments-form, .homec-features__single:hover, .homec-iconic-list li i, .homec-section-bottom-shape, .swiper-pagination span::before{
+     border-bottom: 1px solid #d8232a; 
+}
+.homec-btn svg path{
+    fill: #ffffff;
+}
+.homec-filter-group .form-group .select2-container--default .select2-selection--single span.select2-selection__arrow{
+        position: initial;
+}
+
+.homec-filter-group .form-group, .homec-filter-group .homec-btn{
+    height: auto;
+}
+.homec-filter-group .form-group{
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    border-right: 1px solid #cac9c9;
+    flex-direction: initial;
+    align-items: center;
+    padding: 5px 15px;
+    min-width: 190px;
+}
+.homec-filter-group .form-group i{
+    color: #d8232a;
+    position: relative;
+    left: -8px;
+}
+
+.homec-filter-group .homec-btn{
+    line-height: normal;
+    padding: 7px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: auto;
+    min-width: auto;
+    font-weight: 400;
+    background: #d8232a!important;
+}
+.homec-filter-group .homec-btn svg{
+    width: 15px;
+    height: 15px;
+}
+.homec-filter-group .form-group .select2-container--default .select2-selection--single span{
+        font-size: 14px !important;
+    font-weight: 400;
+}
+
+.homec-filters{
+    border-radius: 50px;
+}
+.homec-hero__tabs--detail{
+    width: 100%;
+}
+.homec-filter-group{
+    justify-content: space-between;
+}
+.homec-features__icon img {
+    max-width: 60px;
+}
+.homec-features__icon{
+    min-width: 120px;
+    min-height: 120px;
+    line-height: 120px;
+}
+.homec-features__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.homec-features__v2 {
+    top: 0px;
+}
+.homec-section__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+.homec-section__badge--small {
+    font-size: 16px;
+    font-weight: 400;
+}
+.homec-btn{
+    height: 50px;
+    line-height: 50px;
+}
+.homec-property__title a {
+    font-size: 17px;
+    font-weight: 400;
+}
+.homec-property__price {
+    font-size: 17px;
+    font-weight: 600;
+}
+.homec-property__price span{
+    font-size: 15px;
+}
+.homec-bg-third-color .homec-second-color{
+    color: #ffffff;
+}
+.homec-agent__title{
+    font-size: 16px;
+    font-weight: 500;
+}
+.homec-listing__inner:hover .homec-listing__title{
+    color: #ffffff!important;
+}
+.homec-listing__title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.homec-listing__title span{
+    font-size: 16px;
+}
+.ecom-wc__button .homec-btn{
+    color: #ffffff;
+}
+.ecom-wc__button .homec-btn:hover{
+    color: #d8232a!important;
+}
+.homec-blog__title a {
+    font-size: 18px;
+    font-weight: 500 !important;
+    line-height: 28px;
+}
+.homec-blog__meta li{
+    font-size: 14px;
+}
+.homec-blog__btn{
+     font-weight: 500;
+    color: #d8232a;
+    font-size: 16px;
+}
+.homec-blog__meta li svg {
+    fill: #d8232a;
+}
+/*.homec-property__head{
+    position: initial;
+}*/
+.homec-property__title a{
+    position: initial;
+}
+.homec-property__body{
+   position: initial; 
+}
+
+.homec-property__title a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+
+}
+.breadcrumb__menu li a{
+    color: #ffffff!important;
+}
+.breadcrumb__menu li::after{
+    color: #ffffff!important;
+}
+.homec-list-tabs.homec-list-tabs--v3 .list-group-item{
+    font-size: 14px;
+    padding: 12px 20px;
+}
+.homec-dashboard__label{
+    font-size: 18px;
+}
+.homec-dashboard__single{
+    background: #f7f7fc;
+}
+.homec-btn.homec-btn__second{
+    color: #ffffff!important;
+    font-size: 16px;
+}
+.homec-list-tabs.homec-list-tabs--v3 .list-group-item.active{
+        background: #d8232a !important;
+    color: #ffffff !important;
+}
+.homec-list-tabs.homec-list-tabs--v3 .list-group-item.active .homec-dashboard__list--icon {
+    background: #ffffff!important;
+}
+.homec-list-tabs.homec-list-tabs--v3 .list-group-item.active svg {
+    fill: #d8232a!important;
+}
+.ecom-wc__logo img {
+    max-width: 150px;
+}
+.homec-slider-agent .homec-agent__title a{
+    display: inline-block!important;
+}
+
+.homec-accordion .homec-accordion__heading{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 20px;
+}
+.homec-faq-bg .homec-section__title{
+    font-size: 22px;
+}
+.accordion-body.homec-accordion__body {
+    line-height: 25px;
+    font-size: 14px;
+}
+.homec-support-img__content img {
+    width: 50px;
+    border-radius: 0;
+}
+.homec-support-img__title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.homec-support-img__title span{
+    font-size: 15px;
+}
+.footer-area p {
+    font-size: 14px;
+    line-height: 25px;
+}
+.footer-top-inner .widget-title{
+        font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.footer-top-inner .single-widget li {
+        font-size: 15px;
+    line-height: 20px;
+}
+
+.hoemc-showing-results__text {
+    font-size: 14px;
+}
+.homec-form__form.homec-form__form--bar button
+{
+    min-width: 130px;
+    font-size: 16px;
+}
+.homec-form__form.homec-form__form--bar{
+    max-width: 450px;
+    width: 450px;
+    height: 50px;
+}
+.select2-container .select2-selection--single {
+    min-height: 45px;
+}
+.property-sidebar__title {
+    font-size: 15px;
+}
+.homec-property__title {
+    margin-bottom: 10px;
+}
+.homec-property__text p {
+    font-size: 14px;
+    line-height: 22px;
+}
+.homec-property__text{
+    gap: 10px;
+}
+
+.agent_agency_btn .nav-link {
+    line-height: 50px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #d8232a;
+    color: #d8232a;
+}
+.agent_agency_btn .nav-link.active{
+    background-color: #d8232a;
+}
+.homec-agent__title a{
+    position: initial;
+}
+.homec-agent__title a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+}
+.homec-header{
+    position: initial;
+    transition: none;
+}
+.homec-header.is-sticky{
+    position: fixed;
+    top: 0;
+
+}
+
+  #hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;           /* or whatever height you need */
+  }
+
+  /* background video */
+  #hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* scale & crop to fill */
+    z-index: 1;
+  }
+
+  /* optional dark overlay */
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+
+  /* your content wrapper sits above video & overlay */
+  #hero .homec-hero__inner {
+    position: relative;
+    z-index: 3;
+    min-height: auto;
+  }
+  .homec-hero{
+    min-height: auto;
+  }
+
+.homec-hero__inner {
+    padding-top: 150px;
+}
+.property-explore-wrap{
+    padding: 50px 20px 50px 20px;
+    background-color: #dff6f9;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+.property-explore-wrap h4{
+    font-size: 22px;
+    font-weight: 600;
+}
+.property-explore-wrap p{
+    color: #303030;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/*.home-property-circle-wrapper .homec-property__head{
+    display: flex;
+    justify-content: space-between;
+}*/
+.home-property-circle-wrapper .property-img-wrap{
+   width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    z-index: 9;
+    left: 20px;
+}
+.home-property-circle-wrapper .property-img-wrap img{
+/*    min-width: 100%;*/
+    min-height: 100%;
+    width: 100%;
+}
+.home-property-circle-wrapper .homec-property__head img{
+    width: auto;
+    height: auto;
+    min-height: auto;
+}
+.home-property-circle-wrapper .homec-property__list{
+        background: #f5f4ff;
+    margin-top: 35px;
+    border-radius: 5px;
+    padding: 50px 8px 10px;
+    border: none;
+}
+.home-property-circle-wrapper .homec-property__body{
+    position: relative;
+}
+
+.home-property-circle-wrapper .homec-property__list li{
+    font-size: 13px;
+}
+.home-property-circle-wrapper .homec-property{
+    background-color: transparent;
+    border: 1px solid #dddddd;
+}
+.homec-bg-third-color {
+    background-color: #ffffff!important;
+}
+.homec-properties .swiper-pagination{
+    margin-top: 0px!important;
+}
+
+.homec-features__v2
+{
+    margin-bottom: 0px;
+}
+.homec-features__single{
+    background: transparent;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+}
+
+@media(max-width: 1199px){
+    .homec-filter-group{
+        flex-wrap: nowrap;
+    }
+    .homec-filter-group .form-group{
+    padding: 5px 8px;
+    min-width: 140px;
+    }
+    .home-property-circle-wrapper .homec-property{
+        margin: 8px;
+    }
+}
+
+@media(max-width : 767px){
+    .homec-hero__content{
+        max-width: 100%;
+    }
+    .homec-tabs.homec-tabs--noborder a{
+        padding: 8px 30px !important;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width: 10000px) {
+    #active-sticky.is-sticky .homec-header__icon {
+        width: auto;
+        height: 40px;
+    }
+    #active-sticky.is-sticky .homec-btn{
+        height: 40px;
+        line-height: 40px;
+    }
+}

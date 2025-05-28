@@ -34,7 +34,7 @@
 
 
     <!-- About Area -->
-    <section class="homec-about homec-bg-third-color pd-top-90 pd-btm-120">
+    <section class="homec-about homec-bg-third-color pd-top-50 pd-btm-80">
         <div class="homec-shape">
             <div class="homec-shape-single homec-shape-1"><img src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="shape"></div>
             <div class="homec-shape-single homec-shape-2"><img src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="shape"></div>
@@ -107,7 +107,7 @@
     @endphp
 
     <!-- Features Area -->
-    <section class="homec-features pd-top-90 pd-btm-120">
+    <section class="homec-features pd-top-50 pd-btm-70">
         <div class="container">
             <div class="row">
                 @foreach ($property_types as $property_type)
@@ -188,7 +188,7 @@
     <!-- End FunFacts Area -->
 
     <!-- Agents -->
-    <section class="homec-bg-third-color homec-bg-cover pd-top-90 pd-btm-120" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
+    <section class="homec-bg-third-color homec-bg-cover pd-top-50 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
         <div class="homec-overlay"></div>
         <div class="section-inside-bg homec-agent-inside"></div>
         <div class="container">
@@ -258,7 +258,7 @@
     <!-- End Agents -->
 
     <!-- Faq Area -->
-    <section class="homec-bg-cover pd-top-90 pd-btm-120 homec-faq-bg">
+    <section class="homec-bg-cover pd-top-60 pd-btm-80 homec-faq-bg">
         <div class="container homec-container-medium">
             <div class="row homec-container-medium__row align-items-center">
                 <div class="col-lg-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
@@ -303,7 +303,7 @@
     <!-- End Faq Area -->
 
     <!-- Download App -->
-    <section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
+    <!--<section class="download-app homec-bg-cover homec-bg-primary-color pd-top-15 pd-btm-15" style="background-image:url({{ asset($mobile_app->app_bg) }})">
         <div class="homec-shape">
             <div class="homec-shape-single homec-shape-11"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="bg"></div>
             <div class="homec-shape-single homec-shape-12"><img src="{{ asset('frontend/img/anim-shape-10.svg') }}" alt="bg"></div>
@@ -318,7 +318,7 @@
                                 <h2 class="homec-section__title">{{ $mobile_app->full_title }}</h2>
                                 <p class="sec-head__text">{{ $mobile_app->description }}</p>
                             </div>
-                            <!-- App Download Button -->
+                            
                             <div class="download__app-button" data-aos="fade-up" data-aos-delay="500">
                                 <a href="{{ $mobile_app->app_store }}" class="homec-btn homec-btn-primary-overlay homec-btn__download">
                                     <div class="homec-btn__inside">
@@ -333,9 +333,9 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- End App Download Button -->
+                            
                         </div>
-                        <!-- Download Image -->
+
                         <div class="download-app__img" data-aos="fade-up" data-aos-delay="700">
                             <img src="{{ asset($mobile_app->image) }}" alt="mobile_app">
                         </div>
@@ -343,7 +343,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End Download App -->
 
 @endsection
