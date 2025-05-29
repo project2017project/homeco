@@ -114,6 +114,8 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
+															<i class="fa-solid fa-house"></i>
+
 															<select name="type" class="select2">
 																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
@@ -124,6 +126,8 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
+															<i class="fa-solid fa-location-dot"></i>
+
 															<select name="location" class="select2">
 																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
@@ -134,6 +138,7 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
+															<i class="fa-solid fa-circle-dollar-to-slot"></i>
 															<select class="select2" id="sale_price_range">
                                                                 <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
@@ -169,6 +174,8 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
+															<i class="fa-solid fa-house"></i>
+
 															<select name="type" class="select2">
 																<option value="" data-display="">{{__('user.Type')}}</option>
                                                                 @foreach ($property_types as $property_type)
@@ -179,6 +186,8 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
+															<i class="fa-solid fa-location-dot"></i>
+
 															<select name="location" class="select2">
 																<option value="" data-display="">{{__('user.Locaiton')}}</option>
                                                                 @foreach ($locations as $single_location)
@@ -189,6 +198,7 @@
 														<!-- Form Group -->
 														<div class="form-group">
 															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
+															<i class="fa-solid fa-circle-dollar-to-slot"></i>
 															<select class="select2" id="any_price_range">
                                                                 <option value="">{{__('user.Price Range')}}</option>
                                                                 @foreach ($filter_prices as $filter_price)
@@ -314,7 +324,7 @@
                     <div class="row">
                         <div class="col-12">
                             <!-- Section TItle -->
-                            <div class="homec-section__head text-center mg-btm-60">
+                            <div class="homec-section__head text-center mg-btm-30">
                                 <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $location->title }}</span>
                                 <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $location->description }}</h2>
                             </div>
@@ -533,112 +543,45 @@
 
 
 
-    @if ($category->visibility)
 
-        @php
-            $property_types = $category->property_types;
-        @endphp
-		<!-- Features Area -->
-		<section class="homec-features homec-features__v2">
+        <section class="home-cta-wrapper">
 			<div class="container">
 				<div class="row">
-                    @foreach ($property_types as $property_type)
-					<div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-						<!-- Single Feature -->
-						<a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
-							<div class="homec-features__icon">
-								<img src="{{ asset($property_type->icon) }}" alt="icon">
+					<div class="col-12">
+						<div class="home-cta-banner-wrap">
+							<div class="cta-content-wrap">
+								<h4>Post your Property for Free</h4>
+								<p>List it on Tashi and get genuine leads</p>
 							</div>
-							<div class="homec-features__content">
-								<h3 class="homec-features__title">{{ $property_type->name }}</h3>
-								<p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
-							</div>
-						</a>
-						<!-- End Single Feature -->
-					</div>
-                    @endforeach
-				</div>
-			</div>
-		</section>
-		<!-- End Features Area -->
-    @endif
-
-    @if ($about_us->visibility)
-        @php
-            $home2_content = $about_us->home2_content;
-        @endphp
-
-		<!-- About Area -->
-		<section class="homec-about pd-top-60 pd-btm-100">
-			<div class="homec-shape">
-				<img class="homec-shape-single homec-shape-1" src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="icon">
-				<img class="homec-shape-single homec-shape-2" src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="icon">
-				<img class="homec-shape-single homec-shape-3" src="{{ asset('frontend/img/anim-shape-3.svg') }}" alt="icon">
-			</div>
-			<div class="container homec-container-medium">
-				<div class="row  homec-container-medium__row align-items-center">
-					<div class="col-lg-7 col-12 homec-about__column--one mg-top-30" data-aos="fade-right" data-aos-delay="400">
-						<!-- Homec Image Group -->
-						<div class="homec-image-group">
-							<div class="homec-image-group__single">
-								<img src="{{ asset($home2_content->image1) }}" alt="image1">
-								<img src="{{ asset($home2_content->image2) }}" alt="image2">
-							</div>
-							<div class="homec-image-group__content">
-								<h4 class="homec-image-group__title">{{ $home2_content->percentage }}</h4>
-								<p class="homec-image-group__text">{{ $home2_content->percentage_text }}</p>
+							<div class="cta-post-btn">
+								<a href="javascript:void(0)" class="homec-btn">Get In Touch</a>
 							</div>
 						</div>
-						<!-- End Homec Image Group -->
-					</div>
-					<div class="col-lg-5 col-12 homec-about__column--two mg-top-30">
-						<div class="homec-about-content">
-							<!-- Section Title -->
-							<div class="homec-section__head">
-								<div class="homec-section__shape">
-									<span class="homec-section__badge homec-section__badge--shape" data-aos="fade-down" data-aos-delay="300">{{ $home2_content->short_title }}</span>
-								</div>
-								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $home2_content->long_title }}</h2>
-							</div>
-							<div class="homec-about-content__inner mg-top-20" data-aos="fade-in" data-aos-delay="500">
-								<p class="homec-about-content__text">{{ $home2_content->description1 }}</p>
-								<div class="homec-focus-content homec-border mg-top-20">
-									<p>{{ $home2_content->description2 }}</p>
-								</div>
-								<!-- Homec List -->
-								<ul class="homec-iconic-list list-none mg-top-30">
-									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item1 }}</li>
-									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item2 }}</li>
-								</ul>
-								<!-- Homec Button -->
-								<div class="mg-top-40">
-									<a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End About Area -->
-    @endif
+		</div>
+	</section>
+
+
+
+
 
 
     @if ($top_property->visibility)
 		<!-- Properties Listing -->
-		<section class="homec-properties homec-bg-cover homec-bg-third-color pd-top-60 pd-btm-80 homec-featured-property-bg">
+		<section class="homec-properties home-top-property-wrapper homec-bg-third-color pd-top-60 pd-btm-80">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<div class="homec-flex homec-flex__section mg-btm-40">
 							<!-- Section TItle -->
 							<div class="homec-section__head m-0 mg-top-30">
-								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $top_property->title }}</span>
+								<!-- <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $top_property->title }}</span> -->
 								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $top_property->description }}</h2>
 							</div>
 							<!-- Button -->
-							<div class="homec-section__btn mg-top-30" data-aos="fade-right" data-aos-delay="500">
-								<a href="{{ route('properties',['top_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Top  Properties')}}</span></a>
+							<div class="homec-section__btn mg-top-30 without-back-btn" data-aos="fade-right" data-aos-delay="500">
+								<a href="{{ route('properties',['top_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Top  Properties')}}</span><i class="fa-solid fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -649,7 +592,7 @@
                     @endphp
 
 					<div class="col-12">
-						<div class="swiper mySwiper homec-slider-property loading">
+						<div class="swiper mySwiper homec-top-slider-property loading">
 							<div class="swiper-wrapper">
 
                                 @foreach ($top_properties as $top_property)
@@ -687,6 +630,8 @@
                                             </div>
                                             <!-- Property Body-->
                                             <div class="homec-property__body">
+                                                
+                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($top_property->slug)) }}">{{ html_decode($top_property->title) }}</a></h3>
                                                 <div class="homec-property__topbar">
                                                     <div class="homec-property__price">{{ $currency_icon }}{{ html_decode(num_format($top_property->price)) }}
                                                         @if ($top_property->purpose == 'rent')
@@ -694,7 +639,6 @@
                                                         @endif
                                                     </div>
                                                 </div>
-                                                <h3 class="homec-property__title"><a href="{{ route('property', html_decode($top_property->slug)) }}">{{ html_decode($top_property->title) }}</a></h3>
                                                 <div class="homec-property__text">
                                                     <img src="{{ asset('frontend/img/location-icon.svg') }}" alt="address"><p>{{ html_decode($top_property->address) }}</p>
                                                 </div>
@@ -720,10 +664,167 @@
 		<!-- End Properties Listing -->
     @endif
 
-    @if ($setting->agent_can_add_property)
+
+
+    <!--@if ($category->visibility)
+
+        @php
+            $property_types = $category->property_types;
+        @endphp
+		<section class="homec-features homec-features__v2 property-tools-wrapper">
+			<div class="container">
+				<div class="row">
+                    @foreach ($property_types as $property_type)
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
+						<a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="{{ asset($property_type->icon) }}" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">{{ $property_type->name }}</h3>
+								<p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
+								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+							</div>
+						</a>
+					</div>
+                    @endforeach
+				</div>
+			</div>
+		</section>
+    @endif-->
+
+
+    <!-- ====== Feature Boxes Start ===== -->
+
+
+    <section class="homec-features homec-features__v2 property-tools-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30">
+						<a href="http://homeco.webngigs/properties?type=apartment" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="../public/frontend/img/feature/apartment.png" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">Apartment</h3>
+								<p class="homec-features__text">Spacious apartments with contemporary design, secure access, community amenities for urban living.</p>
+								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30">
+						<a href="http://homeco.webngigs/properties?type=building" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="../public/frontend/img/feature/building.png" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">Building</h3>
+								<p class="homec-features__text">Well-structured residential and commercial buildings with durable construction, reliable facility management.</p>
+								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30">
+						<a href="http://homeco.webngigs/properties?type=duplex-house" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="../public/frontend/img/feature/duplex.png" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">Duplex House</h3>
+								<p class="homec-features__text">Elegant duplex houses with private entrances, separate living spaces, cozy outdoor areas.</p>
+								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30">
+						<a href="http://homeco.webngigs/properties?type=plaza" class="homec-features__single">
+							<div class="homec-features__icon">
+								<img src="../public/frontend/img/feature/plaza.png" alt="icon">
+							</div>
+							<div class="homec-features__content">
+								<h3 class="homec-features__title">Plaza</h3>
+								<p class="homec-features__text">Dynamic plazas combining retail, office, and leisure spaces in walkable settings with high foot traffic.</p>
+								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+    <!-- ===== Feature Boxes end ===== -->
+
+
+
+
+
+
+
+
+
+
+    <!--@if ($about_us->visibility)
+        @php
+            $home2_content = $about_us->home2_content;
+        @endphp
+
+		<section class="homec-about pd-top-60 pd-btm-100">
+			<div class="homec-shape">
+				<img class="homec-shape-single homec-shape-1" src="{{ asset('frontend/img/anim-shape-1.svg') }}" alt="icon">
+				<img class="homec-shape-single homec-shape-2" src="{{ asset('frontend/img/anim-shape-2.svg') }}" alt="icon">
+				<img class="homec-shape-single homec-shape-3" src="{{ asset('frontend/img/anim-shape-3.svg') }}" alt="icon">
+			</div>
+			<div class="container homec-container-medium">
+				<div class="row  homec-container-medium__row align-items-center">
+					<div class="col-lg-7 col-12 homec-about__column--one mg-top-30" data-aos="fade-right" data-aos-delay="400">
+						<div class="homec-image-group">
+							<div class="homec-image-group__single">
+								<img src="{{ asset($home2_content->image1) }}" alt="image1">
+								<img src="{{ asset($home2_content->image2) }}" alt="image2">
+							</div>
+							<div class="homec-image-group__content">
+								<h4 class="homec-image-group__title">{{ $home2_content->percentage }}</h4>
+								<p class="homec-image-group__text">{{ $home2_content->percentage_text }}</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 col-12 homec-about__column--two mg-top-30">
+						<div class="homec-about-content">
+							<div class="homec-section__head">
+								<div class="homec-section__shape">
+									<span class="homec-section__badge homec-section__badge--shape" data-aos="fade-down" data-aos-delay="300">{{ $home2_content->short_title }}</span>
+								</div>
+								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $home2_content->long_title }}</h2>
+							</div>
+							<div class="homec-about-content__inner mg-top-20" data-aos="fade-in" data-aos-delay="500">
+								<p class="homec-about-content__text">{{ $home2_content->description1 }}</p>
+								<div class="homec-focus-content homec-border mg-top-20">
+									<p>{{ $home2_content->description2 }}</p>
+								</div>
+								<ul class="homec-iconic-list list-none mg-top-30">
+									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item1 }}</li>
+									<li><i class="fa-solid fa-check"></i>{{ $home2_content->item2 }}</li>
+								</ul>
+								<div class="mg-top-40">
+									<a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    @endif-->
+
+
+
+    <!--@if ($setting->agent_can_add_property)
         @if ($setting->agent_can_add_property == 'enable')
             @if ($agent->visibility)
-                <!-- Agents -->
                 <section class="homec-bg-third-color homec-bg-cover pd-top-60 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
                     <div class="homec-overlay"></div>
                     <div class="section-inside-bg homec-agent-inside"></div>
@@ -747,9 +848,8 @@
                                     <div class="swiper-wrapper">
                                         @foreach ($agent->agents as $agent_index => $single_agent )
                                             <div class="swiper-slide">
-                                                <!-- Single agent-->
+
                                                 <div class="homec-agent">
-                                                    <!-- Agent Head-->
                                                     <div class="homec-agent__head">
                                                         @if ($single_agent->image)
                                                         <img src="{{ asset($single_agent->image) }}" alt="agent">
@@ -774,7 +874,7 @@
                                                             @endif
                                                         </ul>
                                                     </div>
-                                                    <!-- Agent Body -->
+
                                                     <div class="homec-agent__body">
                                                         <h4 class="homec-agent__title position_relitive">
 
@@ -798,31 +898,29 @@
                                                         <span>{{ html_decode($single_agent->designation) }}</span>
                                                 </h4>
                                                     </div>
-                                                    <!-- End Agent Body -->
+
                                                 </div>
-                                                <!-- End Single agent-->
+
                                             </div>
                                         @endforeach
                                     </div>
                                 </div>
-                                <!-- Slider Pagination -->
+
                                 <div class="swiper-pagination swiper-pagination__start swiper-pagination--white  swiper-pagination__agent"></div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- End Agents -->
             @endif
         @endif
-    @endif
+    @endif-->
 
 
 
-        @if ($counter->visibility)
+       <!-- @if ($counter->visibility)
             @php
                 $counter_content = $counter->content;
             @endphp
-            <!-- FunFacts -->
             <section class="homec-funfacts pd-btm-10">
                 <img src="{{ asset($counter_content->bg_image) }}" alt="bg_image">
                 <div class="container">
@@ -836,13 +934,11 @@
                                                 <h2 class="homec-section__title mg-btm-10">{{ $counter_content->title }}</h2>
                                                 <p>{{ $counter_content->description }}</p>
                                             </div>
-                                            <!-- Homec List -->
                                             <ul class="homec-iconic-list list-none mg-top-30"  data-aos="fade-up" data-aos-delay="400">
                                                 <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_1 }}</li>
                                                 <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_2 }}</li>
                                                 <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_3 }}</li>
                                             </ul>
-                                            <!-- Homec Button -->
                                             <div class="homec-btn__main mg-top-40"  data-aos="fade-up" data-aos-delay="500">
                                                 <a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
                                             </div>
@@ -854,7 +950,7 @@
                                             <div class="row">
                                                 @foreach ($counter->items as $counter_item)
                                                     <div class="col-lg-6 col-md-6 col-12"  data-aos="fade-in" data-aos-delay="400">
-                                                        <!-- FunFacts Single -->
+
                                                         <div class="homec-funfact__single homec-border">
                                                             <div class="homec-funfact__icon">
                                                                 <img src="{{ asset($counter_item->icon) }}" alt="icon">
@@ -862,7 +958,6 @@
                                                             <h3 class="homec-funfact__number"><span class="counter">{{ $counter_item->number }}</span></h3>
                                                             <p class="homec-funfact__text">{{ $counter_item->title }}</p>
                                                         </div>
-                                                        <!-- End FunFacts Single -->
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -878,7 +973,7 @@
                     <div class="row mg-top-100">
                         <div class="col-12">
                             <h4 class="homec-medium-title text-center mg-btm-30">{{ $partner->title }}</h4>
-                            <!-- Clients Logo Slider -->
+
                             <div class="swiper mySwiper homec-slider-client loading">
                                 <div class="swiper-wrapper">
                                     @foreach ($partner->partners as $partner_item)
@@ -890,7 +985,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <!-- End Clients Logo Slider -->
+
                         </div>
                     </div>
                     @endif
@@ -898,8 +993,7 @@
 
                 </div>
             </section>
-            <!-- End FunFacts Area -->
-        @endif
+        @endif-->
 
         <!--@if ($setting->agent_can_add_property)
             @if ($setting->agent_can_add_property == 'enable')
@@ -1148,20 +1242,20 @@
 
         @if ($blog->visibility)
 		<!-- Blog Area -->
-		<section id="blog" class="blog-area homec-bg-cover section-padding homec-blog-bg">
+		<section id="blog" class="blog-area homec-bg-cover pd-top-80 pd-btm-80 homec-blog-bg">
 			<div class="blog-bg-pattern">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
 							<div class="homec-section__head text-center mg-btm-30">
-								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0" data-aos="fade-in" data-aos-delay="300">{{ $blog->title }} </span>
-								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{{ $blog->description }}</h2>
+								<span class="homec-section__badge homec-primary-color homec-section__badge--small m-0" >{{ $blog->title }} </span>
+								<h2 class="homec-section__title" >{{ $blog->description }}</h2>
 							</div>
 						</div>
 					</div>
 					<div class="row">
                         @foreach ($blog->blogs as $blog_index => $single_blog)
-                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-lg-4 col-md-6 col-12" >
                                 <!-- Single Blog -->
                                 <div class="homec-blog">
                                     <div class="homec-blog__head">
@@ -1221,4 +1315,214 @@
 		</section>
 		<!-- End Blog Area -->
         @endif
+
+
+    <!-- ====== Property Searches Start ===== -->
+
+
+
+
+
+
+
+		<section class="home-search-propert-wrapper homec-bg-third-color pd-top-10 pd-btm-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="homec-flex homec-flex__section mg-btm-20">
+							<!-- Section TItle -->
+							<div class="homec-section__head m-0 mg-btm-10">
+								<h2 class="homec-section__title">Property Options in Jaipur</h2>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row searches-rows">
+                   <div class="col-12 mg-btm-10">
+                        <div class="search-tabs-wrap">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-buy-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-buy" type="button" role="tab" aria-controls="pills-buy"
+                                        aria-selected="true">Buy</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-rent-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-rent" type="button" role="tab"
+                                        aria-controls="pills-rent" aria-selected="false">Rent</button>
+                                </li>
+                            </ul>
+                        </div>
+                </div> 
+
+                <div class="col-12">
+                	
+
+                    <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-buy" role="tabpanel" aria-labelledby="pills-buy-tab">
+
+                    <div class="row">
+                     <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular Residential Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Property for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Studio Apartments in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Resale House in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Villas for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Penthouse in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Ready To Move Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Resale Flats in Jaipur</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular BHK Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Property for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">1 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">2 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">3 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">4 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">1 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">2 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">3 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">4 BHK House for Sale in Jaipur</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular Flat Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Jagatpura</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Malviya Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Vaishali Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Pratap Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Mansarovar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Bani Park</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Raja Park</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in C-Scheme</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Ajmer Road</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular House Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">House for Sale in Malviya Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Mansarovar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Vaishali Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jhotwara</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jagatpura</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Pratap Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Shyam Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Niwaru Road</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Kalwar Road</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+
+                <div class="tab-pane fade" id="pills-rent" role="tabpanel" aria-labelledby="pills-rent-tab">
+                    <div class="row">
+                     <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular Residential Searches rent</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Property for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Studio Apartments in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Resale House in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Villas for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Penthouse in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Ready To Move Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">Resale Flats in Jaipur</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular BHK Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Property for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">1 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">2 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">3 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">4 BHK Flats in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">1 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">2 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">3 BHK House for Sale in Jaipur</a></li>
+                        		<li><a href="javascript:void(0)">4 BHK House for Sale in Jaipur</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular Flat Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Jagatpura</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Malviya Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Vaishali Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Pratap Nagar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Mansarovar</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Bani Park</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Raja Park</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in C-Scheme</a></li>
+                        		<li><a href="javascript:void(0)">Flats for Sale in Ajmer Road</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="search-content-wrap">
+                        	<h4>Popular House Searches</h4>
+                        	<ul>
+                        		<li><a href="javascript:void(0)">House for Sale in Malviya Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Mansarovar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Vaishali Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jhotwara</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Jagatpura</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Pratap Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Shyam Nagar</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Niwaru Road</a></li>
+                        		<li><a href="javascript:void(0)">House for Sale in Kalwar Road</a></li>
+                        	</ul>
+                        </div>       
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+
+                </div>
+
+				</div>
+			</div>
+		</section>
+
+
+    <!-- ====== Property Searches End ======= -->
+
+
+
 @endsection
+
+

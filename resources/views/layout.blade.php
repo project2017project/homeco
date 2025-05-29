@@ -901,7 +901,7 @@
                     keyboard: true,
                     loop: true,
                     grabCursor: true,
-                    spaceBetween: 30,
+                    spaceBetween: 20,
                     centeredSlides: false,
                     // pagination: {
                     //     el: '.swiper-pagination__property',
@@ -924,6 +924,48 @@
                         },
                         1024: {
                             slidesPerView: "3",
+                        },
+                    },
+                });
+
+
+                /* Top Slider Property */
+                var swiper = new Swiper(".homec-top-slider-property ", {
+                    // autoplay: {
+                    //     delay: 5000,
+                    // },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    mousewheel: false,
+                    autoplay: false,
+                    keyboard: true,
+                    loop: true,
+                    grabCursor: true,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                    // pagination: {
+                    //     el: '.swiper-pagination__property',
+                    //     type: 'bullets',
+                    //     clickable: true,
+                    // },
+                    slidesPerView: "4",
+                    breakpoints: {
+                        320: {
+                            slidesPerView: "1",
+                        },
+                        428: {
+                            slidesPerView: "1",
+                        },
+                        640: {
+                            slidesPerView: "2",
+                        },
+                        768: {
+                            slidesPerView: "2",
+                        },
+                        1024: {
+                            slidesPerView: "4",
                         },
                     },
                 });
