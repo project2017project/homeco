@@ -35,7 +35,7 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas far fa-building"></i><span>{{__('admin.Real Estate')}}</span></a>
 
             <ul class="dropdown-menu">
-
+                <li class="{{ Route::is('admin.property-import-page') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.property-import-page') }}">{{__('admin.Property Bulk Import')}}</a></li>
                 <li class="{{ Route::is('admin.property.create') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.property.create') }}">{{__('admin.Create Property')}}</a></li>
 
                 <li class="{{ Route::is('admin.property.index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.property.index') }}">{{__('admin.Own Properties')}}</a></li>

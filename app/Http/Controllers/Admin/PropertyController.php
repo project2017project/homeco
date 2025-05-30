@@ -26,6 +26,10 @@ use App\Http\Controllers\Controller;
 use App\Models\AdditionalInformation;
 use App\Models\PropertyNearestLocation;
 
+use App\Exports\PropertyExport;
+use App\Imports\PropertyImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class PropertyController extends Controller
 {
@@ -1018,6 +1022,44 @@ class PropertyController extends Controller
         return response()->json([
             'template' => view('admin.city_partials', compact('cities', 'city_id'))->render()
         ], 200);
+    }
+
+    public function property_import(){
+        return view('admin.property_import');
+    }
+
+    public function property_export(){
+        return Excel::download(new PropertyExport, 'properties.xlsx');
+    }
+
+    public function store_import_Property(Request $request){
+        try {
+            // Debug: Check file upload
+            if (!$request->hasFile('file')) {
+                throw new \Exception('No file was uploaded.');
+            }
+
+            // Debug: Check file type
+            $file = $request->file('file');
+            if (!$file->isValid()) {
+                throw new \Exception('Uploaded file is not valid.');
+            }
+
+            // Import using Excel
+            Excel::import(new PropertyImport, $file);
+
+            $notification = trans('admin_validation.Uploaded Successfully');
+            $notification = ['messege' => $notification, 'alert-type' => 'success'];
+            return redirect()->route('admin.agent-property')->with($notification);
+
+        } catch (\Throwable $e) {
+            echo "<h3 style='color:red;'>Error Message:</h3>";
+            echo $e->getMessage();
+            echo "<h3 style='color:blue;'>Full Trace:</h3><pre>";
+            echo $e->getTraceAsString();
+            echo "</pre>";
+            exit;
+        }
     }
 
 
