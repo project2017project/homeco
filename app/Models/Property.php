@@ -9,6 +9,22 @@ class Property extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'agent_id',
+        'property_type_id',
+        'title',
+        'slug',
+        'purpose',
+        'rent_period',
+        'price',
+        'thumbnail_image',
+        'description',
+        'video_description',
+        'video_thumbnail',
+        'video_id',
+        'address',
+    ];
+
     public function property_type(){
         return $this->belongsTo(Category::class, 'property_type_id');
     }

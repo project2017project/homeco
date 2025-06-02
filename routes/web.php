@@ -396,6 +396,9 @@ Route::group(['as'=> 'admin.', 'prefix' => 'admin'],function (){
 
     Route::get('create-property', [ContentController::class, 'create_property'])->name('create-property');
     Route::put('update-create-property', [ContentController::class, 'update_create_property'])->name('update-create-property');
+    Route::get('property-import-page',[PropertyController::class,'property_import'])->name('property-import-page');
+    Route::get('property-export',[PropertyController::class,'property_export'])->name('property-export');
+    Route::post('store-import-property',[PropertyController::class,'store_import_property'])->name('store-import-property');
 
     Route::get('homepage', [ContentController::class, 'homepage'])->name('homepage');
     Route::put('update-homepage', [ContentController::class, 'update_homepage'])->name('update-homepage');
