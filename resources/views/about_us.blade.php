@@ -50,17 +50,17 @@
                     <div class="homec-image-group homec-image-group--v2">
                         <div class="homec-image-group__main">
                             <img src="{{ asset($about_us->background_image) }}" alt="background_image">
-                            <div class="homec-experiences">
+                            <!--<div class="homec-experiences">
                                 <h4 class="homec-experiences__title">{{ $about_us->experience_text_1 }} <span>{{ $about_us->experience_text_2 }}</span></h4>
-                            </div>
+                            </div>-->
                         </div>
-                        <div class="homec-ceo-quote">
+                        <!--<div class="homec-ceo-quote">
                             <div class="homec-ceo-quote__img">
                                 <div class="homec-overlay"></div>
                                 <img src="{{ asset($about_us->author_image) }}" alt="author_image">
                             </div>
                             <h4 class="homec-ceo-quote__title">{{ $about_us->author_name }}<span>{{ $about_us->author_designation }}</span></h4>
-                        </div>
+                        </div>-->
                     </div>
                     <!-- End Homec Image Group -->
                 </div>
@@ -102,17 +102,116 @@
     </section>
     <!-- End About Area -->
 
-    @php
+
+
+        <!-- ====== Feature Boxes Start ===== -->
+
+
+    <section class="homec-features homec-features__v2 property-tools-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
+                        <a href="http://homeco.webngigs/properties?type=apartment" class="homec-features__single">
+                            <div class="homec-features__icon">
+                                <img src="../public/frontend/img/feature/apartment.png" alt="icon">
+                            </div>
+                            <div class="homec-features__content">
+                                <h3 class="homec-features__title">Apartment</h3>
+                                <p class="homec-features__text">Spacious apartments with contemporary design, secure access, community amenities for urban living.</p>
+                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
+                        <a href="http://homeco.webngigs/properties?type=building" class="homec-features__single">
+                            <div class="homec-features__icon">
+                                <img src="../public/frontend/img/feature/building.png" alt="icon">
+                            </div>
+                            <div class="homec-features__content">
+                                <h3 class="homec-features__title">Building</h3>
+                                <p class="homec-features__text">Well-structured residential and commercial buildings with durable construction, reliable facility management.</p>
+                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
+                        <a href="http://homeco.webngigs/properties?type=duplex-house" class="homec-features__single">
+                            <div class="homec-features__icon">
+                                <img src="../public/frontend/img/feature/duplex.png" alt="icon">
+                            </div>
+                            <div class="homec-features__content">
+                                <h3 class="homec-features__title">Duplex House</h3>
+                                <p class="homec-features__text">Elegant duplex houses with private entrances, separate living spaces, cozy outdoor areas.</p>
+                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
+                        <a href="http://homeco.webngigs/properties?type=plaza" class="homec-features__single">
+                            <div class="homec-features__icon">
+                                <img src="../public/frontend/img/feature/plaza.png" alt="icon">
+                            </div>
+                            <div class="homec-features__content">
+                                <h3 class="homec-features__title">Plaza</h3>
+                                <p class="homec-features__text">Dynamic plazas combining retail, office, and leisure spaces in walkable settings with high foot traffic.</p>
+                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    <!-- ===== Feature Boxes end ===== -->
+
+
+                @if ($counter->visibility)
+        @php
+                $counter_content = $counter->content;
+            @endphp
+        <section class="counter-sec-wrapper pd-top-80 pd-btm-30">
+            <div class="container">
+                <div class="row">
+                        <div class="col-12">
+                            <div class="homec-section__head text-center mg-btm-30">
+                                <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0">{{ $counter_content->description }}</span>
+                                <h2 class="homec-section__title">{{ $counter_content->title }}</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <div class="row">
+                    @foreach ($counter->items as $counter_item)
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-50">
+                        <!-- FunFacts Single -->
+                        <div class="homec-funfact__single homec-border">
+                            <div class="homec-funfact__icon">
+                                <img src="{{ asset($counter_item->icon) }}" alt="icon">
+                            </div>
+                            <h3 class="homec-funfact__number"><span class="counter">{{ $counter_item->number }}</span></h3>
+                            <p class="homec-funfact__text">{{ $counter_item->title }}</p>
+                        </div>
+                        <!-- End FunFacts Single -->
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    <!--@php
         $property_types = $category->property_types;
     @endphp
 
-    <!-- Features Area -->
     <section class="homec-features pd-top-50 pd-btm-70">
         <div class="container">
             <div class="row">
                 @foreach ($property_types as $property_type)
                 <div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-                    <!-- Single Feature -->
                     <a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
                         <div class="homec-features__icon">
                             <img src="{{ asset($property_type->icon) }}" alt="icon">
@@ -122,73 +221,18 @@
                             <p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
                         </div>
                     </a>
-                    <!-- End Single Feature -->
                 </div>
                 @endforeach
             </div>
         </div>
-    </section>
-    <!-- End Features Area -->
+    </section>-->
 
-    @php
-        $counter_content = $counter->content;
-    @endphp
-    <!-- FunFacts -->
-    <section class="homec-funfacts pd-btm-100">
-        <img src="{{ asset($counter_content->bg_image) }}" alt="bg_image">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="homec-funfact homec-border homec-funfact--bg">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5 col-12">
-                                <div class="homec-funfact__inner">
-                                    <div class="homec-funfact__content"  data-aos="fade-up" data-aos-delay="300">
-                                        <h2 class="homec-section__title mg-btm-10">{{ $counter_content->title }}</h2>
-                                        <p>{{ $counter_content->description }}</p>
-                                    </div>
-                                    <!-- Homec List -->
-                                    <ul class="homec-iconic-list list-none mg-top-30"  data-aos="fade-up" data-aos-delay="400">
-                                        <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_1 }}</li>
-                                        <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_2 }}</li>
-                                        <li><i class="fa-solid fa-check"></i>{{ $counter_content->list_3 }}</li>
-                                    </ul>
-                                    <!-- Homec Button -->
-                                    <div class="homec-btn__main mg-top-40"  data-aos="fade-up" data-aos-delay="500">
-                                        <a href="{{ route('contact-us') }}" class="homec-btn"><span>{{__('user.Contact Us')}}</span></a>
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-12">
-                                <div class="homec-funfacts">
-                                    <div class="row">
-                                        @foreach ($counter->items as $counter_item)
-                                            <div class="col-lg-6 col-md-6 col-12"  data-aos="fade-in" data-aos-delay="400">
-                                                <!-- FunFacts Single -->
-                                                <div class="homec-funfact__single homec-border">
-                                                    <div class="homec-funfact__icon">
-                                                        <img src="{{ asset($counter_item->icon) }}" alt="icon">
-                                                    </div>
-                                                    <h3 class="homec-funfact__number"><span class="counter">{{ $counter_item->number }}</span></h3>
-                                                    <p class="homec-funfact__text">{{ $counter_item->title }}</p>
-                                                </div>
-                                                <!-- End FunFacts Single -->
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End FunFacts Area -->
+
+
 
     <!-- Agents -->
-    <section class="homec-bg-third-color homec-bg-cover pd-top-50 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
+    <!--<section class="homec-bg-third-color homec-bg-cover pd-top-50 pd-btm-80" style="background-image: url({{ asset($agent->home2_agent_bg) }});">
         <div class="homec-overlay"></div>
         <div class="section-inside-bg homec-agent-inside"></div>
         <div class="container">
@@ -211,9 +255,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($agent->agents as $agent_index => $single_agent )
                                 <div class="swiper-slide">
-                                    <!-- Single agent-->
                                     <div class="homec-agent">
-                                        <!-- Agent Head-->
                                         <div class="homec-agent__head">
                                             @if ($single_agent->image)
                                             <img src="{{ asset($single_agent->image) }}" alt="agent">
@@ -238,27 +280,23 @@
                                                 @endif
                                             </ul>
                                         </div>
-                                        <!-- Agent Body -->
                                         <div class="homec-agent__body">
                                             <h4 class="homec-agent__title"><a href="{{ route('agent', ['agent_type' => 'agent', 'user_name' => $single_agent->user_name]) }}">{{ $single_agent->name }}<span>{{ $single_agent->designation }}</span></a></h4>
                                         </div>
-                                        <!-- End Agent Body -->
                                     </div>
-                                    <!-- End Single agent-->
                                 </div>
                             @endforeach
                         </div>
                     </div>
-                    <!-- Slider Pagination -->
                     <div class="swiper-pagination swiper-pagination__start swiper-pagination--white  swiper-pagination__agent"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End Agents -->
 
     <!-- Faq Area -->
-    <section class="homec-bg-cover pd-top-60 pd-btm-80 homec-faq-bg">
+    <section class="homec-bg-cover pd-top-30 pd-btm-50">
         <div class="container homec-container-medium">
             <div class="row homec-container-medium__row align-items-center">
                 <div class="col-lg-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">

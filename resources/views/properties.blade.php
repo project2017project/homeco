@@ -93,7 +93,7 @@
                                     </svg>
                                 </a>
                                 
-                                @if ($setting->live_map == 'yes')
+                                <!--@if ($setting->live_map == 'yes')
                                     <a class="list-group-item map_view" data-bs-toggle="list" href="#map-grid"
                                         role="tab">
                                         <svg  width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +110,7 @@
                                         </svg>
 
                                     </a>
-                                @endif
+                                @endif-->
                             </div>
                         </div>
                     </div>

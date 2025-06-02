@@ -445,7 +445,7 @@
     background-color: #ffffff!important;
 }
 .homec-properties .swiper-pagination{
-    margin-top: 0px!important;
+    margin-top: 30px!important;
 }
 
 .homec-features__v2
@@ -453,6 +453,10 @@
     margin-bottom: 0px;
 }
 
+.swiper-pagination span{
+    width: 15px;
+    height: 15px;
+}
 .homec-top-slider-property .homec-property{
 background: transparent;
     box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
@@ -618,6 +622,134 @@ color: #303030;
     background: transparent;
     box-shadow: none;
 }
+.homec-blog{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.homec-header a.homec-header__icon{
+    background: transparent;
+}
+.homec-property.homec-property__list-style .homec-property__head img {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-width: 330px;
+}
+.homec-property-bar{
+        border: 1px solid #dddddd;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    padding: 8px 20px;
+}
+.homec-property-bar .homec-form__form{
+    background: #f5f5f5;
+    border-radius: 50px;
+    height: auto;
+    border: 1px solid #dddddd;
+}
+.homec-property-bar .homec-form__form.homec-form__form--bar button{
+    border-radius: 50px;
+}
+.property-sidebar__single input[type="checkbox"]{
+    background: transparent;
+    border: 1px solid #dddddd;
+}
+.homec-property.homec-property__list-style{
+ box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+}
+.property-sidebar{
+   box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06); 
+}
+.breadcrumbs__content{
+    height: 300px;
+}
+.homec-section__badge.homec-section__badge--shape{
+    padding: 0px!important;
+    background-size: initial;
+    background-position: initial;
+    background-repeat: initial;
+    background-image: none;
+}
+.counter-sec-wrapper .homec-funfact__single{
+    background: transparent;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+}
+.counter-sec-wrapper .homec-funfact__single:hover {
+    background-color: #d8232a;
+}
+
+.contact-side-pic img{
+    border-radius: 5px;
+}
+.homec-contact-form .homec-property-ag{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.homec-contact-form .homec-property-ag__title {
+    color: #222222;
+}
+
+.homec-contact-form .homec-property-ag__form input{
+    border: 1px solid #dddddd;
+    color: #222222!important;
+    height: 45px;
+    font-size: 14px;
+}
+
+.homec-contact-form .homec-property-ag__form textarea{
+    border: 1px solid #dddddd;
+    color: #222222!important;
+    font-size: 14px;
+}
+
+
+
+.homec-contact-form .homec-property-ag__form input::placeholder {
+    color: #222222 !important;
+}
+
+.homec-contact-form .homec-property-ag__form input::-ms-input-placeholder {
+    color: #222222 !important;
+}
+
+.homec-contact-form .homec-property-ag__form textarea::placeholder {
+    color: #222222 !important;
+}
+
+.homec-contact-form .homec-property-ag__form textarea::-ms-input-placeholder {
+    color: #222222 !important;
+}
+.contact-info-wrapper .homec-contact__single{
+background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+.contact-info-wrapper .homec-contact__icon
+{
+height: 55px;
+width: 55px;
+background: #d8232a;
+}
+.contact-info-wrapper .homec-contact__icon svg {
+    fill: #ffffff;
+    height: 25px;
+    width: 25px;
+}
+.contact-info-wrapper .homec-contact__label {
+    color: #222222;
+    font-weight: 600;
+}
+.contact-info-wrapper .homec-contact__title{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
 
 
 @media(max-width: 1199px){
@@ -690,6 +822,8 @@ color: #303030;
 }
 .homec-filter-group .form-group{
     padding: 12px 8px!important;
+    border-bottom: 1px solid #dddddd;
+        margin-bottom: 10px;
 }
 .homec-section__title{
     font-size: 20px!important;
@@ -710,6 +844,21 @@ color: #303030;
 .home-top-property-wrapper .homec-section__btn.mg-top-30{
 margin-top: 0px!important;
 }
+.breadcrumbs__content {
+    height: 200px;
+    min-height: 200px;
+}
+.breadcrumb__menu li a{
+    font-size: 14px;
+}
+.breadcrumbs__content .breadcrumb__title {
+        font-size: 20px;
+    }
+    .scrollToTop {
+        right: -15px;
+        bottom: 78px;
+    }
+
 }
 
 
@@ -727,5 +876,8 @@ margin-top: 0px!important;
         padding-bottom: 15px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    #active-sticky.is-sticky .homec-header__middle{
+        box-shadow: 0px 6px 15px rgba(20, 0, 255, 0.06); 
     }
 }
