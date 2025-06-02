@@ -569,7 +569,7 @@
 
     @if ($top_property->visibility)
 		<!-- Properties Listing -->
-		<section class="homec-properties home-top-property-wrapper homec-bg-third-color pd-top-60 pd-btm-80">
+		<section class="homec-properties home-top-property-wrapper homec-bg-third-color pd-top-60 pd-btm-50">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -656,7 +656,7 @@
 							</div>
 						</div>
 						<!-- Slider Pagination -->
-						<div class="swiper-pagination swiper-pagination__property"></div>
+						<div class="swiper-pagination swiper-pagination__top_property"></div>
 					</div>
 				</div>
 			</div>
@@ -1242,7 +1242,7 @@
 
         @if ($blog->visibility)
 		<!-- Blog Area -->
-		<section id="blog" class="blog-area homec-bg-cover pd-top-80 pd-btm-80 homec-blog-bg">
+		<section id="blog" class="blog-area homec-bg-cover pd-top-80 pd-btm-60 homec-blog-bg">
 			<div class="blog-bg-pattern">
 				<div class="container">
 					<div class="row">
