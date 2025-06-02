@@ -889,25 +889,24 @@
 
                 /* Slider Property */
                 var swiper = new Swiper(".homec-slider-property", {
-                    // autoplay: {
-                    //     delay: 5000,
-                    // },
+                    autoplay: {
+                        delay: 5000,
+                    },
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     },
                     mousewheel: false,
-                    autoplay: false,
                     keyboard: true,
                     loop: true,
                     grabCursor: true,
                     spaceBetween: 20,
                     centeredSlides: false,
-                    // pagination: {
-                    //     el: '.swiper-pagination__property',
-                    //     type: 'bullets',
-                    //     clickable: true,
-                    // },
+                    pagination: {
+                        el: '.swiper-pagination__property',
+                        type: 'bullets',
+                        clickable: true,
+                    },
                     slidesPerView: "4",
                     breakpoints: {
                         320: {
@@ -931,25 +930,24 @@
 
                 /* Top Slider Property */
                 var swiper = new Swiper(".homec-top-slider-property ", {
-                    // autoplay: {
-                    //     delay: 5000,
-                    // },
+                    autoplay: {
+                        delay: 5000,
+                    },
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     },
                     mousewheel: false,
-                    autoplay: false,
                     keyboard: true,
                     loop: true,
                     grabCursor: true,
                     spaceBetween: 20,
                     centeredSlides: false,
-                    // pagination: {
-                    //     el: '.swiper-pagination__property',
-                    //     type: 'bullets',
-                    //     clickable: true,
-                    // },
+                    pagination: {
+                        el: '.swiper-pagination__top_property',
+                        type: 'bullets',
+                        clickable: true,
+                    },
                     slidesPerView: "4",
                     breakpoints: {
                         320: {
