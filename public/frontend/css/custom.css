@@ -215,11 +215,22 @@
     font-size: 18px;
 }
 .homec-dashboard__single{
-    background: #f7f7fc;
+    background: transparent;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+}
+.homec-dashboard__single .homec-dashboard__icon {
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
 }
 .homec-btn.homec-btn__second{
     color: #ffffff!important;
     font-size: 16px;
+}
+.homec-list-tabs.homec-list-tabs--v3{
+background: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
 }
 .homec-list-tabs.homec-list-tabs--v3 .list-group-item.active{
         background: #d8232a !important;
@@ -748,9 +759,163 @@ background: #d8232a;
     font-size: 15px;
     font-weight: 400;
 }
+.footer-area ul li a:hover {
+    color: #ffffff;
+}
+.homec-header a.homec-header__icon:hover{
+    background: #d8232a;
+}
+.homec-btn.homec-btn__second:hover{
+    color: #d8232a!important;
+    border-color: #d8232a!important;
+}
+.pd-features__single{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd;
+}
+.pd-features__title {
+    font-size: 16px;
+    font-weight: 500;
+}
+.pd-features__text
+{
+    font-size: 15px;
+}
 
+.homec-list-tabs.homec-list-tabs--v2 a{
+    font-size: 16px;
+}
+.homec-pdetails-tab__inner p{
+   font-size: 14px;
+   margin-bottom: 20px;
+}
+.homec-property-ag--side{
+     background-color: #ffffff!important;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd;
+}
+.homec-property-ag--side .homec-property-ag__title
+{
+color: #222222;
+}
+.homec-property-ag--side .homec-property-ag__author--title{
+    font-size: 16px;
+    color: #222222;
+}
+.homec-property-ag__author {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+.homec-property-ag__form input, .homec-property-ag__form textarea{
+    border: 1px solid #dddddd!important;
+    font-size: 14px!important;
+}
+.homec-property-ag__form input:hover, .homec-property-ag__form textarea:hover{
+    border-color: #dddddd!important;
+    color: #222222!important;
+}
 
+.homec-property-ag__form input{
+    color: #222222!important;
+}
+.homec-property-ag__form textarea{
+   color: #222222!important; 
+}
+.homec-property-ag__form input::placeholder {
+    color: #222222 !important;
+    opacity: 1 !important;
+    font-size: 14px!important;
+}
 
+.homec-property-ag__form input::-ms-input-placeholder {
+    color: #222222 !important;
+    opacity: 1 !important;
+    font-size: 14px!important;
+}
+
+.homec-property-ag__form textarea::placeholder {
+    color: #222222 !important;
+    opacity: 1 !important;
+    font-size: 14px!important;
+}
+
+.homec-property-ag__form textarea::-ms-input-placeholder {
+    color: #222222 !important;
+    opacity: 1 !important;
+    font-size: 14px!important;
+}
+.calculate-box{
+        background-color: #ffffff!important;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd; 
+}
+.calculate-box .calculate-box-text h4{
+    color: #222222;
+}
+.calculate-box .calculate-box-text p{
+    color: #222222;
+}
+.calculate-box-lone-amount label{
+    color: #222222;
+}
+.calculate-box-lone-amount-text-one p{
+    color: #222222;
+}
+.calculate-box-lone-amount-two .calculate-box-lone-amount-text #amt{
+    border: none;
+    background: transparent;
+    color: #222222!important;
+}
+.calculate-box-lone-amount-two .calculate-box-lone-amount-text .year{
+    border: none;
+    background: transparent;
+    color: #222222!important;
+}
+.calculate-box-lone-amount .form-control{
+    border: 1px solid #dddddd;
+    height: 40px;
+
+}
+.calculate-payment .calculate-payment-left h5{
+    color: #222222;
+}
+.calculate-payment
+{
+    margin-top: 0px;
+}
+.homec-btn.homec-btn__second.homc-white-bg-button{
+    background-color: #222222;
+}
+.homec-btn.homec-btn__second.homc-white-bg-button:hover{
+    background-color: transparent!important;
+}
+.homec-btn.homec-btn__second.homc-white-bg-button:hover:before{
+    background-color: #ffffff;
+}
+.homec-amount-card.homec-amount-card__sticky {
+    background: #ffffff!important;
+    padding: 10px 25px!important;
+}
+.homec-amount-card__amount{
+    font-size: 20px!important;
+}
+.homec-ptdetails-features__list li b{
+        font-size: 14px;
+}
+.calculate-box-lone-amount .form-control{
+     color: #222222!important;
+}
+.calculate-box-lone-amount .form-control:hover
+{
+    border: 1px solid #dddddd!important;
+    color: #222222!important;
+}
+.calculate-payment .calculate-payment-right h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #d8232a;
+}
 
 @media(max-width: 1199px){
     .homec-filter-group{
