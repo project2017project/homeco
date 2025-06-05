@@ -2980,3 +2980,12 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   100% {
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0.0; } }
+
+
+body .btn-primary {
+    background-color: #d8232a!important;
+}
+body .btn-primary:hover{
+  background-color: #222222!important;
+  border-color:  #222222!important;
+}

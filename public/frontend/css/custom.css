@@ -671,7 +671,17 @@ color: #303030;
    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06); 
 }
 .breadcrumbs__content{
-    height: 300px;
+    height: 350px;
+    position: relative;
+}
+.breadcrumbs__content:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .homec-section__badge.homec-section__badge--shape{
     padding: 0px!important;
