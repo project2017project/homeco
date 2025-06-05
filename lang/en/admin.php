@@ -224,6 +224,7 @@
   'Edit Blog Category' => 'Edit Blog Category',
   'Edit Property Type' => 'Edit Property Type',
   'Existing Icon' => 'Existing Icon',
+  'Description' => 'Description',
   'Edit Counter' => 'Edit Counter',
   'Edit Custom Page' => 'Edit Custom Page',
   'Email Template' => 'Email Template',

@@ -42,6 +42,10 @@
                                     <input type="text" id="slug" class="form-control"  name="slug" value="{{ $category->slug }}">
                                 </div>
                                 <div class="form-group col-12">
+                                    <label for="">{{__('admin.Description')}} <span class="text-danger">*</span></label>
+                                    <input type="text" id="short_description" class="form-control" name="short_description" value="{{ $category->short_description }}">
+                                </div>
+                                <div class="form-group col-12">
                                     <label>{{__('admin.Status')}} <span class="text-danger">*</span></label>
                                     <select name="status" class="form-control">
                                         <option {{ $category->status==1 ? 'selected': '' }} value="1">{{__('admin.Active')}}</option>
