@@ -675,14 +675,14 @@
 			<div class="container">
 				<div class="row">
                     @foreach ($property_types as $property_type)
-					<div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
+					<div class="col-lg-3 col-md-6 col-12 mg-top-30">
 						<a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
 							<div class="homec-features__icon">
 								<img src="{{ asset($property_type->icon) }}" alt="icon">
 							</div>
 							<div class="homec-features__content">
 								<h3 class="homec-features__title">{{ $property_type->name }}</h3>
-								<p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
+								<!-- <p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p> -->
                                 <p class="homec-features__text">{{ $property_type->short_description }}</p>
 								<span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
 							</div>
