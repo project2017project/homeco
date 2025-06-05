@@ -154,7 +154,7 @@
     </section>
 
 
-    <section class="pd-top-0 homec-bg-third-color pd-btm-80 homec-bg-cover homec-property-single-bg">
+    <section class="pd-top-0 homec-bg-third-color pd-btm-80 homec-bg-cover">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 ol-12">
@@ -402,7 +402,7 @@
                         <button id="run" class="homec-btn homec-btn__second homec-property-ag__button"><span>{{ __('user.Book Now') }}</span></button>
                     </div>
                     <!-- Property Agent Card -->
-                    <div class="homec-property-ag homec-property-ag--side homec-bg-cover homec-agent-side-cover">
+                    <div class="homec-property-ag homec-property-ag--side">
                         <h3 class="homec-property-ag__title">{{__('user.Property Agent')}}</h3>
                         <!-- Property Profile -->
                         <div class="homec-property-ag__author">
