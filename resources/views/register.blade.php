@@ -4,13 +4,13 @@
 		<!-- Meta Tags -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="{{__('user.HomeCo || Register')}}">
-		<meta name="description" content={{__('user.HomeCo || Register')}}">
-		<meta name="title" content={{__('user.HomeCo || Register')}}">
+		<meta name="keywords" content="{{__('user.Tashi || Register')}}">
+		<meta name="description" content={{__('user.Tashi || Register')}}">
+		<meta name="title" content={{__('user.Tashi || Register')}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Site Title -->
-		<title>{{__('user.HomeCo || Register')}}</title>
+		<title>{{__('user.Tashi || Register')}}</title>
 
 		<!-- Fav Icon -->
         <link rel="icon" type="image/png" href="{{ asset($setting->favicon) }}">
