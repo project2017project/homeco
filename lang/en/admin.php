@@ -45,6 +45,8 @@
   'Awaiting for approval' => 'Awaiting for approval',
   'Awaiting for approval(agent property)' => 'Awaiting for approval(agent property)',
   'Property' => 'Property',
+  'Property Bulk Import' => 'Property Bulk Import',
+  'Property List' => 'Property List',
   'Price' => 'Price',
   'Purpose' => 'Purpose',
   'Approval' => 'Approval',
