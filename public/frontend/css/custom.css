@@ -931,7 +931,7 @@ color: #222222;
     font-size: 14px;
 }
 .homec-btn.homec-btn__second:hover .homec-btn__inside svg path{
-    color: #d8232a!important;
+    fill: #d8232a !important;
 }
 
 @media(max-width: 1199px){
