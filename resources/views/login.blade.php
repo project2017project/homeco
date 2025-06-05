@@ -68,7 +68,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="ecom-wc__form">
                             <div class="ecom-wc__form-inner">
-                                <h3 class="ecom-wc__form-title ecom-wc__form-title__one">{{__('user.Login')}} <span>{{__('user.To access our pltafrom please login first')}}</span></h3>
+                                <h3 class="ecom-wc__form-title ecom-wc__form-title__one">{{__('user.Login')}} <span>{{__('user.To access our Website please login first')}}</span></h3>
                                 <!-- Sign in Form -->
                                 <form class="ecom-wc__form-main p-0" action="{{ route('store-login') }}" method="post">
                                     @csrf

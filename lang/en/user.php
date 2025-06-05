@@ -193,7 +193,7 @@
   'Processing...' => 'Processing...',
   'Tashi || Login' => 'Tashi || Login',
   'Login' => 'Login',
-  'To access our pltafrom please login first' => 'To access our pltafrom please login first',
+  'To access our Website please login first' => 'To access our Website please login first',
   'Forget password ?' => 'Forget password ?',
   'Do not have an account ?' => 'Do not have an account ?',
   'Create Account' => 'Create Account',
