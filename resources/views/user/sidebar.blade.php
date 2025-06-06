@@ -91,6 +91,8 @@
         @endif
     @endif
 
+    
+
     @if ($setting->agent_can_add_property)
         @if ($setting->agent_can_add_property == 'enable')
             @if( $agent_order)

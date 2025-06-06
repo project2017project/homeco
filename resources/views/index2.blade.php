@@ -667,7 +667,6 @@
 
 
     @if ($category->visibility)
-
         @php
             $property_types = $category->property_types;
         @endphp
