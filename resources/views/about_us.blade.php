@@ -105,7 +105,7 @@
 
 
                 @if ($counter->visibility)
-        @php
+             @php
                 $counter_content = $counter->content;
             @endphp
         <section class="counter-sec-wrapper pd-top-50 pd-btm-30">
