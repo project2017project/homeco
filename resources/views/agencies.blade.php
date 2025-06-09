@@ -33,7 +33,7 @@
     <!-- End breadcrumbs -->
 
     <!-- Agents -->
-    <section class="pd-top-70 pd-btm-100">
+    <section class="pd-top-70 pd-btm-40">
         <div class="container">
 
             <div class="row">
@@ -41,16 +41,17 @@
                     <div class="agent_agency_btn homec-property-bar">
                         <div class="homec-property-bar__single">
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                        aria-selected="true">{{ __('user.Agency/Team') }}</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
+                                <li class="nav-item active" role="presentation">
                                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                         data-bs-target="#pills-profile" type="button" role="tab"
                                         aria-controls="pills-profile" aria-selected="false">{{ __('user.Single Agents') }}</button>
                                 </li>
+                                <!--<li class="nav-item" role="presentation">
+                                    <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">{{ __('user.Agency/Team') }}</button>
+                                </li>-->
+                                
                             </ul>
                         </div>
                         <div class="homec-property-bar__single">
@@ -66,40 +67,8 @@
             </div>
 
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
-                    <div class="row">
-                        @foreach ($agencies as $agency)
-                            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                                <!-- Single agency-->
-                                <div class="homec-agent homec-agent__grid homec-border mg-top-30">
-                                    <!-- agency Head-->
-                                    <div class="homec-agent__head">
-                                        <img src="{{ asset($agency?->profile?->image) }}" alt="agent">
-                                    </div>
-                                    <!-- Agent Body -->
-                                    <div class="homec-agent__body">
-                                        <h4 class="homec-agent__title">
-                                            <a href="{{ route('agency-details', ['id' => $agency->id]) }}">
-                                                {{ $agency?->profile?->company_name }}
-                                            </a>
-                                            <span>
-                                                {{ $agency?->profile?->tag_line }}
-                                            </span>
-                                        </h4>
-                                    </div>
-                                    <!-- End agency Body -->
-                                </div>
-                                <!-- End Single agency-->
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="row mg-top-40">
-                        {{ $agencies->links('custom_pagination') }}
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="tab-pane fade  show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="row">
                         @foreach ($agents as $single_agent)
                             <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
@@ -178,13 +147,44 @@
                         {{ $agents->links('custom_pagination') }}
                     </div>
                 </div>
+
+                <!--<div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <div class="row">
+                        @foreach ($agencies as $agency)
+                            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="homec-agent homec-agent__grid homec-border mg-top-30">
+                                    
+                                    <div class="homec-agent__head">
+                                        <img src="{{ asset($agency?->profile?->image) }}" alt="agent">
+                                    </div>
+                                    <div class="homec-agent__body">
+                                        <h4 class="homec-agent__title">
+                                            <a href="{{ route('agency-details', ['id' => $agency->id]) }}">
+                                                {{ $agency?->profile?->company_name }}
+                                            </a>
+                                            <span>
+                                                {{ $agency?->profile?->tag_line }}
+                                            </span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="row mg-top-40">
+                        {{ $agencies->links('custom_pagination') }}
+                    </div>
+                </div>-->
+
+            
             </div>
         </div>
     </section>
     <!-- End Agents -->
 
     <!-- Faq Area -->
-    <section class="homec-bg-cover pd-top-50 pd-btm-80 homec-faq-bg">
+    <section class="pd-top-20 pd-btm-80">
         <div class="container homec-container-medium">
             <div class="row homec-container-medium__row align-items-center">
                 <div class="col-lg-6 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">

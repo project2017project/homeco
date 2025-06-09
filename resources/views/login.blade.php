@@ -4,13 +4,13 @@
 		<!-- Meta Tags -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="{{__('user.HomeCo || Login')}}">
-		<meta name="description" content="{{__('user.HomeCo || Login')}}">
-		<meta name="title" content="{{__('user.HomeCo || Login')}}">
+		<meta name="keywords" content="{{__('user.Tashi || Login')}}">
+		<meta name="description" content="{{__('user.Tashi || Login')}}">
+		<meta name="title" content="{{__('user.Tashi || Login')}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Site Title -->
-		<title>{{__('user.HomeCo || Login')}}</title>
+		<title>{{__('user.Tashi || Login')}}</title>
 
 		<!-- Fav Icon -->
         <link rel="icon" type="image/png" href="{{ asset($setting->favicon) }}">
@@ -68,7 +68,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="ecom-wc__form">
                             <div class="ecom-wc__form-inner">
-                                <h3 class="ecom-wc__form-title ecom-wc__form-title__one">{{__('user.Login')}} <span>{{__('user.To access our pltafrom please login first')}}</span></h3>
+                                <h3 class="ecom-wc__form-title ecom-wc__form-title__one">{{__('user.Login')}} <span>{{__('user.To access our Website please login first')}}</span></h3>
                                 <!-- Sign in Form -->
                                 <form class="ecom-wc__form-main p-0" action="{{ route('store-login') }}" method="post">
                                     @csrf

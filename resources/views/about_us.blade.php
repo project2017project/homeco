@@ -104,76 +104,11 @@
 
 
 
-        <!-- ====== Feature Boxes Start ===== -->
-
-
-    <section class="homec-features homec-features__v2 property-tools-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
-                        <a href="http://homeco.webngigs/properties?type=apartment" class="homec-features__single">
-                            <div class="homec-features__icon">
-                                <img src="../public/frontend/img/feature/apartment.png" alt="icon">
-                            </div>
-                            <div class="homec-features__content">
-                                <h3 class="homec-features__title">Apartment</h3>
-                                <p class="homec-features__text">Spacious apartments with contemporary design, secure access, community amenities for urban living.</p>
-                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
-                        <a href="http://homeco.webngigs/properties?type=building" class="homec-features__single">
-                            <div class="homec-features__icon">
-                                <img src="../public/frontend/img/feature/building.png" alt="icon">
-                            </div>
-                            <div class="homec-features__content">
-                                <h3 class="homec-features__title">Building</h3>
-                                <p class="homec-features__text">Well-structured residential and commercial buildings with durable construction, reliable facility management.</p>
-                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
-                        <a href="http://homeco.webngigs/properties?type=duplex-house" class="homec-features__single">
-                            <div class="homec-features__icon">
-                                <img src="../public/frontend/img/feature/duplex.png" alt="icon">
-                            </div>
-                            <div class="homec-features__content">
-                                <h3 class="homec-features__title">Duplex House</h3>
-                                <p class="homec-features__text">Elegant duplex houses with private entrances, separate living spaces, cozy outdoor areas.</p>
-                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mg-top-30">
-                        <a href="http://homeco.webngigs/properties?type=plaza" class="homec-features__single">
-                            <div class="homec-features__icon">
-                                <img src="../public/frontend/img/feature/plaza.png" alt="icon">
-                            </div>
-                            <div class="homec-features__content">
-                                <h3 class="homec-features__title">Plaza</h3>
-                                <p class="homec-features__text">Dynamic plazas combining retail, office, and leisure spaces in walkable settings with high foot traffic.</p>
-                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-    <!-- ===== Feature Boxes end ===== -->
-
-
                 @if ($counter->visibility)
-        @php
+             @php
                 $counter_content = $counter->content;
             @endphp
-        <section class="counter-sec-wrapper pd-top-80 pd-btm-30">
+        <section class="counter-sec-wrapper pd-top-50 pd-btm-30">
             <div class="container">
                 <div class="row">
                         <div class="col-12">
@@ -203,29 +138,31 @@
         </section>
     @endif
 
-    <!--@php
+    @php
         $property_types = $category->property_types;
     @endphp
 
-    <section class="homec-features pd-top-50 pd-btm-70">
-        <div class="container">
-            <div class="row">
-                @foreach ($property_types as $property_type)
-                <div class="col-lg-3 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
-                    <a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
-                        <div class="homec-features__icon">
-                            <img src="{{ asset($property_type->icon) }}" alt="icon">
-                        </div>
-                        <div class="homec-features__content">
-                            <h3 class="homec-features__title">{{ $property_type->name }}</h3>
-                            <p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p>
-                        </div>
-                    </a>
+    <section class="homec-features homec-features__v2 property-tools-wrapper pd-top-50 pd-btm-30">
+            <div class="container">
+                <div class="row">
+                    @foreach ($property_types as $property_type)
+                    <div class="col-lg-3 col-md-6 col-12 mg-top-20">
+                        <a href="{{ route('properties', ['type' => $property_type->slug]) }}" class="homec-features__single">
+                            <div class="homec-features__icon">
+                                <img src="{{ asset($property_type->icon) }}" alt="icon">
+                            </div>
+                            <div class="homec-features__content">
+                                <h3 class="homec-features__title">{{ $property_type->name }}</h3>
+                                <!-- <p class="homec-features__text">{{ $property_type->totalProperty }}+ {{__('user.Property')}}</p> -->
+                                <p class="homec-features__text">{{ $property_type->short_description }}</p>
+                                <span class="view-now-btn">View Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
-        </div>
-    </section>-->
+        </section>
 
 
 

@@ -124,7 +124,7 @@ class HomeController extends Controller
             'slider_properties' => $slider_properties,
         );
 
-        $property_types = Category::select('id', 'name', 'slug')->orderBy('name', 'asc')->where('status', 1)->get();
+        $property_types = Category::select('id', 'name', 'slug','short_description')->orderBy('name', 'asc')->where('status', 1)->get();
 
         $home2_intro = (object) array(
             'bg_image' => $slider->home2_bg,
@@ -376,7 +376,7 @@ class HomeController extends Controller
         $category_visibility = false;
         if($homepage->show_category == 'enable') $category_visibility = true;
         $category_item = $homepage->category_item;
-        $property_types = Category::select('id', 'name', 'slug', 'icon', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take($category_item);
+        $property_types = Category::select('id', 'name', 'slug', 'icon','short_description', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take($category_item);
         $category = (object) array(
             'visibility' => $category_visibility,
             'property_types' => $property_types,
@@ -626,7 +626,7 @@ class HomeController extends Controller
         $category_visibility = false;
         if($homepage->show_category == 'enable') $category_visibility = true;
         $category_item = $homepage->category_item;
-        $property_types = Category::select('id', 'name', 'slug', 'icon', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take($category_item);
+        $property_types = Category::select('id', 'name', 'slug', 'icon','short_description', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take($category_item);
         $category = (object) array(
             'visibility' => $category_visibility,
             'property_types' => $property_types,
@@ -969,7 +969,7 @@ class HomeController extends Controller
         $category_visibility = false;
         if($homepage->show_category == 'enable') $category_visibility = true;
         $category_item = $homepage->category_item;
-        $property_types = Category::select('id', 'name', 'slug', 'icon', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take(4);
+        $property_types = Category::select('id', 'name', 'slug', 'icon','short_description', 'status')->orderBy('name', 'asc')->where('status', 1)->get()->take(4);
         $category = (object) array(
             'visibility' => $category_visibility,
             'property_types' => $property_types,
@@ -1189,7 +1189,7 @@ class HomeController extends Controller
         $properties = $properties->paginate($paginate_qty->qty);
 
         $locations = City::select('id', 'name', 'slug')->get();
-        $property_types = Category::select('id', 'name', 'slug')->orderBy('name', 'asc')->where('status', 1)->get();
+        $property_types = Category::select('id', 'name', 'slug', 'short_description')->orderBy('name', 'asc')->where('status', 1)->get();
         $countries = Country::orderBy('id', 'desc')->get();
 
         // agent section

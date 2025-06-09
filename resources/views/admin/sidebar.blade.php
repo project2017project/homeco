@@ -56,6 +56,10 @@
 
                 <li class="{{ Route::is('admin.aminity.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.aminity.index') }}">{{__('admin.Aminities')}}</a></li>
 
+                <li class="{{ Route::is('admin.securitysafety.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.securitysafety.index') }}">{{__('admin.Securitysafety')}}</a></li>
+
+                <li class="{{ Route::is('admin.bill.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.bill.index') }}">{{__('admin.Bills')}}</a></li>
+
                 <li class="{{ Route::is('admin.review-list') || Route::is('admin.show-review') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.review-list') }}">{{__('admin.Review List')}}</a></li>
 
             </ul>

@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\Review;
 use App\Models\Property;
 use App\Models\Wishlist;
+use App\Models\CompanyProfile;
 use App\Helpers\MailHelper;
 use Illuminate\Http\Request;
 use App\Mail\SendSingleAgentMail;

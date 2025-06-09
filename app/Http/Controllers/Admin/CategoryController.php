@@ -105,6 +105,7 @@ class CategoryController extends Controller
             'name'=>'required|unique:categories,name,'.$category->id,
             'slug'=>'required|unique:categories,name,'.$category->id,
             'status'=>'required',
+            'short_description'=>'required',
         ];
 
         $customMessages = [
@@ -118,6 +119,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->slug = $request->slug;
         $category->status = $request->status;
+        $category->short_description = $request->short_description;
         $category->save();
         if($request->icon){
             $old_logo = $category->icon;
