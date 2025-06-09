@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Aminity;
 use App\Models\PropertyAminity;
 
-class AminityContoller extends Controller
+class AminityController extends Controller
 {
     public function __construct()
     {
