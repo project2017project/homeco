@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\User\PaypalController;
 use App\Http\Controllers\Admin\AgencyController;
 use App\Http\Controllers\Admin\AminityContoller;
+use App\Http\Controllers\Admin\SsafetyContoller;
+use App\Http\Controllers\Admin\BillContoller;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\User\CompanyController;
@@ -355,6 +357,9 @@ Route::group(['as'=> 'admin.', 'prefix' => 'admin'],function (){
     Route::put('nearest-location-status/{id}', [NearestLocationController::class,'changeStatus'])->name('nearest-location-status');
 
     Route::resource('aminity', AminityContoller::class);
+    Route::resource('securitysafety', SecuritysafetyContoller::class);
+    Route::resource('bill', BillContoller::class);
+
     Route::resource('pricing-plan', PricingPlanController::class);
 
     Route::get('assign-pricing-plan',[ OrderController::class, 'assign_pricing_plan'])->name('assign-pricing-plan');
