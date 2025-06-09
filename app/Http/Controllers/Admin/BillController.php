@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Aminity;
-use App\Models\PropertyAminity;
+use App\Models\Bill;
+use App\Models\PropertyBill;
 
-class AminityContoller extends Controller
+class BillController extends Controller
 {
     public function __construct()
     {
@@ -16,28 +16,28 @@ class AminityContoller extends Controller
 
     public function index()
     {
-        $aminities = Aminity::orderBy('id', 'desc')->get();
+        $bills = Bill::orderBy('id', 'desc')->get();
 
-        return view('admin.aminity',compact('aminities'));
+        return view('admin.bill',compact('bills'));
     }
 
     public function create(){
-        return view('admin.aminity_create');
+        return view('admin.bill_create');
     }
 
     public function store(Request $request)
     {
         $rules = [
-            'aminity'=>'required'
+            'bill'=>'required'
         ];
         $customMessages = [
-            'aminity.required' => trans('admin_validation.Aminity is required'),
+            'bill.required' => trans('admin_validation.Bill is required'),
         ];
         $this->validate($request, $rules,$customMessages);
 
-        $aminity = new Aminity();
-        $aminity->aminity = $request->aminity;
-        $aminity->save();
+        $bill = new Bill();
+        $bill->bill = $request->bill;
+        $bill->save();
 
         $notification = trans('admin_validation.Created Successfully');
         $notification = array('messege'=>$notification,'alert-type'=>'success');
@@ -46,36 +46,36 @@ class AminityContoller extends Controller
 
     public function edit($id){
 
-        $aminity = Aminity::find($id);
+        $bill = Bill::find($id);
 
-        return view('admin.aminity_edit', compact('aminity'));
+        return view('admin.bill_edit', compact('bill'));
     }
 
     public function update(Request $request, $id)
     {
         $rules = [
-            'aminity'=>'required'
+            'bill'=>'required'
         ];
         $customMessages = [
-            'aminity.required' => trans('admin_validation.Aminity is required'),
+            'bill.required' => trans('admin_validation.Bill is required'),
         ];
         $this->validate($request, $rules,$customMessages);
 
-        $aminity = Aminity::find($id);
-        $aminity->aminity = $request->aminity;
-        $aminity->save();
+        $bill = Bill::find($id);
+        $bill->bill = $request->bill;
+        $bill->save();
 
         $notification = trans('admin_validation.Update Successfully');
         $notification = array('messege'=>$notification,'alert-type'=>'success');
-        return redirect()->route('admin.aminity.index')->with($notification);
+        return redirect()->route('admin.bill.index')->with($notification);
     }
 
     public function destroy($id)
     {
-        $count = PropertyAminity::where('aminity_id', $id)->count();
+        $count = PropertyBill::where('bill_id', $id)->count();
         if($count == 0){
-            $aminity = Aminity::find($id);
-            $aminity->delete();
+            $bill = Bill::find($id);
+            $bill->delete();
 
             $notification = trans('admin_validation.Delete Successfully');
             $notification = array('messege'=>$notification,'alert-type'=>'success');
