@@ -39,6 +39,23 @@ class BillController extends Controller
         $bill->bill = $request->bill;
         $bill->save();
 
+        if ($request->item1_icon) {
+            $exist_banner = $bill->item1_icon;
+
+            $file = $request->file('item1_icon'); // ✅ Properly get UploadedFile
+            $extention = $file->getClientOriginalExtension();
+            $banner_name = 'bill-item-one' . date('-Y-m-d-h-i-s-') . rand(999, 9999) . '.' . $extention;
+            $file_path = 'uploads/icons/' . $banner_name;
+            $file->move(public_path('uploads/icons/'), $banner_name);
+
+            $bill->item1_icon = $file_path;
+            $bill->save();
+
+            if ($exist_banner && File::exists(public_path($exist_banner))) {
+                unlink(public_path($exist_banner));
+            }
+        }
+
         $notification = trans('admin_validation.Created Successfully');
         $notification = array('messege'=>$notification,'alert-type'=>'success');
         return redirect()->back()->with($notification);
@@ -64,6 +81,23 @@ class BillController extends Controller
         $bill = Bill::find($id);
         $bill->bill = $request->bill;
         $bill->save();
+
+        if ($request->item1_icon) {
+            $exist_banner = $bill->item1_icon;
+
+            $file = $request->file('item1_icon'); // ✅ Properly get UploadedFile
+            $extention = $file->getClientOriginalExtension();
+            $banner_name = 'bill-item-one' . date('-Y-m-d-h-i-s-') . rand(999, 9999) . '.' . $extention;
+            $file_path = 'uploads/icons/' . $banner_name;
+            $file->move(public_path('uploads/icons/'), $banner_name);
+
+            $bill->item1_icon = $file_path;
+            $bill->save();
+
+            if ($exist_banner && File::exists(public_path($exist_banner))) {
+                unlink(public_path($exist_banner));
+            }
+        }
 
         $notification = trans('admin_validation.Update Successfully');
         $notification = array('messege'=>$notification,'alert-type'=>'success');

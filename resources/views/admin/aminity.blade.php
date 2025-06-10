@@ -22,6 +22,7 @@
                                 <tr>
                                     <th >{{__('admin.SN')}}</th>
                                     <th >{{__('admin.Aminity')}}</th>
+                                    <th >{{__('admin.Icon')}}</th>
                                     <th >{{__('admin.Action')}}</th>
                                   </tr>
                             </thead>
@@ -30,13 +31,14 @@
                                     <tr>
                                         <td>{{ ++$index }}</td>
                                         <td>{{ $aminity->aminity }}</td>
+                                        <td><img src="{{ asset($aminity->item1_icon) }}" style="height:32px;width:32px;"/></td>
 
                                         <td>
 
                                         <a href="{{ route('admin.aminity.edit',$aminity->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>
 
                                         <a href="javascript:;" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-sm" onclick="deleteData({{ $aminity->id }})"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                    </td>
+                                      </td>
 
                                     </tr>
                                   @endforeach

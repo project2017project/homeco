@@ -22,6 +22,7 @@
                                 <tr>
                                     <th >{{__('admin.SN')}}</th>
                                     <th >{{__('admin.Securitysafety')}}</th>
+                                    <th >{{__('admin.Icon')}}</th>
                                     <th >{{__('admin.Action')}}</th>
                                   </tr>
                             </thead>
@@ -30,6 +31,7 @@
                                     <tr>
                                         <td>{{ ++$index }}</td>
                                         <td>{{ $securitysafety->securitysafety }}</td>
+                                        <td><img src="{{ asset($securitysafety->item1_icon) }}" style="height:32px;width:32px;"/></td>
 
                                         <td>
 
