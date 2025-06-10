@@ -209,6 +209,31 @@
                                         </div>
                                         <!-- End Homec Features -->
                                     @endif
+
+                                    @if ($bills->count() > 0)
+                                        <!-- Homec Features -->
+                                        <div class="homec-ptdetails-features mg-top-30">
+                                            <h4 class="homec-ptdetails-features__title">{{__('user.Bills')}}</h4>
+                                            <ul class="homec-ptdetails-features__list">
+                                                @foreach ($bills as $bill)
+                                                <li><b><i class="fas fa-check"></i> {{ $bill->bill->bill }}</b></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        <!-- End Homec Features -->
+                                    @endif
+                                    @if ($securitysafeties->count() > 0)
+                                        <!-- Homec Features -->
+                                        <div class="homec-ptdetails-features mg-top-30">
+                                            <h4 class="homec-ptdetails-features__title">{{__('user.Securitysafeties')}}</h4>
+                                            <ul class="homec-ptdetails-features__list">
+                                                @foreach ($securitysafeties as $securitysafety)
+                                                <li><b><i class="fas fa-check"></i> {{ $securitysafety->securitysafety->securitysafety }}</b></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        <!-- End Homec Features -->
+                                    @endif
                                 </div>
                             </div>
                             <!--  End Property Details -->

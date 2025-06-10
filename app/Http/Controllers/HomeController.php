@@ -42,6 +42,8 @@ use App\Models\Property;
 use App\Models\WhyChooseUs;
 use App\Models\PropertySlider;
 use App\Models\PropertyAminity;
+use App\Models\PropertyBill;
+use App\Models\PropertySecuritysafety;
 use App\Models\PropertyNearestLocation;
 use App\Models\AdditionalInformation;
 use App\Models\Admin;
@@ -1350,6 +1352,8 @@ class HomeController extends Controller
 
         $sliders = PropertySlider::where('property_id', $property->id)->get();
         $aminities = PropertyAminity::with('aminity')->where('property_id', $property->id)->get();
+        $bills = PropertyBill::with('bill')->where('property_id', $property->id)->get();
+        $securitysafeties = PropertySecuritysafety::with('securitysafety')->where('property_id', $property->id)->get();
         $nearest_locations = PropertyNearestLocation::with('location')->where('property_id', $property->id)->get();
         $additional_informations = AdditionalInformation::where('property_id', $property->id)->get();
         $property_plans = PropertyPlan::where('property_id', $property->id)->get();
@@ -1393,6 +1397,8 @@ class HomeController extends Controller
             'booking' => $booking,
             'sliders' => $sliders,
             'aminities' => $aminities,
+            'bills' => $bills,
+            'securitysafeties' => $securitysafeties,
             'nearest_locations' => $nearest_locations,
             'additional_informations' => $additional_informations,
             'property_plans' => $property_plans,

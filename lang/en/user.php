@@ -107,6 +107,8 @@
   'Address Details' => 'Address Details',
   'Google Map' => 'Google Map',
   'Aminities' => 'Aminities',
+  'Bills' => 'Bills',
+  'Securitysafeties' => 'Security & Safety',
   'Additional Information' => 'Additional Information',
   'Property Plan' => 'Property Plan',
   'SEO Information' => 'SEO Information',
