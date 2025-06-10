@@ -22,6 +22,7 @@
                                 <tr>
                                     <th >{{__('admin.SN')}}</th>
                                     <th >{{__('admin.Aminity')}}</th>
+                                    <th >{{__('admin.Icon')}}</th>
                                     <th >{{__('admin.Action')}}</th>
                                   </tr>
                             </thead>
@@ -30,7 +31,7 @@
                                     <tr>
                                         <td>{{ ++$index }}</td>
                                         <td>{{ $bill->bill }}</td>
-
+                                        <td><img src="{{ asset($bill->item1_icon) }}" style="height:32px;width:32px;"/></td>
                                         <td>
 
                                         <a href="{{ route('admin.bill.edit',$bill->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>

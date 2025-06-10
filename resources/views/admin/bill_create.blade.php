@@ -16,12 +16,16 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin.bill.store') }}" method="post">
+                        <form action="{{ route('admin.bill.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
                                 <label for="">{{__('admin.Bill')}} <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="bill">
+                            </div>
+                            <div class="form-group">
+                                <label for="">{{__('admin.New icon')}}</label>
+                                <input type="file" class="form-control-file" name="item1_icon">
                             </div>
 
                             <button class="btn btn-primary">{{__('admin.Save')}}</button>
