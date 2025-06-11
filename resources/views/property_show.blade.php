@@ -5,7 +5,7 @@
 @endsection
 
 @section('meta')
-    <meta name="title" content="{{ html_decode($property->seo_title) }}">
+    <meta name="title" content="tesg {{ html_decode($property->seo_title) }}">
     <meta name="description" content="{{ html_decode($property->seo_meta_description) }}">
     <meta name="keywords" content="{{ html_decode($property->seo_title) }}">
 @endsection
@@ -33,62 +33,62 @@
     </section>
     <!-- End breadcrumbs -->
 
-    <section class="pd-top-100">
+    <section class="pd-top-60">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-						<div class="homec-property-slides">
-							<div class="homec-property-main">
-								<div class="flexslider" id="f1">
-									<ul class="slides">
-									    @foreach($sliders as $index => $slider)
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">{{ $currency_icon }}{{ html_decode(num_format($property->price)) }}
-													@if ($property->purpose == 'rent')
+                        <div class="homec-property-slides">
+                            <div class="homec-property-main">
+                                <div class="flexslider" id="f1">
+                                    <ul class="slides">
+                                        @foreach($sliders as $index => $slider)
+                                        <li>
+                                            <div class="homec-image-gallery">
+                                                <!-- Amount Card -->
+                                                <div class="homec-amount-card homec-amount-card__sticky">
+                                                    <h4 class="homec-amount-card__amount">{{ $currency_icon }}{{ html_decode(num_format($property->price)) }}
+                                                    @if ($property->purpose == 'rent')
                                                     <span>{{ $property->rent_period }}</span>
                                                     @endif
 
-													</h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="{{ asset($slider->image) }}" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">{{ $property->title }}</h3>
-														<p class="homec-image-gallery__text">
-														<img src="{{ asset('frontend/img/map-icon.svg')}}" alt="#">
-														{{ $property->address }} </p>
-													</div>
-												</div>
-											</div>
-										</li>
-										@endforeach
+                                                    </h4>
+                                                </div>
+                                                <!-- End Amount Card -->
+                                                <div class="homec-overlay"></div>
+                                                <img src="{{ asset($slider->image) }}" alt="#">
+                                                <div class="homec-image-gallery__bottom">
+                                                    <div class="homec-image-gallery__content">
+                                                        <h3 class="homec-image-gallery__title">{{ $property->title }}</h3>
+                                                        <p class="homec-image-gallery__text">
+                                                        <img src="{{ asset('frontend/img/map-icon.svg')}}" alt="#">
+                                                        {{ $property->address }} </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        @endforeach
 
-									</ul>
-								</div>
-								<div class="homec-property-thumbs--top">
-    								<div class="homec-property-thumbs mg-top-10">
-    									<div class="flexslider carousel" id="f2">
-    										<ul class="slides">
-    										    @foreach($sliders as $index => $slider)
-    											<li>
-    												<div class="single-thumbs">
-    													<img src="{{ asset($slider->image) }}" alt="thumbs">
-    												</div>
-    											</li>
-    											@endforeach
+                                    </ul>
+                                </div>
+                                <div class="homec-property-thumbs--top">
+                                    <div class="homec-property-thumbs mg-top-10">
+                                        <div class="flexslider carousel" id="f2">
+                                            <ul class="slides">
+                                                @foreach($sliders as $index => $slider)
+                                                <li>
+                                                    <div class="single-thumbs">
+                                                        <img src="{{ asset($slider->image) }}" alt="thumbs">
+                                                    </div>
+                                                </li>
+                                                @endforeach
 
-    										</ul>
-    									</div>
-    								</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="row pd-top-10 pd-btm-50">
                 <div class="col-12">
@@ -154,22 +154,41 @@
     </section>
 
 
-    <section class="pd-top-0 homec-bg-third-color pd-btm-80 homec-bg-cover">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 ol-12">
-                    <div class="list-group homec-list-tabs homec-list-tabs--v2" id="list-tab" role="tablist">
-                        <a class="list-group-item active" data-bs-toggle="list" href="#homec-pd-tab1" role="tab">{{__('user.Property Details')}}</a>
-                        <a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab2" role="tab">{{__('user.Property Plan')}}</a>
-                        <a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab3" role="tab">{{__('user.Video')}} </a>
-                        <a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab4" role="tab">{{__('user.Locations')}} </a>
-                        <a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab5" role="tab">{{__('user.Review')}}</a>
+    <section class="property-details-tabs-wrapper pd-top-0 homec-bg-third-color pd-btm-10 homec-bg-cover">
+        <div class="tabs-full-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <div class="list-group homec-list-tabs homec-list-tabs--v2" id="list-tab" role="tablist">
+                        <a class="list-group-item active" href="#homec-pd-tab1" >{{__('user.Property Details')}}</a>
+                        <a class="list-group-item" href="#homec-pd-tab2">{{__('user.Property Plan')}}</a>
+                        <a class="list-group-item" href="#homec-pd-tab3">{{__('user.Video')}} </a>
+                        <a class="list-group-item" href="#homec-pd-tab4">{{__('user.Locations')}} </a>
+                        <a class="list-group-item" href="#homec-pd-tab5">{{__('user.Review')}}</a>
+                    </div>
                     </div>
 
+
+                    <div class="col-lg-4 col-12">
+                        <div class="property-book-btns">
+                        <button id="run" class="homec-btn homec-btn__second homec-property-ag__button"><span>{{ __('user.Book Now') }}</span></button>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="property-tabs-content-wrap">
+        <div class="container pd-top-30">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    
+
                     <div class="homec-pdetails-tab">
-                        <div class="tab-content" id="nav-tabContent">
+                        <div class="property-tab-content" id="nav-tabContent">
                             <!--  Property Details -->
-                            <div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
+                        <div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
                                 <div class="homec-pdetails-tab__inner">
                                     {!! html_decode(clean($property->description)) !!}
                                     <!-- Homec Features -->
@@ -222,6 +241,7 @@
                                         </div>
                                         <!-- End Homec Features -->
                                     @endif
+
                                     @if ($securitysafeties->count() > 0)
                                         <!-- Homec Features -->
                                         <div class="homec-ptdetails-features mg-top-30">
@@ -234,11 +254,13 @@
                                         </div>
                                         <!-- End Homec Features -->
                                     @endif
+
                                 </div>
                             </div>
                             <!--  End Property Details -->
                             <!--  Floor Plans -->
                             <div class="tab-pane fade" id="homec-pd-tab2" role="tabpanel">
+                                <h4>Property Plan</h4>
                                 <div class="homec-pdetails-tab__inner">
                                     <div class="homec-accordion accordion accordion-flush" id="homec-accordion">
 
@@ -267,6 +289,7 @@
                             <!--  End Floor Plans -->
                             <!--  Property Video -->
                             <div class="tab-pane fade" id="homec-pd-tab3" role="tabpanel">
+                                <h4>Property Video</h4>
                                 <div class="homec-pdetails-tab__inner">
                                     <p>{{ html_decode($property->video_description) }}</p>
                                     <!-- Homec Features -->
@@ -293,6 +316,7 @@
                             <!--  End Property Video -->
                             <!--  Property Map -->
                             <div class="tab-pane fade" id="homec-pd-tab4" role="tabpanel">
+                                <h4>Property Location</h4>
                                 <div class="homec-pdetails-tab__inner m-0">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-12">
@@ -326,6 +350,7 @@
                             <!--  End Property Map -->
                             <!--  Property Review -->
                             <div class="tab-pane fade" id="homec-pd-tab5" role="tabpanel">
+                                <h4>Reviews</h4>
                                 <div class="homec-pdetails-tab__inner">
                                    <div class="homec-pdetails-tab--review">
 
@@ -423,9 +448,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <div class="my-4">
-                        <button id="run" class="homec-btn homec-btn__second homec-property-ag__button"><span>{{ __('user.Book Now') }}</span></button>
-                    </div>
+                    
                     <!-- Property Agent Card -->
                     <div class="homec-property-ag homec-property-ag--side">
                         <h3 class="homec-property-ag__title">{{__('user.Property Agent')}}</h3>
@@ -490,34 +513,34 @@
 
                   <!-- calculet Property Agent Card -->
                     <div class="calculate-box">
-						<div class="calculate-box-text">
-							<h4>{{__('user.Calculate Your Mortgage')}}</h4>
+                        <div class="calculate-box-text">
+                            <h4>{{__('user.Calculate Your Mortgage')}}</h4>
 
-							<p>{{__('user.You can calculate monthly loan amount using this calcutator')}}</p>
-						</div>
+                            <p>{{__('user.You can calculate monthly loan amount using this calcutator')}}</p>
+                        </div>
 
-						<div class="calculate-box-lone-amount">
+                        <div class="calculate-box-lone-amount">
 
-							<label> {{__('user.Loan Amount')}} </label>
-							<input class="form-control" id="loan-amount" placeholder="0">
-						</div>
-						<div class="calculate-box-lone-amount-two">
-							<div class="calculate-box-lone-amount-text-one">
-								<p>{{__('user.Percentage rate')}}</p>
-							</div>
-							<div class="calculate-box-lone-amount-text">
-								<div class="left">
+                            <label> {{__('user.Loan Amount')}} </label>
+                            <input class="form-control" id="loan-amount" placeholder="0">
+                        </div>
+                        <div class="calculate-box-lone-amount-two">
+                            <div class="calculate-box-lone-amount-text-one">
+                                <p>{{__('user.Percentage rate')}}</p>
+                            </div>
+                            <div class="calculate-box-lone-amount-text">
+                                <div class="left">
                                 <input class="low" id="amt" name="amt" type="text"  placeholder="0"    value="0">
-								</div>
-								<div class="right">
+                                </div>
+                                <div class="right">
                                 <input  id="amt" name="amt" type="text"  placeholder="0"    value="100%">
-								</div>
-							</div>
+                                </div>
+                            </div>
                         <div class="chrome">
                       <input id="annualInterest" min="0" max="100" type="range" value="0" />
                     </div>
 
-					<div class="calculate-box-lone-amount-two lculate-box-lone-amount-three ">
+                    <div class="calculate-box-lone-amount-two lculate-box-lone-amount-three ">
                         <div class="calculate-box-lone-amount-text-one">
                             <p>{{__('user.Loan Term (Years)')}}</p>
                         </div>
@@ -532,7 +555,7 @@
                         <div class="chrome">
                             <input id="tearmYear"  type="range" min="0" max="5" step="1" list="data" value="0" />
                         </div>
-					</div>
+                    </div>
 
                     <div class="calculate-box-lone-amount-btn">
                         <a href="javascript:;" id="sbt" class="homec-btn"><span>{{__('user.Calculate')}}</span></a>
@@ -554,18 +577,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+</div>
+</section>
 
         <!-- Modal book Info -->
-		<div class="homec-modal modal fade" id="profile_view" tabindex="-1" aria-labelledby="logoutmodal" aria-hidden="true" >
-			<div class="homec-modal__width homec-modal__width--profile modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<button type="button" class="homec-moal__close" data-bs-dismiss="modal" aria-label="Close">
-						<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.96538 11.4998C8.84252 11.3642 8.73942 11.243 8.62945 11.1289C5.9368 8.31163 3.24501 5.49253 0.546342 2.68062C0.107304 2.2226 -0.122954 1.71338 0.0660637 1.06407C0.359901 0.0591085 1.48284 -0.323477 2.28531 0.307878C2.42192 0.415649 2.5422 0.546769 2.66335 0.6734C5.31733 3.44669 7.97132 6.22088 10.6227 8.99687C10.7336 9.11272 10.8212 9.25282 10.9501 9.42166C11.1253 9.24743 11.2482 9.13068 11.3651 9.00854C14.0491 6.20292 16.7349 3.39909 19.4147 0.58898C19.8485 0.134548 20.3288 -0.124101 20.956 0.0600065C21.9346 0.347394 22.3212 1.5634 21.6975 2.40222C21.6012 2.53154 21.4844 2.6447 21.3727 2.76055C18.7101 5.54552 16.0467 8.33138 13.3807 11.1128C13.2707 11.2277 13.1264 11.3067 12.9743 11.4208C13.1539 11.622 13.2544 11.7414 13.3618 11.8546C16.0553 14.6719 18.7471 17.4901 21.4449 20.3029C21.8942 20.7717 22.1314 21.2944 21.9269 21.9607C21.6202 22.9576 20.4783 23.3222 19.693 22.6747C19.5702 22.5732 19.4619 22.4511 19.3511 22.3344C16.6876 19.5503 14.0242 16.7653 11.3599 13.9803C11.2499 13.8654 11.1357 13.7558 11.0051 13.6247C10.8788 13.7495 10.7636 13.8564 10.6545 13.9696C7.94812 16.7976 5.24087 19.6212 2.54306 22.4547C2.10918 22.9109 1.61515 23.104 1.02662 22.9325C0.0841064 22.6586 -0.300803 21.4902 0.265392 20.6549C0.37193 20.4978 0.508538 20.3604 0.639133 20.2229C3.30171 17.4371 5.96515 14.653 8.62859 11.868C8.7377 11.754 8.84252 11.6345 8.96538 11.4998Z" fill="#EB5757"></path>
-						</svg>
-					</button>
-					<div class="homec-modal__inner">
+        <div class="homec-modal modal fade" id="profile_view" tabindex="-1" aria-labelledby="logoutmodal" aria-hidden="true" >
+            <div class="homec-modal__width homec-modal__width--profile modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="homec-moal__close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.96538 11.4998C8.84252 11.3642 8.73942 11.243 8.62945 11.1289C5.9368 8.31163 3.24501 5.49253 0.546342 2.68062C0.107304 2.2226 -0.122954 1.71338 0.0660637 1.06407C0.359901 0.0591085 1.48284 -0.323477 2.28531 0.307878C2.42192 0.415649 2.5422 0.546769 2.66335 0.6734C5.31733 3.44669 7.97132 6.22088 10.6227 8.99687C10.7336 9.11272 10.8212 9.25282 10.9501 9.42166C11.1253 9.24743 11.2482 9.13068 11.3651 9.00854C14.0491 6.20292 16.7349 3.39909 19.4147 0.58898C19.8485 0.134548 20.3288 -0.124101 20.956 0.0600065C21.9346 0.347394 22.3212 1.5634 21.6975 2.40222C21.6012 2.53154 21.4844 2.6447 21.3727 2.76055C18.7101 5.54552 16.0467 8.33138 13.3807 11.1128C13.2707 11.2277 13.1264 11.3067 12.9743 11.4208C13.1539 11.622 13.2544 11.7414 13.3618 11.8546C16.0553 14.6719 18.7471 17.4901 21.4449 20.3029C21.8942 20.7717 22.1314 21.2944 21.9269 21.9607C21.6202 22.9576 20.4783 23.3222 19.693 22.6747C19.5702 22.5732 19.4619 22.4511 19.3511 22.3344C16.6876 19.5503 14.0242 16.7653 11.3599 13.9803C11.2499 13.8654 11.1357 13.7558 11.0051 13.6247C10.8788 13.7495 10.7636 13.8564 10.6545 13.9696C7.94812 16.7976 5.24087 19.6212 2.54306 22.4547C2.10918 22.9109 1.61515 23.104 1.02662 22.9325C0.0841064 22.6586 -0.300803 21.4902 0.265392 20.6549C0.37193 20.4978 0.508538 20.3604 0.639133 20.2229C3.30171 17.4371 5.96515 14.653 8.62859 11.868C8.7377 11.754 8.84252 11.6345 8.96538 11.4998Z" fill="#EB5757"></path>
+                        </svg>
+                    </button>
+                    <div class="homec-modal__inner">
                         <h4 class="homec-submit-form__title mt-5">{{__('user.Booking Details')}}</h4>
                         <form action="{{ route('booking.store')}}" method="POST">
                             @csrf
@@ -682,11 +708,11 @@
                         </form>
 
 
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Modal book Info -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal book Info -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.en.min.js"></script>

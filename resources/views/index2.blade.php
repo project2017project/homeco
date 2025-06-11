@@ -37,8 +37,8 @@
 									<!-- Features Tab List -->
 									<div id="homec-tabs" class="list-group homec-tabs homec-tabs--noborder"  role="tablist">
 										<a class="list-group-item active" data-bs-toggle="list" href="#homec-tab1" role="tab">{{__('user.Rent')}}</a>
-										<a class="list-group-item" data-bs-toggle="list" href="#homec-tab2" role="tab">{{__('user.Sell')}}</a>
-										<a class="list-group-item" data-bs-toggle="list" href="#homec-tab3" role="tab">{{__('user.Any')}}</a>
+										<a class="list-group-item" data-bs-toggle="list" href="#homec-tab2" role="tab">{{__('user.Buy')}}</a>
+										<a class="list-group-item" href="{{ route('login') }}" role="tab">{{__('user.Sell')}}</a>
 									</div>
 								</div>
 								<div class="homec-hero__tabs--detail">
@@ -166,14 +166,15 @@
 											</div>
 										</div>
 										<!-- End Tab One -->
-										<div class="tab-pane fade" id="homec-tab3" role="tabpanel">
+										
+
+										<!--<div class="tab-pane fade" id="homec-tab3" role="tabpanel">
 											<div class="homec-filters homec-filters__margin">
 												<form action="{{ route('properties') }}">
                                                     <input type="hidden" name="purpose" value="any">
 													<div class="homec-filter-group">
-														<!-- Form Group -->
+
 														<div class="form-group">
-															<!-- <span class="homec-filter-group__label">{{__('user.Type')}}</span> -->
 															<i class="fa-solid fa-house"></i>
 
 															<select name="type" class="select2">
@@ -183,9 +184,8 @@
                                                                 @endforeach
 															</select>
 														</div>
-														<!-- Form Group -->
+
 														<div class="form-group">
-															<!-- <span class="homec-filter-group__label">{{__('user.Locaiton')}}</span> -->
 															<i class="fa-solid fa-location-dot"></i>
 
 															<select name="location" class="select2">
@@ -195,9 +195,7 @@
                                                                 @endforeach
 															</select>
 														</div>
-														<!-- Form Group -->
 														<div class="form-group">
-															<!-- <span  class="homec-filter-group__label">{{__('user.Price Range')}}</span> -->
 															<i class="fa-solid fa-circle-dollar-to-slot"></i>
 															<select class="select2" id="any_price_range">
                                                                 <option value="">{{__('user.Price Range')}}</option>
@@ -210,7 +208,7 @@
                                                         <input type="hidden" name="min_price" value="0" id="any_min_price">
                                                         <input type="hidden" name="max_price" value="0" id="any_max_price">
 
-														<!-- Button -->
+														
 														<button type="submit" class="homec-btn homec-btn__second">
 															<span class="homec-btn__inside">
 																<span>
@@ -224,8 +222,10 @@
 													</div>
 												</form>
 											</div>
-										</div>
+										</div>-->
 										<!-- End Tab One -->
+
+
 									</div>
 								</div>
 							</div>
