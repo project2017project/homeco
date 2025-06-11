@@ -42,13 +42,13 @@
     </section>
     <!-- End breadcrumbs -->
 
-    <!-- Property -->
-    <section class="homec-propertys pd-top-60 pd-btm-60">
+    <div class="property-bar-sticky">
         <div class="container homec-container-medium">
             <div class="row">
                 <div class="col-12">
-                    <!-- Proeprty Bar -->
-                    <div class="homec-property-bar">
+                    
+            
+        <div class="homec-property-bar">
                         <div class="homec-property-bar__single first">
                             <div class="homec-form__form homec-form__form--bar">
                                 <input value="{{ request()->get('search') }}" id="search_input" type="text"
@@ -115,6 +115,19 @@
                         </div>
                     </div>
                     <!-- End Proeprty Bar -->
+
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property -->
+    <section class="homec-propertys pd-top-10 pd-btm-60">
+        <div class="container homec-container-medium">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Proeprty Bar -->
+                    
                 </div>
             </div>
 
@@ -142,8 +155,8 @@
                                     <h4 class="property-sidebar__title">{{ __('user.Purpose') }}</h4>
                                     <div class="form-group">
                                         <select class="property-sidebar__group homec-border select2noSearch" name="purpose">
-                                            <option {{ request()->get('purpose') == 'any' ? 'selected' : '' }}
-                                                value="any">{{ __('user.Any') }}</option>
+                                            <option {{ request()->get('purpose') == 'buy' ? 'selected' : '' }}
+                                                value="buy">{{ __('user.Buy') }}</option>
                                             <option {{ request()->get('purpose') == 'rent' ? 'selected' : '' }}
                                                 value="rent">{{ __('user.For Rent') }}</option>
                                             <option {{ request()->get('purpose') == 'sale' ? 'selected' : '' }}

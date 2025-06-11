@@ -647,12 +647,14 @@ color: #303030;
     max-width: 330px;
 }
 .homec-property-bar{
-        border: 1px solid #dddddd;
-    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
-    padding: 8px 20px;
+        border: none;
+    box-shadow: none;
+    padding: 0px;
+    background: transparent!important;
+  
 }
 .homec-property-bar .homec-form__form{
-    background: #f5f5f5;
+    background: #ffffff;
     border-radius: 50px;
     height: auto;
     border: 1px solid #dddddd;
@@ -943,6 +945,132 @@ color: #222222;
 .homec-btn.homec-btn__second:hover .homec-btn__inside svg path{
     fill: #d8232a !important;
 }
+.homec-add-property{
+     background-color: #ffffff!important;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd; 
+}
+.homec-add-property .homec-add-property__img {
+    width: 150px;
+    height: 150px;
+}
+.homec-add-property .homec-add-property__img img {
+    max-width: 90px;
+}
+.download-app{
+    display: none;
+}
+.homec-submit-form__title{
+    padding: 12px 30px;
+    background: #d8232a;
+}
+.homec-submit-form .homec-form-input input{
+    border: 1px solid #dddddd;
+    background: #fafafa;
+}
+.homec-submit-form .homec-form-input select{
+    border: 1px solid #dddddd;
+    background: #fafafa;
+}
+.homec-submit-form .homec-form-input textarea{
+    border: 1px solid #dddddd;
+    background: #fafafa; 
+}
+.homec-submit-form .homec-image-video-upload
+{
+border: 1px solid #dddddd;
+    background: #fafafa; 
+}
+.homec-submit-form .form-group.homec-form-input .select2-container .select2-selection--single{
+border: 1px solid #dddddd;
+    background: #fafafa; 
+}
+.homec-submit-form  input[type="checkbox"]{
+  background: #dddddd;   
+}
+
+.homec-dashboard-property{
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.homec-dashboard-property__buttons .homec-dashboard-property__btn{
+    background: #eeeeee;
+}
+
+.homec-dashboard-property__title{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.property-bar-sticky{
+  /* position: sticky;
+    top: 85px;
+    z-index: 999;*/
+    background: rgb(243 243 244);
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+
+}
+
+#homec-tabs.homec-gl-tabs a{
+    background: #ffffff;
+}
+.tabs-full-wrapper{
+    position: sticky;
+    top: 85px;
+    z-index: 999;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 0px 0px;
+}
+.tabs-full-wrapper .homec-list-tabs.homec-list-tabs--v2{
+    border: none;
+}
+.property-tabs-content-wrap .homec-pdetails-tab__inner{
+ margin-top: 0px;
+}
+
+.property-tabs-content-wrap .fade:not(.show) {
+    opacity: 1;
+}
+.property-tabs-content-wrap .tab-pane{
+    margin-bottom: 45px;
+}
+.property-tabs-content-wrap .tab-pane h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.homec-location-card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    min-height: 210px;
+}
+.homec-location-card__icon{
+    background: #f3f3f3;
+    width: 60px;
+    height: 60px;
+}
+.homec-location-card__icon svg{
+    width: 25px;
+    height: 25px;
+}
+.homec-testimonial.homec-testimonial--review .homec-testimonial__text {
+    font-size: 16px;
+}
+.homec-ptdetails-features .homec-ptdetails-features__list li img{
+    width: 35px;
+}
+
+
+
 
 @media(max-width: 1199px){
     .homec-filter-group{
@@ -1121,8 +1249,24 @@ padding-top: 10px!important;
         padding-bottom: 20px!important;
     }
 
+.property-bar-sticky .container{
+    padding: 0px!important;
+}
+.tabs-full-wrapper {
+    position: initial;
+    top: 0px;
+    z-index: 9;
+    background: transparent;
+    border-bottom: none;
+    padding: 0px;
+}
 
-
+.property-tabs-content-wrap .tab-pane {
+    margin-bottom: 30px;
+}
+.homec-property-ag--side{
+    margin-top: 0px!important;
+}
 }
 
 
@@ -1138,11 +1282,11 @@ padding-top: 10px!important;
     #active-sticky.is-sticky .homec-header__inside {
         padding-top: 15px;
         padding-bottom: 15px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     #active-sticky.is-sticky .homec-header__middle{
-        box-shadow: 0px 6px 15px rgba(20, 0, 255, 0.06); 
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.06); 
     }
 }
 

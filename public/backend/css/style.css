@@ -662,7 +662,7 @@ select.form-control:not([size]):not([multiple]) {
           padding-right: 13px !important; }
           .card .card-header h4 + .card-header-action .btn.active,
           .card .card-header h4 + .card-header-form .btn.active {
-            box-shadow: 0 2px 6px #acb5f6;
+            box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
             background-color: #d8232a;
             color: #fff; }
         .card .card-header h4 + .card-header-action .dropdown,
@@ -1038,7 +1038,7 @@ table tr:hover .table-links {
   .nav-pills .nav-item .nav-link:hover {
     background-color: #f6f7fe; }
   .nav-pills .nav-item .nav-link.active {
-    box-shadow: 0 2px 6px #acb5f6;
+    box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
     color: #fff;
     background-color: #d8232a; }
   .nav-pills .nav-item .nav-link .badge {
@@ -1315,7 +1315,7 @@ h6 .badge {
   color: #fff !important; }
 
 .btn-primary, .btn-primary.disabled {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
   background-color: #d8232a;
   border-color: #d8232a; }
   .btn-primary:focus, .btn-primary.disabled:focus {
@@ -1470,7 +1470,7 @@ h6 .badge {
     .accordion .accordion-header:hover {
       background-color: #f2f2f2; }
     .accordion .accordion-header[aria-expanded="true"] {
-      box-shadow: 0 2px 6px #acb5f6;
+      box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06);
       background-color: #d8232a;
       color: #fff; }
   .accordion .accordion-body {
@@ -2137,7 +2137,7 @@ pre {
   height: 350px; }
 
 .shadow-primary {
-  box-shadow: 0 2px 6px #acb5f6; }
+  box-shadow: 0px 0px 15px rgba(20, 0, 255, 0.06); }
 
 .shadow-secondary {
   box-shadow: 0 2px 6px #e1e5e8; }

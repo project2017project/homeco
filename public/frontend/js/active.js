@@ -140,3 +140,51 @@ accordionItems.forEach(item => {
 
 
 
+$(document).ready(function () {
+    const tabLinks = $('.homec-list-tabs a');
+    const stickyBar = $('.tabs-full-wrapper');
+    const stickyHeight = stickyBar.outerHeight() || 80;
+    const scrollOffset = 100;
+
+    // Set first tab active by default
+    tabLinks.removeClass('active').first().addClass('active');
+
+    // Smooth scroll on tab click
+    tabLinks.on('click', function (e) {
+        e.preventDefault();
+        const target = $($(this).attr('href'));
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - stickyHeight - 10
+            }, 500);
+        }
+    });
+
+    // Highlight active tab on scroll
+    $(window).on('scroll', function () {
+        const scrollTop = $(window).scrollTop() + stickyHeight + scrollOffset;
+
+        let found = false;
+        tabLinks.each(function () {
+            const currLink = $(this);
+            const targetSection = $(currLink.attr('href'));
+
+            if (targetSection.length) {
+                const sectionTop = targetSection.offset().top;
+                const sectionBottom = sectionTop + targetSection.outerHeight();
+
+                if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+                    tabLinks.removeClass('active');
+                    currLink.addClass('active');
+                    found = true;
+                    return false;
+                }
+            }
+        });
+
+        if (!found) {
+            tabLinks.removeClass('active').first().addClass('active');
+        }
+    });
+});
+
