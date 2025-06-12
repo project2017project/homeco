@@ -311,6 +311,9 @@ background: #ffffff;
 .homec-property__text p {
     font-size: 14px;
     line-height: 22px;
+     white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .homec-property__text{
     gap: 10px;
@@ -1067,6 +1070,10 @@ border: 1px solid #dddddd;
 }
 .homec-ptdetails-features .homec-ptdetails-features__list li img{
     width: 35px;
+}
+
+.single-widget.footer-contact .f-contact-list li img{
+    width: 24px;
 }
 
 

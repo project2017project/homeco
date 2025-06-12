@@ -349,6 +349,57 @@
                             </div>
                         </div>
 
+
+                        <!-- Bill create start -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>{{__('admin.Bills')}}</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div>
+
+                                                @foreach ($bills as $bill)
+                                                    <input value="{{ $bill->id }}" type="checkbox" name="bills[]" id="bill{{ $bill->id }}">
+
+                                                    <label class="mx-1" for="bill{{ $bill->id }}">{{ $bill->bill }}</label>
+                                                @endforeach
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bill create End -->
+
+                        <!-- Bill create start -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>{{__('admin.Securitysafety')}}</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div>
+
+                                                @foreach ($securitysafeties as $securitysafety)
+                                                    <input value="{{ $securitysafety->id }}" type="checkbox" name="securitysafeties[]" id="securitysafety{{ $securitysafety->id }}">
+
+                                                    <label class="mx-1" for="securitysafety{{ $securitysafety->id }}">{{ $securitysafety->securitysafety }}</label>
+                                                @endforeach
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bill create End -->
+
                         <div class="card">
                             <div class="card-body">
                                 <h4>{{__('admin.Nearest Location')}}</h4>

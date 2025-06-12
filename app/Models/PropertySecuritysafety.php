@@ -10,7 +10,7 @@ class PropertySecuritysafety extends Model
     use HasFactory;
 
     public function securitysafety(){
-        return $this->belongsTo(Securitysafety::class)->select('id','securitysafety');
+        return $this->belongsTo(Securitysafety::class)->select('id','securitysafety','item1_icon');
     }
 
     protected $casts =  [

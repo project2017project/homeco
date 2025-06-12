@@ -222,7 +222,8 @@
                                             <h4 class="homec-ptdetails-features__title">{{__('user.Aminities')}}</h4>
                                             <ul class="homec-ptdetails-features__list">
                                                 @foreach ($aminities as $aminity)
-                                                <li><b><i class="fas fa-check"></i> {{ $aminity->aminity->aminity }}</b></li>
+                                                <li><b><img src="{{ asset($aminity->aminity->item1_icon) }}" alt="Aminity"> 
+                                                    {{ $aminity->aminity->aminity }}</b></li>
                                                 @endforeach
                                             </ul>
                                         </div>
@@ -235,7 +236,7 @@
                                             <h4 class="homec-ptdetails-features__title">{{__('user.Bills')}}</h4>
                                             <ul class="homec-ptdetails-features__list">
                                                 @foreach ($bills as $bill)
-                                                <li><b><i class="fas fa-check"></i> {{ $bill->bill->bill }}</b></li>
+                                                <li><b><img src="{{ asset($bill->bill->item1_icon) }}" alt="Bill"> {{ $bill->bill->bill }}</b></li>
                                                 @endforeach
                                             </ul>
                                         </div>
@@ -248,7 +249,7 @@
                                             <h4 class="homec-ptdetails-features__title">{{__('user.Securitysafeties')}}</h4>
                                             <ul class="homec-ptdetails-features__list">
                                                 @foreach ($securitysafeties as $securitysafety)
-                                                <li><b><i class="fas fa-check"></i> {{ $securitysafety->securitysafety->securitysafety }}</b></li>
+                                                <li><b><img src="{{ asset($securitysafety->securitysafety->item1_icon) }}" alt="Security"> {{ $securitysafety->securitysafety->securitysafety }}</b></li>
                                                 @endforeach
                                             </ul>
                                         </div>
