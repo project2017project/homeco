@@ -534,7 +534,7 @@
                                             <h3 class="widget-title">{{ __('user.Contact Us') }}</h3>
                                             <div class="f-contact__form-top">
                                                 <ul class="f-contact-list list-none">
-                                                    <li><img src="{{ asset('frontend/img/footer-phone.svg') }}"
+                                                    <li><img src="{{ asset('frontend/img/footer-phone.png') }}"
                                                             alt="phone"><a
                                                             href="tel:{{ $footer->phone }}">{{ $footer->phone }}</a>
                                                     </li>

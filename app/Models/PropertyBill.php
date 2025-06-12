@@ -10,7 +10,7 @@ class PropertyBill extends Model
     use HasFactory;
 
     public function bill(){
-        return $this->belongsTo(Bill::class)->select('id','bill');
+        return $this->belongsTo(Bill::class)->select('id','bill','item1_icon');
     }
 
     protected $casts =  [

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Aminity;
 use App\Models\PropertyAminity;
+use Illuminate\Support\Facades\File;
 
 class AminityController extends Controller
 {

@@ -435,6 +435,76 @@
                             </div>
                         </div>
 
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>{{__('admin.Bills')}}</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div>
+                                                @foreach ($bills as $bill)
+
+                                                @php
+                                                    $is_checked=false;
+                                                @endphp
+                                                @foreach ($existing_bill_properties as $biill)
+                                                    @if ($bill->id == $biill->bill_id)
+                                                        @php
+                                                            $is_checked=true;
+                                                        @endphp
+                                                    @endif
+                                                @endforeach
+
+                                                    <input {{ $is_checked ? 'checked' :'' }} value="{{ $bill->id }}" type="checkbox" name="bills[]" id="bill{{ $bill->id }}">
+
+                                                    <label class="mx-1" for="bill{{ $bill->id }}">{{ $bill->bill }}</label>
+                                                @endforeach
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>{{__('admin.Securitysafety')}}</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div>
+                                                @foreach ($securitysafeties as $securitysafety)
+
+                                                @php
+                                                    $is_checked=false;
+                                                @endphp
+                                                @foreach ($existing_securitysafety_properties as $securityssafety)
+                                                    @if ($securitysafety->id == $securityssafety->securitysafety_id)
+                                                        @php
+                                                            $is_checked=true;
+                                                        @endphp
+                                                    @endif
+                                                @endforeach
+
+                                                    <input {{ $is_checked ? 'checked' :'' }} value="{{ $securitysafety->id }}" type="checkbox" name="securitysafeties[]" id="securitysafety{{ $securitysafety->id }}">
+
+                                                    <label class="mx-1" for="securitysafety{{ $securitysafety->id }}">{{ $securitysafety->securitysafety }}</label>
+                                                @endforeach
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="card">
                             <div class="card-body">
                                 <h4>{{__('admin.Nearest Location')}}</h4>

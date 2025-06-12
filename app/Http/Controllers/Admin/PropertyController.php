@@ -10,6 +10,8 @@ use App\Models\User;
 use App\Models\Order;
 use App\Models\Review;
 use App\Models\Aminity;
+use App\Models\Bill;
+use App\Models\Securitysafety;
 use App\Models\Booking;
 use App\Models\Compare;
 use App\Models\Country;
@@ -22,6 +24,8 @@ use Illuminate\Http\Request;
 use App\Models\PropertySlider;
 use App\Models\NearestLocation;
 use App\Models\PropertyAminity;
+use App\Models\PropertyBill;
+use App\Models\PropertySecuritysafety;
 use App\Http\Controllers\Controller;
 use App\Models\AdditionalInformation;
 use App\Models\PropertyNearestLocation;
@@ -91,6 +95,8 @@ class PropertyController extends Controller
         $types = Category::where('status', 1)->get();
         $cities = City::all();
         $aminities = Aminity::all();
+        $bills = Bill::all();
+        $securitysafeties = Securitysafety::all();
         $nearest_locations = NearestLocation::orderBy('id', 'desc')->where('status', 1)->get();
         $countries = Country::orderBy('id', 'desc')->get();
         $setting = Setting::first();
@@ -108,6 +114,8 @@ class PropertyController extends Controller
             'types' => $types,
             'cities' => $cities,
             'aminities' => $aminities,
+            'bills' => $bills,
+            'securitysafeties' => $securitysafeties,
             'nearest_locations' => $nearest_locations,
             'agents' => $agents,
             'countries' => $countries,
@@ -291,6 +299,24 @@ class PropertyController extends Controller
             }
         }
 
+        if($request->bills){
+            foreach($request->bills as $bill){
+                $item = new PropertyBill();
+                $item->bill_id = $bill;
+                $item->property_id = $property->id;
+                $item->save();
+            }
+        }
+
+        if($request->securitysafeties){
+            foreach($request->securitysafeties as $securitysafety){
+                $item = new PropertySecuritysafety();
+                $item->securitysafety_id = $securitysafety;
+                $item->property_id = $property->id;
+                $item->save();
+            }
+        }
+
         if($request->slider_images){
             foreach($request->slider_images as $index => $image){
                 $extention = $image->getClientOriginalExtension();
@@ -363,9 +389,13 @@ class PropertyController extends Controller
         $types = Category::where('status', 1)->get();
         $cities = City::all();
         $aminities = Aminity::all();
+        $bills = Bill::all();
+        $securitysafeties = Securitysafety::all();
         $nearest_locations = NearestLocation::orderBy('id', 'desc')->where('status', 1)->get();
         $existing_sliders = PropertySlider::where('property_id', $id)->get();
         $existing_properties = PropertyAminity::where('property_id', $id)->get();
+        $existing_bill_properties = PropertyBill::where('property_id', $id)->get();
+        $existing_securitysafety_properties = PropertySecuritysafety::where('property_id', $id)->get();
         $existing_nearest_locations = PropertyNearestLocation::where('property_id', $id)->get();
         $existing_add_informations = AdditionalInformation::where('property_id', $id)->get();
         $existing_plans = PropertyPlan::where('property_id', $id)->get();
@@ -434,9 +464,13 @@ class PropertyController extends Controller
             'types' => $types,
             'cities' => $cities,
             'aminities' => $aminities,
+            'bills' => $bills,
+            'securitysafeties' => $securitysafeties,
             'nearest_locations' => $nearest_locations,
             'existing_sliders' => $existing_sliders,
             'existing_properties' => $existing_properties,
+            'existing_bill_properties' => $existing_bill_properties,
+            'existing_securitysafety_properties' => $existing_securitysafety_properties,
             'existing_nearest_locations' => $existing_nearest_locations,
             'existing_add_informations' => $existing_add_informations,
             'existing_plans' => $existing_plans,
@@ -578,6 +612,26 @@ class PropertyController extends Controller
             foreach($request->aminities as $aminity){
                 $item = new PropertyAminity();
                 $item->aminity_id = $aminity;
+                $item->property_id = $property->id;
+                $item->save();
+            }
+        }
+
+        PropertyBill::where('property_id', $id)->delete();
+        if($request->bills){
+            foreach($request->bills as $bill){
+                $item = new PropertyBill();
+                $item->bill_id = $bill;
+                $item->property_id = $property->id;
+                $item->save();
+            }
+        }
+
+        PropertySecuritysafety::where('property_id', $id)->delete();
+        if($request->securitysafeties){
+            foreach($request->securitysafeties as $securitysafety){
+                $item = new PropertySecuritysafety();
+                $item->securitysafety_id = $securitysafety;
                 $item->property_id = $property->id;
                 $item->save();
             }

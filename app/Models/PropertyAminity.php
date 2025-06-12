@@ -10,7 +10,7 @@ class PropertyAminity extends Model
     use HasFactory;
 
     public function aminity(){
-        return $this->belongsTo(Aminity::class)->select('id','aminity');
+        return $this->belongsTo(Aminity::class)->select('id','aminity','item1_icon');
     }
 
     protected $casts =  [
