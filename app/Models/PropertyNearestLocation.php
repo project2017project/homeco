@@ -10,7 +10,7 @@ class PropertyNearestLocation extends Model
     use HasFactory;
 
     public function location(){
-        return $this->belongsTo(NearestLocation::class, 'nearest_location_id')->where('status', 1)->select('id','location','status');
+        return $this->belongsTo(NearestLocation::class, 'nearest_location_id')->where('status', 1)->select('id','location','item1_icon','status');
     }
 
     protected $casts =  [

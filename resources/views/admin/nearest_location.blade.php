@@ -22,6 +22,7 @@
                                 <tr>
                                     <th width="5%">{{__('admin.SN')}}</th>
                                     <th width="20%">{{__('admin.Location')}}</th>
+                                    <th width="10%">{{__('admin.Icon')}}</th>
                                     <th width="10%">{{__('admin.Status')}}</th>
                                     <th width="10%">{{__('admin.Action')}}</th>
                                   </tr>
@@ -31,6 +32,7 @@
                                     <tr>
                                         <td>{{ ++$index }}</td>
                                         <td>{{ $location->location }}</td>
+                                        <td><img src="{{ asset($location->item1_icon) }}" style="height:32px;width:32px;"/></td>
                                         <td>
                                             @if($location->status == 1)
                                             <a href="javascript:;" onclick="changeBlogCategoryStatus({{ $location->id }})">

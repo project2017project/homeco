@@ -16,12 +16,17 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin.nearest-location.store') }}" method="post">
+                        <form action="{{ route('admin.nearest-location.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
                                 <label for="">{{__('admin.Location')}} <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="location">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">{{__('admin.New icon')}}</label>
+                                <input type="file" class="form-control-file" name="item1_icon">
                             </div>
 
                             <div class="form-group">
