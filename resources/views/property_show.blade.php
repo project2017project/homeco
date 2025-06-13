@@ -209,7 +209,7 @@
                                             <h4 class="homec-ptdetails-features__title">{{__('user.Nearest Location')}}</h4>
                                             <ul class="homec-ptdetails-features__list">
                                                 @foreach ($nearest_locations as $nearest_location)
-                                                <li><b>{{ $nearest_location->location->location }}:</b> <span>{{ html_decode($nearest_location->distance) }}{{__('user.KM')}}</span></li>
+                                                <li><b><img src="{{ asset($nearest_location->location->item1_icon) }}" alt="Location"> {{ $nearest_location->location->location }}:</b> <span>{{ html_decode($nearest_location->distance) }}{{__('user.KM')}}</span></li>
                                                 @endforeach
                                             </ul>
                                         </div>

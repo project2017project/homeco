@@ -16,7 +16,7 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin.nearest-location.update', $location->id) }}" method="post">
+                        <form action="{{ route('admin.nearest-location.update', $location->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -24,6 +24,21 @@
                                 <label for="">{{__('admin.Location')}} <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="location" value="{{ $location->location }}">
                             </div>
+
+
+                            <div class="form-group">
+                                <label for="">{{__('admin.Item one icon')}}</label>
+
+                                <div>
+                                    <img src="{{ asset($location->item1_icon) }}" alt="" class="w_80">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">{{__('admin.New icon')}}</label>
+                                <input type="file" class="form-control-file" name="item1_icon">
+                            </div>
+
 
                             <div class="form-group">
                                 <label>{{__('admin.Status')}} <span class="text-danger">*</span></label>
