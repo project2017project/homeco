@@ -1260,12 +1260,13 @@ padding-top: 10px!important;
     padding: 0px!important;
 }
 .tabs-full-wrapper {
-    position: initial;
-    top: 0px;
-    z-index: 9;
-    background: transparent;
-    border-bottom: none;
-    padding: 0px;
+    position: sticky;
+    top: 71px;
+    z-index: 999;
+    border-top: 1px solid #d4d4d4;
+    background: #ffffff;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 3px 0px 5px;
 }
 
 .property-tabs-content-wrap .tab-pane {
@@ -1273,6 +1274,15 @@ padding-top: 10px!important;
 }
 .homec-property-ag--side{
     margin-top: 0px!important;
+}
+    .homec-modal {
+        padding: 15px;
+}
+.homec-modal__inner {
+    padding: 15px;
+}
+.modal-dialog {
+    margin: 0px;
 }
 }
 
