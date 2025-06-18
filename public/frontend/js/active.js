@@ -141,7 +141,7 @@ accordionItems.forEach(item => {
 
 
 $(document).ready(function () {
-    const tabLinks = $('.homec-list-tabs a');
+    const tabLinks = $('.property-scroll-tab a');
     const stickyBar = $('.tabs-full-wrapper');
     const stickyHeight = stickyBar.outerHeight() || 80;
     const scrollOffset = 100;

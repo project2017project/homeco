@@ -159,7 +159,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12">
-                        <div class="list-group homec-list-tabs homec-list-tabs--v2" id="list-tab" role="tablist">
+                        <div class="list-group homec-list-tabs homec-list-tabs--v2 property-scroll-tab" id="list-tab" role="tablist">
                         <a class="list-group-item active" href="#homec-pd-tab1" >{{__('user.Property Details')}}</a>
                         <a class="list-group-item" href="#homec-pd-tab2">{{__('user.Property Plan')}}</a>
                         <a class="list-group-item" href="#homec-pd-tab3">{{__('user.Video')}} </a>
