@@ -397,7 +397,7 @@
                                    </div>
 
                                    @auth('web')
-                                    <div class="col-12 d-flex justify-content-center mg-top-40">
+                                    <div class="col-12 d-flex justify-content-center mg-top-10">
                                             <div class="homec-comments-form homec-comments-form--reviews">
                                                 <h2 class="homec-comments-form__title m-0">{{__('user.Submit your review')}}</h2>
                                                 <p class="homec-comments-form__text">{{__('user.Your email address will not be published. Required fields are marked')}} *</p>

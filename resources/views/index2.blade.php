@@ -325,11 +325,11 @@
                         <div class="col-12">
                             <!-- Section TItle -->
                             <div class="homec-section__head text-center mg-btm-30">
-                                <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $location->title }}</span>
-                                <h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $location->description }}</h2>
+                                <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0">{{ $location->title }}</span>
+                                <h2 class="homec-section__title">{{ $location->description }}</h2>
                             </div>
                             <!-- Homec Search -->
-                            <div class="homec-search-form mg-top-10" data-aos="fade-up" data-aos-delay="500">
+                            <div class="homec-search-form mg-top-10">
                                 <form class="homec-search-form__form homec-search-form__form--city" action="{{ route('properties') }}">
                                     <div class="homec-search-form__group">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +377,7 @@
                             $seven_property = false;
                         @endphp
 
-                        <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                        <div class="col-12">
                             <!-- Homec Listing -->
                             <div class="homec-listing mg-top-40">
                                 @foreach ($home_locations as $loc_index => $home_location)
@@ -531,7 +531,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12  d-flex justify-content-center mg-top-40" data-aos="fade-up" data-aos-delay="700">
+                        <div class="col-12  d-flex justify-content-center mg-top-40">
                             <!-- Section TItle -->
                             <a href="{{ route('properties') }}" class="homec-btn"><span>{{__('user.Search Property')}}</span></a>
                         </div>
@@ -577,10 +577,10 @@
 							<!-- Section TItle -->
 							<div class="homec-section__head m-0 mg-top-30">
 								<!-- <span class="homec-section__badge homec-primary-color homec-section__badge--small m-0"  data-aos="fade-in" data-aos-delay="300">{{ $top_property->title }}</span> -->
-								<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{{ $top_property->description }}</h2>
+								<h2 class="homec-section__title">{{ $top_property->description }}</h2>
 							</div>
 							<!-- Button -->
-							<div class="homec-section__btn mg-top-30 without-back-btn" data-aos="fade-right" data-aos-delay="500">
+							<div class="homec-section__btn mg-top-30 without-back-btn">
 								<a href="{{ route('properties',['top_property' => 'enable']) }}" class="homec-btn"><span>{{__('user.See Top  Properties')}}</span><i class="fa-solid fa-arrow-right"></i></a>
 							</div>
 						</div>

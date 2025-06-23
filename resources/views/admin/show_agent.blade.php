@@ -68,7 +68,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <a href="{{ route('admin.purchase-history', ['agent_id' => $agent->id]) }}">
                   <div class="card card-statistic-1">
                     <div class="card-icon bg-success">
@@ -84,7 +84,7 @@
                     </div>
                   </div>
                 </a>
-                </div>
+                </div> -->
               </div>
             <div class="row mt-sm-4">
                 <div class="col-12 col-md-12 col-lg-5">
@@ -100,10 +100,10 @@
                           <div class="profile-widget-item-label">{{__('admin.Joined at')}}</div>
                           <div class="profile-widget-item-value">{{ $agent->created_at->format('d M Y') }}</div>
                         </div>
-                        <div class="profile-widget-item">
+                        <!-- <div class="profile-widget-item">
                           <div class="profile-widget-item-label">{{__('admin.Total Purchase')}}</div>
                           <div class="profile-widget-item-value">{{ $currency_icon }}{{ $total_purchase_amount }}</div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                     <div class="profile-widget-description">
@@ -162,9 +162,9 @@
                                         <a href="{{ route('admin.send-email-to-agent', $agent->id) }}" class="btn btn-warning btn-block btn-lg my-2">{{__('admin.Send Email')}}</a>
                                     </div>
 
-                                    <div class="col-12">
+                                    <!-- <div class="col-12">
                                         <a href="{{ route('admin.purchase-history', ['agent_id' => $agent->id]) }}" class="btn btn-primary btn-block btn-lg my-2">{{__('admin.Purchase History')}}</a>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -233,6 +233,15 @@
                                     <div class="form-group col-md-6">
                                         <label>{{__('admin.Instagram')}}</label>
                                         <input type="text" class="form-control" value="{{ html_decode($agent->instagram) }}" name="instagram">
+                                    </div>
+                                    <div class="form-group col-12" style="visibility: hidden;">
+                                        <label for="">{{__('admin.Assign Plan')}} <span class="text-danger">*</span></label>
+                                        <select name="plan_id" id="plan_id" class="form-control">
+                                            <option value="3">Premium</option>
+
+                                          
+
+                                        </select>
                                     </div>
 
                                 </div>

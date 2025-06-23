@@ -78,12 +78,14 @@
                                         <input type="text" class="form-control" name="instagram">
                                     </div>
 
-                                    <div class="form-group col-12">
+                                    <div class="form-group col-12" style="visibility: hidden;">
                                         <label for="">{{__('admin.Assign Plan')}} <span class="text-danger">*</span></label>
                                         <select name="plan_id" id="plan_id" class="form-control">
-                                            @foreach ($items as $item)
+                                            <option value="3">Premium</option>
+
+                                            <!-- @foreach ($items as $item)
                                             <option value="{{ $item->id }}">{{ $item->plan_name }}</option>
-                                            @endforeach
+                                            @endforeach -->
 
                                         </select>
                                     </div>
