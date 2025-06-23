@@ -549,7 +549,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-12 d-flex justify-content-end mg-top-40">
+                            <div class="col-12 d-flex justify-content-center mg-top-40">
                                 <button type="submit" class="homec-btn homec-btn__second"><span>{{__('user.Submit Property')}}</span></button>
                             </div>
                         </div>

@@ -764,7 +764,7 @@
             currentMarker = L.marker([lat, lng]).addTo(map); // Add new marker
 
             // Fetch the address from the clicked coordinates
-            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&accept-language=en&lat=${lat}&lon=${lng}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data && data.display_name) {
